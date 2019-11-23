@@ -370,16 +370,20 @@ f.close()
 #Note: This code block identifies which vertex that is, and will later exit the program should no valid one be found.
 
 degreeSix = -1
-degrees = list(G.degree(G.nodes()))
+degrees = nx.degree(G)
 print (degrees)
-
 print ("Built degree dictionary as: %s" % (degrees))
-for node in degrees:
-	if(node[1] == 6):
-		degreeSix = node[0]
-		print ("Found degree six vertex to be: %s" % (node[0]))
+
+for node,degree in degrees.items():
+	print("here are the degrees")
+	print(degrees)
+	print("there go the degrees")
+	print(node)
+	if(degree == 6):
+		degreeSix = node
+		print ("Found degree six vertex to be: %s" % node)
 		fi.write('\nFound degree six vertex to be: ')
-		fi.write(str(node[0]))
+		fi.write(str(node))
 		break
 if(degreeSix == -1):
 	print ("No vertex of degree six found.")
