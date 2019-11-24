@@ -38,15 +38,12 @@ for i in graphEdges:
     if(not list(sorted(G.nodes())) == [2,3,4,5,6,7]):
         continue
 
-    elif(not nx.is_connected(G)):
+    if(not nx.is_connected(G)):
         continue
 
-    for value in G.degree():
-        if (value[1] < 2):
-            junkGraphFlag = True
-            break
-    
-    if(junkGraphFlag):
+    degrees = list(nx.degree(G).values())
+
+    if 1 in degrees:
         continue
 
     for graph in nonIsomorphicGraphs:
@@ -63,8 +60,10 @@ for i in graphEdges:
 
 print(f"I've got {len(nonIsomorphicGraphs)} distinct nonisomorphic graphs for your computing pleasure.")
 
+graphNum = 1
 for graph in nonIsomorphicGraphs:
-    print(graph.edges())
+    print(graphNum, ' ',graph.edges())
+    graphNum = graphNum + 1
 
 print("End program!")
 
