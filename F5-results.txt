@@ -1,0 +1,149 @@
+Read list as: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+Adding edge 1 as: (1,2)
+Adding edge 2 as: (1,3)
+Adding edge 3 as: (1,4)
+Adding edge 4 as: (1,5)
+Adding edge 5 as: (1,6)
+Adding edge 6 as: (1,7)
+Adding edge 7 as: (2,7)
+Adding edge 8 as: (6,7)
+Adding edge 9 as: (2,6)
+Adding edge 10 as: (3,4)
+Adding edge 11 as: (4,5)
+Adding edge 12 as: (3,5)
+Adding edge 13 as: (2,3)
+Found degree six vertex to be: 1
+Built vertex list as: [1, 2, 3, 4, 5, 6, 7]
+
+
+Passes: (3, 2),(6, 4)
+Passes: (3, 6),(2, 4)
+Found a solution using the second set of passes.
+Found VALID solution:[2, 1, 3, 10, 5, 9, 7, 8, 6, 4, 11, 12, 13]
+Passes: (3, 2),(7, 4)
+Passes: (3, 7),(2, 4)
+Found a solution using the second set of passes.
+Found VALID solution:[2, 1, 3, 10, 6, 7, 9, 8, 5, 4, 11, 12, 13]
+Passes: (3, 2),(7, 4)
+Passes: (3, 7),(2, 4)
+Found a solution using the second set of passes.
+Found VALID solution:[2, 1, 3, 10, 7, 6, 5, 8, 9, 4, 11, 12, 13]
+Passes: (3, 2),(6, 4)
+Passes: (3, 6),(2, 4)
+Found a solution using the second set of passes.
+Found VALID solution:[2, 1, 3, 10, 9, 5, 6, 8, 7, 4, 11, 12, 13]
+Passes: (3, 2),(6, 5)
+Passes: (3, 6),(2, 5)
+Found a solution using the second set of passes.
+Found VALID solution:[2, 1, 12, 4, 9, 5, 6, 8, 7, 10, 11, 3, 13]
+Passes: (3, 2),(6, 5)
+Passes: (3, 6),(2, 5)
+Found a solution using the second set of passes.
+Found VALID solution:[2, 1, 12, 4, 5, 9, 7, 8, 6, 10, 11, 3, 13]
+Passes: (3, 2),(7, 5)
+Passes: (3, 7),(2, 5)
+Found a solution using the second set of passes.
+Found VALID solution:[2, 1, 12, 4, 6, 7, 9, 8, 5, 10, 11, 3, 13]
+Passes: (3, 2),(7, 5)
+Passes: (3, 7),(2, 5)
+Found a solution using the second set of passes.
+Found VALID solution:[2, 1, 12, 4, 7, 6, 5, 8, 9, 10, 11, 3, 13]
+Passes: (3, 2),(6, 4)
+Passes: (3, 6),(2, 4)
+Found a solution using the second set of passes.
+Found VALID solution:[2, 1, 10, 3, 9, 5, 6, 8, 7, 12, 11, 4, 13]
+Passes: (3, 2),(6, 4)
+Passes: (3, 6),(2, 4)
+Found a solution using the second set of passes.
+Found VALID solution:[2, 1, 10, 3, 5, 9, 7, 8, 6, 12, 11, 4, 13]
+Passes: (3, 2),(7, 4)
+Passes: (3, 7),(2, 4)
+Found a solution using the second set of passes.
+Found VALID solution:[2, 1, 10, 3, 6, 7, 9, 8, 5, 12, 11, 4, 13]
+Passes: (3, 2),(7, 4)
+Passes: (3, 7),(2, 4)
+Found a solution using the second set of passes.
+Found VALID solution:[2, 1, 10, 3, 7, 6, 5, 8, 9, 12, 11, 4, 13]
+Passes: (2, 3),(4, 7)
+Passes: (2, 4),(3, 7)
+Found a solution using the second set of passes.
+Found VALID solution:[1, 2, 7, 6, 10, 3, 4, 11, 12, 9, 8, 5, 13]
+Passes: (2, 3),(4, 7)
+Passes: (2, 4),(3, 7)
+Found a solution using the second set of passes.
+Found VALID solution:[1, 2, 7, 6, 3, 10, 12, 11, 4, 9, 8, 5, 13]
+Passes: (2, 3),(5, 7)
+Passes: (2, 5),(3, 7)
+Found a solution using the second set of passes.
+Found VALID solution:[1, 2, 7, 6, 4, 12, 10, 11, 3, 9, 8, 5, 13]
+Passes: (2, 3),(5, 7)
+Passes: (2, 5),(3, 7)
+Found a solution using the second set of passes.
+Found VALID solution:[1, 2, 7, 6, 12, 4, 3, 11, 10, 9, 8, 5, 13]
+Passes: (2, 3),(5, 6)
+Passes: (2, 5),(3, 6)
+Found a solution using the second set of passes.
+Found VALID solution:[1, 2, 9, 5, 4, 12, 10, 11, 3, 7, 8, 6, 13]
+Passes: (2, 3),(5, 6)
+Passes: (2, 5),(3, 6)
+Found a solution using the second set of passes.
+Found VALID solution:[1, 2, 9, 5, 12, 4, 3, 11, 10, 7, 8, 6, 13]
+Passes: (2, 3),(4, 6)
+Passes: (2, 4),(3, 6)
+Found a solution using the second set of passes.
+Found VALID solution:[1, 2, 9, 5, 3, 10, 12, 11, 4, 7, 8, 6, 13]
+Passes: (2, 3),(4, 6)
+Passes: (2, 4),(3, 6)
+Found a solution using the second set of passes.
+Found VALID solution:[1, 2, 9, 5, 10, 3, 4, 11, 12, 7, 8, 6, 13]
+Passes: (2, 3),(4, 6)
+Passes: (2, 4),(3, 6)
+Found a solution using the second set of passes.
+Found VALID solution:[1, 2, 5, 9, 10, 3, 4, 11, 12, 6, 8, 7, 13]
+Passes: (2, 3),(5, 6)
+Passes: (2, 5),(3, 6)
+Found a solution using the second set of passes.
+Found VALID solution:[1, 2, 5, 9, 4, 12, 10, 11, 3, 6, 8, 7, 13]
+Passes: (2, 3),(5, 6)
+Passes: (2, 5),(3, 6)
+Found a solution using the second set of passes.
+Found VALID solution:[1, 2, 5, 9, 12, 4, 3, 11, 10, 6, 8, 7, 13]
+Passes: (2, 3),(4, 6)
+Passes: (2, 4),(3, 6)
+Found a solution using the second set of passes.
+Found VALID solution:[1, 2, 5, 9, 3, 10, 12, 11, 4, 6, 8, 7, 13]
+Passes: (2, 3),(4, 7)
+Passes: (2, 4),(3, 7)
+Found a solution using the second set of passes.
+Found VALID solution:[1, 2, 6, 7, 3, 10, 12, 11, 4, 5, 8, 9, 13]
+Passes: (2, 3),(5, 7)
+Passes: (2, 5),(3, 7)
+Found a solution using the second set of passes.
+Found VALID solution:[1, 2, 6, 7, 4, 12, 10, 11, 3, 5, 8, 9, 13]
+Passes: (2, 3),(4, 7)
+Passes: (2, 4),(3, 7)
+Found a solution using the second set of passes.
+Found VALID solution:[1, 2, 6, 7, 10, 3, 4, 11, 12, 5, 8, 9, 13]
+Passes: (2, 3),(5, 7)
+Passes: (2, 5),(3, 7)
+Found a solution using the second set of passes.
+Found VALID solution:[1, 2, 6, 7, 12, 4, 3, 11, 10, 5, 8, 9, 13]
+Passes: (3, 2),(6, 5)
+Passes: (3, 6),(2, 5)
+Found a solution using the second set of passes.
+Found VALID solution:[2, 1, 4, 12, 9, 5, 6, 8, 7, 3, 11, 10, 13]
+Passes: (3, 2),(6, 5)
+Passes: (3, 6),(2, 5)
+Found a solution using the second set of passes.
+Found VALID solution:[2, 1, 4, 12, 5, 9, 7, 8, 6, 3, 11, 10, 13]
+Passes: (3, 2),(7, 5)
+Passes: (3, 7),(2, 5)
+Found a solution using the second set of passes.
+Found VALID solution:[2, 1, 4, 12, 6, 7, 9, 8, 5, 3, 11, 10, 13]
+Passes: (3, 2),(7, 5)
+Passes: (3, 7),(2, 5)
+Found a solution using the second set of passes.
+Found VALID solution:[2, 1, 4, 12, 7, 6, 5, 8, 9, 3, 11, 10, 13]
+There were 32 topological duals found.
+
+There were 32 winners found.

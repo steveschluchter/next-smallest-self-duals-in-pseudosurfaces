@@ -1,0 +1,38 @@
+Read list as: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+Adding edge 1 as: (1,2)
+Adding edge 2 as: (1,3)
+Adding edge 3 as: (1,4)
+Adding edge 4 as: (1,5)
+Adding edge 5 as: (1,6)
+Adding edge 6 as: (1,7)
+Adding edge 7 as: (2,3)
+Adding edge 8 as: (2,4)
+Adding edge 9 as: (2,5)
+Adding edge 10 as: (3,4)
+Adding edge 11 as: (3,6)
+Adding edge 12 as: (5,6)
+Adding edge 13 as: (5,7)
+Adding edge 14 as: (6,7)
+Found degree six vertex to be: 1
+Built vertex list as: [1, 2, 3, 4, 5, 6, 7]
+
+
+Passes: (5, 3),(2, 6)
+Passes: (5, 2),(3, 6)
+Could not find a solution after using both sets of passes.Found INVALID solution:[4, 5, 7, 1, 2, 12, 3, 8, 9, 10, 11, 6, 13, 14]
+Solution did not contain a valid bowtie structure
+Passes: (6, 3),(2, 5)
+Passes: (6, 2),(3, 5)
+Could not find a solution after using both sets of passes.Found INVALID solution:[5, 4, 7, 2, 1, 12, 3, 10, 11, 8, 9, 6, 14, 13]
+Solution did not contain a valid bowtie structure
+Passes: (3, 6),(5, 2)
+Passes: (3, 5),(6, 2)
+Could not find a solution after using both sets of passes.Found INVALID solution:[2, 1, 12, 5, 4, 7, 6, 14, 11, 13, 9, 3, 10, 8]
+Solution did not contain a valid bowtie structure
+Passes: (2, 6),(5, 3)
+Passes: (2, 5),(6, 3)
+Could not find a solution after using both sets of passes.Found INVALID solution:[1, 2, 12, 4, 5, 7, 6, 13, 9, 14, 11, 3, 8, 10]
+Solution did not contain a valid bowtie structure
+There were 4 topological duals found.
+
+There were no winners found.

@@ -6,12 +6,12 @@ Adding edge 4 as: (1,5)
 Adding edge 5 as: (1,6)
 Adding edge 6 as: (1,7)
 Adding edge 7 as: (2,3)
-Adding edge 8 as: (3,4)
-Adding edge 9 as: (4,5)
-Adding edge 10 as: (5,6)
-Adding edge 11 as: (6,7)
-Adding edge 12 as: (2,7)
-Adding edge 13 as: (2,4)
+Adding edge 8 as: (2,5)
+Adding edge 9 as: (3,4)
+Adding edge 10 as: (3,7)
+Adding edge 11 as: (4,5)
+Adding edge 12 as: (5,6)
+Adding edge 13 as: (6,7)
 Found degree six vertex to be: 1
 Built vertex list as: [1, 2, 3, 4, 5, 6, 7]
 
