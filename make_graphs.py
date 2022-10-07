@@ -46,7 +46,7 @@ for i in graphEdges:
 
     for v in degrees:
         if v[1] == 1:
-            continue
+            junkGraphFlag = True
 
     for graph in nonIsomorphicGraphs:
 
@@ -65,6 +65,12 @@ print(f"I've got {len(nonIsomorphicGraphs)} distinct nonisomorphic graphs for yo
 graphNum = 1
 for graph in nonIsomorphicGraphs:
     print(graphNum, ' ',graph.edges())
+    for i in range(2,8):
+        graph.add_edge(1,i)
+    print(graphNum, ' ',graph.edges())
     graphNum = graphNum + 1
+    graph.draw()
+
+
 
 print("End program!")

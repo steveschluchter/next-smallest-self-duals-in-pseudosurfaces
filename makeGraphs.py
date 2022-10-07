@@ -41,7 +41,7 @@ for i in graphEdges:
     if(not nx.is_connected(G)):
         continue
 
-    degrees = list(nx.degree(G).values())
+    degrees = list(nx.degree(G))
 
     if 1 in degrees:
         continue
