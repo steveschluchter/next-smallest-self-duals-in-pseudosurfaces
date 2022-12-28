@@ -7,34 +7,31 @@ import pprint
 import time
 import sys
 
-def vertexStar(G,vertex):
-	
-	star = []
-	
-	for edge in G.edges(vertex):
-		if(edge[0] > edge[1]):
-			edgeTuple = (edge[1], edge[0])
-		else:
-			edgeTuple = (edge[0], edge[1])
-		star.append(edgeTuple)
-	
-	return star
+FACTORIAL = 12*11*10*9*8*7*6*5*4*3*2
+QUOTIENT = 14*13
 
 
 #Returns a list of edges incident to a given vertex.
 #Note: Since networkx treats the undirected edge (0,1) as being distinct from the undirected edge (1,0), we make the choice to put the lower-numbered vertex in the first entry in each ordered pair.
-def vertexStar(G,vertex):
+def vertex_star_edges(G,vertex):
 	
-	star = []
+    star = []
 	
-	for edge in G.edges(vertex):
-		if(edge[0] > edge[1]):
-			edgeTuple = (edge[1], edge[0])
-		else:
-			edgeTuple = (edge[0], edge[1])
-		star.append(edgeTuple)
+    for edge in G.edges(vertex):
+   
+        edgeSub = (int(edge[0]), int(edge[1]))
+		
+        if(edge[0] > edge[1]):
+		
+            edgeTuple = (edgeSub[1], edgeSub[0])
+		
+        else:
+			
+            edgeTuple = (edgeSub[0], edgeSub[1])
+		
+        star.append(edgeTuple)
 	
-	return star
+    return star
 
 #Returns the result of permuting the edges in vstar using the permutation perm. 
 def dualEdges(vstar,perm):
@@ -42,8 +39,9 @@ def dualEdges(vstar,perm):
 	dualEdges = []
 	
 	for edge in vstar:
-		label = perm[edgestonumbers[edge]-1]
-		edge = numberstoedges[label]
+
+		label = perm[edgesToNumbers[edge]-1]
+		edge = numbersToEdges[label]
 		dualEdges.append(edge)
 	
 	return dualEdges
@@ -82,28 +80,44 @@ def checkComponents(perm):
 	return (nx.number_connected_components(F) > 1)
 
 
-def vertex_stars(G, vertex):
-	
-	star = []
-	
-	for edge in G.edges(vertex):
-		if(edge[0] > edge[1]):
-			edgeTuple = (edge[1], edge[0])
-		else:
-			edgeTuple = (edge[0], edge[1])
-		star.append(edgeTuple)
-	
-	return star	
-
-def is_connected_algebraic_dual(G,perm,fileString):
+def is_connected_algebraic_dual(G, perm):
 
 	#TODO GET VERTICES IN A LIST
 	#TODO CHECK EACH VERTEX-STAR IN THE LIST
-	    #TODO IF ONE VERTEX FLUNKS IS_CONNECTED OR IS_EULERIAN, then return False
+	#TODO IF ONE VERTEX FLUNKS IS_CONNECTED OR IS_EULERIAN, then return False
 
-	return True 
+    for v in G.nodes():
+        vertex_star = vertex_star_edges(G, v)
+        edge_duals = dualEdges(vertex_star, perm) 
+                    
+        #NOTE: H is the induced graph containing only the permuted edges from star.
+        H = nx.Graph()
+        H.add_edges_from(edge_duals)
+        
+        if(not nx.is_eulerian(H)):
+            
+            return False
 
 
+    
+    return True 
+
+
+def analyze_perms(perm):
+   
+    writeThisToFile = f""
+
+    if is_connected_algebraic_dual(G, perm):
+        writeThisToFile += f"The permutation {perm} is an algebraic dual permutation"  
+           
+        fileName = "collection"
+        for i in perm:
+            fileName += f"{i}"
+        fileName += ".txt"
+
+        with open(fileName, 'w') as f:
+            f.write(writeThisToFile)
+            print(f"wrote file {filename}")
 
 if __name__ == "__main__":
 
@@ -142,11 +156,37 @@ if __name__ == "__main__":
 
     print(type(G.nodes))
 
-    print(type(G.nodes[0]))
+    print("numbersToEdges " + str(numbersToEdges))
+    print("edgesToNumbers " + str(edgesToNumbers))
 
-    print(vertex_stars(G))
-	
-	#print(vertex_star(G, G.nodes()[0]))
-    
-    #pp.pprint(vertex_star(G,G.nodes[0]))
-    
+    fourteen = [digit for digit in range(1, 15)]
+
+    perms = permutations(fourteen, 14)
+
+    perm_array = []
+
+    for i in range(QUOTIENT):
+
+        perm_array = []
+
+        for j in range(FACTORIAL):
+
+            perm_array.append(next(perms))
+
+        print("Started processing a batch of perms")
+        print(f"Started processing with {perm_array[0]}")
+        with Pool(processes=34) as pool:
+           
+            pool.map(analyze_perms, perm_array)
+        
+        #for perm in perm_array:
+        #    print(perm)
+        #    analyze_perms(perm)
+
+
+        print("Finished analyzing perms in batch.") 
+        
+
+    print("Done analyzing permutations")
+
+    sys.exit(1)
