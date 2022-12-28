@@ -166,6 +166,10 @@ if __name__ == "__main__":
     perm_array = []
 
     for i in range(QUOTIENT):
+        
+
+        print("loading up array")
+        print(time.strftime("%a, %d %b %Y %H:%M:%S +0000", time.gmtime()))        
 
         perm_array = []
 
@@ -175,7 +179,7 @@ if __name__ == "__main__":
 
         print("Started processing a batch of perms")
         print(f"Started processing with {perm_array[0]}")
-        with Pool(processes=34) as pool:
+        with Pool(processes=13) as pool:
            
             pool.map(analyze_perms, perm_array)
         
