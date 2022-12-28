@@ -189,7 +189,7 @@ if __name__ == "__main__":
 
 
         print("Finished analyzing perms in batch.") 
-        
+        print(time.strftime("%a, %d %b %Y %H:%M:%S +0000", time.gmtime())) 
 
     print("Done analyzing permutations")
 
