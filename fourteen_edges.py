@@ -7,8 +7,8 @@ import pprint
 import time
 import sys
 
-FACTORIAL = 12*11*10*9*8*7*6*5*4*3*2
-QUOTIENT = 14*13
+FACTORIAL = 11*10*9*8*7*6*5*4*3*2
+QUOTIENT = 14*13*12
 
 
 #Returns a list of edges incident to a given vertex.
@@ -179,7 +179,7 @@ if __name__ == "__main__":
 
         print("Started processing a batch of perms")
         print(f"Started processing with {perm_array[0]}")
-        with Pool(processes=13) as pool:
+        with Pool(processes=8) as pool:
            
             pool.map(analyze_perms, perm_array)
         
