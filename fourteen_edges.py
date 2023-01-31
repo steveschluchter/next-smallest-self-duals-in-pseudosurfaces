@@ -108,7 +108,7 @@ def analyze_perms(perm):
     writeThisToFile = f""
 
     if is_connected_algebraic_dual(G, perm):
-        writeThisToFile += f"The permutation {perm} is an algebraic dual permutation"  
+        writeThisToFile += f"The permutation {perm} is an algebraic dual permutation of {sys.argv[2]}."  
            
         fileName = f"{sys.argv[2]}"
         for i in perm:
@@ -117,7 +117,7 @@ def analyze_perms(perm):
 
         with open(fileName, 'w') as f:
             f.write(writeThisToFile)
-            print(f"wrote file {filename}")
+            print(f"Wrote file {filename}.")
 
 if __name__ == "__main__":
 
