@@ -110,7 +110,7 @@ def analyze_perms(perm):
     if is_connected_algebraic_dual(G, perm):
         writeThisToFile += f"The permutation {perm} is an algebraic dual permutation"  
            
-        fileName = "collection"
+        fileName = f"{sys.argv[2]}"
         for i in perm:
             fileName += f"{i}"
         fileName += ".txt"
@@ -162,7 +162,8 @@ if __name__ == "__main__":
     fourteen = [digit for digit in range(1, 15)]
 
     perms = permutations(fourteen, 14)
-
+    
+    """
     perm_array = []
 
     for i in range(QUOTIENT):
@@ -182,14 +183,14 @@ if __name__ == "__main__":
         with Pool(processes=8) as pool:
            
             pool.map(analyze_perms, perm_array)
-        
-        #for perm in perm_array:
-        #    print(perm)
-        #    analyze_perms(perm)
+    """
+
+    for perm in perms:
+        analyze_perms(perm)
 
 
-        print("Finished analyzing perms in batch.") 
-        print(time.strftime("%a, %d %b %Y %H:%M:%S +0000", time.gmtime())) 
+    print("Finished analyzing perms in batch.") 
+    print(time.strftime("%a, %d %b %Y %H:%M:%S +0000", time.gmtime())) 
 
     print("Done analyzing permutations")
 
