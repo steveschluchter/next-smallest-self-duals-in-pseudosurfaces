@@ -103,14 +103,15 @@ def is_connected_algebraic_dual(G, perm):
     return True 
 
 
-def analyze_perms(perm):
+def analyze_perms(perm, graphName):
    
     writeThisToFile = f""
 
     if is_connected_algebraic_dual(G, perm):
-        writeThisToFile += f"The permutation {perm} is an algebraic dual permutation of {sys.argv[2]}."  
-           
-        fileName = f"{sys.argv[2]}"
+        writeThisToFile += f"The permutation {perm} is an algebraic dual permutation of {graphName}."  
+        print(time.strftime("%a, %d %b %Y %H:%M:%S +0000", time.gmtime())) 
+
+        fileName = f"{graphName}"
         for i in perm:
             fileName += f"{i}"
         fileName += ".txt"
@@ -120,9 +121,9 @@ def analyze_perms(perm):
             print(f"Wrote file {filename}.")
 
 if __name__ == "__main__":
-
-    pp = pprint.PrettyPrinter(indent=4)
-
+    print("begin program")
+    print(time.strftime("%a, %d %b %Y %H:%M:%S +0000", time.gmtime())) 
+    #pp = pprint.PrettyPrinter(indent=4)
     #Builds the graph from the structure provided in the input file.
     #Notes: See files: F1.txt, F2.txt, etc. in the GitHub repository for proper notation.
     #Pull the file name from the command line args.
@@ -186,7 +187,7 @@ if __name__ == "__main__":
     """
 
     for perm in perms:
-        analyze_perms(perm)
+        analyze_perms(perm, sys.argv[1])
 
 
     print("Finished analyzing perms in batch.") 
