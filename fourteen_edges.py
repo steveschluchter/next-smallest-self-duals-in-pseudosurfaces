@@ -103,7 +103,7 @@ def is_connected_algebraic_dual(G, perm):
     return True 
 
 
-def analyze_perms(perm, graphName):
+def analyze_perms(perm):
    
     writeThisToFile = f""
 
@@ -111,7 +111,7 @@ def analyze_perms(perm, graphName):
         writeThisToFile += f"The permutation {perm} is an algebraic dual permutation of {graphName}."  
         print(time.strftime("%a, %d %b %Y %H:%M:%S +0000", time.gmtime())) 
 
-        fileName = f"{graphName}"
+        fileName = f"{graphName}-"
         for i in perm:
             fileName += f"{i}"
         fileName += ".txt"
@@ -122,6 +122,7 @@ def analyze_perms(perm, graphName):
 
 if __name__ == "__main__":
     print("begin program")
+    graphName = sys.argv[1]
     print(time.strftime("%a, %d %b %Y %H:%M:%S +0000", time.gmtime())) 
     #pp = pprint.PrettyPrinter(indent=4)
     #Builds the graph from the structure provided in the input file.
@@ -151,7 +152,7 @@ if __name__ == "__main__":
         numbersToEdges[i+1] = (int(list_of_edges[i][0]),int(list_of_edges[i][1]))
         edgesToNumbers[(int(list_of_edges[i][0]),int(list_of_edges[i][1]))] = i+1
 
-    print("checking nodes and shit")
+    print("checking nodes")
 
     print(G.nodes)
 
@@ -164,7 +165,6 @@ if __name__ == "__main__":
 
     perms = permutations(fourteen, 14)
     
-    """
     perm_array = []
 
     for i in range(QUOTIENT):
@@ -181,14 +181,14 @@ if __name__ == "__main__":
 
         print("Started processing a batch of perms")
         print(f"Started processing with {perm_array[0]}")
-        with Pool(processes=8) as pool:
+        with Pool(processes=7) as pool:
            
             pool.map(analyze_perms, perm_array)
+    
     """
-
     for perm in perms:
         analyze_perms(perm, sys.argv[1])
-
+    """
 
     print("Finished analyzing perms in batch.") 
     print(time.strftime("%a, %d %b %Y %H:%M:%S +0000", time.gmtime())) 
