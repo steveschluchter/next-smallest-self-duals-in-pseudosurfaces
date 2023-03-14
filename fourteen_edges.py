@@ -34,7 +34,7 @@ def vertex_star_edges(G,vertex):
     return star
 
 #Returns the result of permuting the edges in vstar using the permutation perm. 
-def dualEdges(vstar,perm):
+def dual_edges(vstar,perm):
 	
 	dualEdges = []
 	
@@ -48,7 +48,7 @@ def dualEdges(vstar,perm):
 
 #Determines if a 6-star permutes to edges including a cycle.
 #Note: This is only run under the conditions that perm is an algebraic duality correspondence.
-def checkCycles(perm):
+def check_cycles(perm):
 	
 	starSix = vertexStar(G,degreeSix)
 	dualSix = dualEdges(starSix,perm)
@@ -65,7 +65,7 @@ def checkCycles(perm):
 
 #Returns true if a vertex star maps via the inverse permutation to edges inducing more than one component of G, thus detecting multiple umbrellas.
 #Notes: This is not an exhaustive test since it is used if starSix maps to edges inducing a cycle.
-def checkComponents(perm):
+def check_components(perm):
 	
 	starSix = vertexStar(G,degreeSix)
 	inverseEdgeMap = []
@@ -116,6 +116,18 @@ def analyze_perms(perm):
             fileName += f"{i}"
         fileName += ".txt"
 
+        #TODO Check to see if each vertex star maps to cycles.
+        #Else, make all possible choices of boundary walks of bowties.
+
+        #TODO Do check to classify pinchpoint as having one or more umbrellas.
+        #There will be at least one special case of a graph having more than one possible pinchpoint.
+
+        #TODO 
+
+
+
+
+
         with open(fileName, 'w') as f:
             f.write(writeThisToFile)
             print(f"Wrote file {filename}.")
@@ -123,10 +135,11 @@ def analyze_perms(perm):
 if __name__ == "__main__":
     print("begin program")
     graphName = sys.argv[1]
+    
+
+    #TODO reset time index to local (Pacific) time
     print(time.strftime("%a, %d %b %Y %H:%M:%S +0000", time.gmtime())) 
-    #pp = pprint.PrettyPrinter(indent=4)
     #Builds the graph from the structure provided in the input file.
-    #Notes: See files: F1.txt, F2.txt, etc. in the GitHub repository for proper notation.
     #Pull the file name from the command line args.
     if(len(sys.argv) == 2):
         filename = sys.argv[1]
@@ -167,8 +180,7 @@ if __name__ == "__main__":
     
     perm_array = []
 
-    for i in range(QUOTIENT):
-        
+    for i in range(QUOTIENT): 
 
         print("loading up array")
         print(time.strftime("%a, %d %b %Y %H:%M:%S +0000", time.gmtime()))        
@@ -189,6 +201,9 @@ if __name__ == "__main__":
     for perm in perms:
         analyze_perms(perm, sys.argv[1])
     """
+
+    #TODO Write code to scrape permutation data out of collections of files
+    # pertaining to ingested graph.  There will have to be the use of the os and subprocess commands.
 
     print("Finished analyzing perms in batch.") 
     print(time.strftime("%a, %d %b %Y %H:%M:%S +0000", time.gmtime())) 
