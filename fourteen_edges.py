@@ -3,9 +3,10 @@
 from itertools import permutations
 from multiprocessing import Pool
 import networkx as nx
-import pprint
 import time
 import sys
+import os
+
 
 FACTORIAL = 11*10*9*8*7*6*5*4*3*2
 QUOTIENT = 14*13*12
@@ -122,11 +123,7 @@ def analyze_perms(perm):
         #TODO Do check to classify pinchpoint as having one or more umbrellas.
         #There will be at least one special case of a graph having more than one possible pinchpoint.
 
-        #TODO 
-
-
-
-
+        #TODO Compute rank of H1(P) via computing the dimension over Z of the facial boundary walks 
 
         with open(fileName, 'w') as f:
             f.write(writeThisToFile)
@@ -135,14 +132,15 @@ def analyze_perms(perm):
 if __name__ == "__main__":
     print("begin program")
     graphName = sys.argv[1]
-    
-
+    filename = ""    
     #TODO reset time index to local (Pacific) time
     print(time.strftime("%a, %d %b %Y %H:%M:%S +0000", time.gmtime())) 
     #Builds the graph from the structure provided in the input file.
     #Pull the file name from the command line args.
-    if(len(sys.argv) == 2):
+    
+    if(len(sys.argv) >= 2):
         filename = sys.argv[1]
+    """    
     elif(len(sys.argv) > 2):
         print ("Additional arguments supplied. Try: python <<program name>> <<filename>>")
         #sys.exit(1) uncomment this if you want the program to exit here
@@ -151,6 +149,7 @@ if __name__ == "__main__":
         #sys.exit(1) uncomment this if you want the program to exit here
 
     #Open the file and construct the graph from the formatted instructions.
+    """
 
     G = nx.read_edgelist(filename)
 
@@ -174,12 +173,29 @@ if __name__ == "__main__":
     print("numbersToEdges " + str(numbersToEdges))
     print("edgesToNumbers " + str(edgesToNumbers))
 
+    path_to_files = sys.argv[2]
+    stream = os.popen(f"ls {path_to_files}")
+    graph_files = stream.read().split("\n")
+    graph_files = [graph_file for graph_file in graph_files if graph_file != '']
+    print(graph_files)
+    
+    for graph_file in graph_files:
+
+        path_to_file = path_to_files + f"/{graph_file}"
+        regex_this = open(path_to_file, 'r')
+        regex_this = regex_this.read()
+        #TODO regex the tuple pattern with 14 numbers in it out of the string regex_this
+
+        
+
+    """
+
     fourteen = [digit for digit in range(1, 15)]
 
     perms = permutations(fourteen, 14)
     
     perm_array = []
-
+    
     for i in range(QUOTIENT): 
 
         print("loading up array")
@@ -197,7 +213,7 @@ if __name__ == "__main__":
            
             pool.map(analyze_perms, perm_array)
     
-    """
+    
     for perm in perms:
         analyze_perms(perm, sys.argv[1])
     """
