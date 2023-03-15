@@ -3,9 +3,7 @@
 from itertools import permutations
 from multiprocessing import Pool
 import networkx as nx
-import time
-import sys
-import os
+import time, sys, os, re
 
 
 FACTORIAL = 11*10*9*8*7*6*5*4*3*2
@@ -89,7 +87,7 @@ def is_connected_algebraic_dual(G, perm):
 
     for v in G.nodes():
         vertex_star = vertex_star_edges(G, v)
-        edge_duals = dualEdges(vertex_star, perm) 
+        edge_duals = dual_edges(vertex_star, perm) 
                     
         #NOTE: H is the induced graph containing only the permuted edges from star.
         H = nx.Graph()
@@ -104,7 +102,7 @@ def is_connected_algebraic_dual(G, perm):
     return True 
 
 
-def analyze_perms(perm):
+def analyze_perm(perm):
    
     writeThisToFile = f""
 
@@ -179,14 +177,16 @@ if __name__ == "__main__":
     graph_files = [graph_file for graph_file in graph_files if graph_file != '']
     print(graph_files)
     
+
+
     for graph_file in graph_files:
 
         path_to_file = path_to_files + f"/{graph_file}"
         regex_this = open(path_to_file, 'r')
         regex_this = regex_this.read()
-        #TODO regex the tuple pattern with 14 numbers in it out of the string regex_this
-
-        
+        regexed_checker = re.findall(r"\d+", regex_this)
+        tuple_perm = tuple(int(i) for i in regexed_checker)
+        analyze_perm(tuple_perm)
 
     """
 
