@@ -17,9 +17,9 @@ def vertex_star_edges(G, vertex):
     star = []
 	
 
-    for edge in G.edges(str(vertex)):
+    for edge in G.edges(vertex):
         print("in loop")
-        print(G.edges(str(vertex)))
+        print(G.edges(vertex))
         edgeSub = (int(edge[0]), int(edge[1]))
 		
         if(edge[0] > edge[1]):
@@ -37,15 +37,18 @@ def vertex_star_edges(G, vertex):
 #Returns the result of permuting the edges in vstar using the permutation perm. 
 def dual_edges(vstar,perm):
 	
-	dual_edges_list = []
+    dual_edges_list = []
 	
-	for edge in vstar:
-
-		label = perm[edgesToNumbers[edge]-1]
-		edge = numbersToEdges[label]
-		dual_edges_list.append(edge)
+    for edge in vstar:
+        dual_label = perm[ ( perm.index(edges_to_numbers[edge]) + 1) % len(perm) ]
+        dual_edge = numbers_to_edges[dual_label]
+        dual_edges_list.append(dual_edge)
+        print(f"edge {edge}")
+        print(f"label {edges_to_numbers[edge]}")
+        print(f"dual_label {dual_label}")
+        print(f"dual_edge {dual_edge}")
 	
-	return dual_edges_list
+    return dual_edges_list
 
 #Determines if a 6-star permutes to edges including a cycle.
 #Note: This is only run under the conditions that perm is an algebraic duality correspondence.
@@ -105,8 +108,6 @@ def is_connected_algebraic_dual(G, perm):
         if(not nx.is_eulerian(H)):
             
             return False
-
-
     
     return True 
 
@@ -116,8 +117,10 @@ def analyze_perm(perm):
     write_this_to_file = f""
 
     if is_connected_algebraic_dual(G, perm):
-       
+
         write_this_to_file += f"The permutation {perm} is an algebraic dual permutation of {graph_name}."  
+        print("Write this to file ", write_this_to_file)
+        input("x")
         print(time.strftime("%a, %d %b %Y %H:%M:%S +0000", time.gmtime())) 
 
         filename = f"{graph_name}-"
@@ -130,7 +133,9 @@ def analyze_perm(perm):
 
         if(check_cycles(perm)):
         
-            write_this_to_file += "This perm is a winner!  It maps each vertex star to a cycle."                
+            write_this_to_file += "This perm is a winner!  It maps each vertex star to a cycle."
+            
+
 
         #TODO Do check to classify pinchpoint as having one or more umbrellas.
         #There will be at least one special case of a graph having more than one possible pinchpoint.
@@ -171,21 +176,21 @@ if __name__ == "__main__":
     print(G.edges())
     print(type(G.edges()))
     print("Printed G.edges()")
-    numbersToEdges = {}
-    edgesToNumbers = {}
+    numbers_to_edges = {}
+    edges_to_numbers = {}
     list_of_edges = list(G.edges())
 
     degree_six = []
     for vertex in G.nodes():    
         if (G.degree[vertex] > 5):
-            degree_six.append(int(vertex))
+            degree_six.append(vertex)
 
     for i in range(0,len(list_of_edges)):
-        numbersToEdges[i+1] = (int(list_of_edges[i][0]),int(list_of_edges[i][1]))
-        edgesToNumbers[(int(list_of_edges[i][0]),int(list_of_edges[i][1]))] = i+1
+        numbers_to_edges[i+1] = (int(list_of_edges[i][0]),int(list_of_edges[i][1]))
+        edges_to_numbers[(int(list_of_edges[i][0]),int(list_of_edges[i][1]))] = i+1
 
-    print("numbersToEdges " + str(numbersToEdges))
-    print("edgesToNumbers " + str(edgesToNumbers))
+    print("numbersToEdges " + str(numbers_to_edges))
+    print("edgesToNumbers " + str(edges_to_numbers))
     print("degree_six " + str(degree_six))
 
     path_to_files = sys.argv[2]
@@ -201,8 +206,13 @@ if __name__ == "__main__":
         path_to_file = path_to_files + f"/{graph_file}"
         regex_this = open(path_to_file, 'r')
         regex_this = regex_this.read()
-        regexed_checker = re.findall(r"\d+", regex_this)
-        tuple_perm = tuple(int(i) for i in regexed_checker)
+        print(f"regex this {regex_this}")
+        regexed_checker = re.findall(r'\d+', regex_this)
+        print(f"Regexed checker {regexed_checker}")
+
+        #the [0:-1] part accomodates scraping the last digit from the word graphx in all files
+        tuple_perm = tuple(int(i) for i in regexed_checker[0:-1])
+        print(tuple_perm)
         analyze_perm(tuple_perm)
         check_cycles(tuple_perm)
 
@@ -238,6 +248,11 @@ if __name__ == "__main__":
 
     #TODO Write code to scrape permutation data out of collections of files
     # pertaining to ingested graph.  There will have to be the use of the os and subprocess commands.
+
+    print("numbers_to_edges " + str(numbers_to_edges))
+    print("edges_to_numbers " + str(edges_to_numbers))
+    print("degree_six " + str(degree_six))
+    
 
     print("Finished analyzing perms in batch.") 
     print(time.strftime("%a, %d %b %Y %H:%M:%S +0000", time.gmtime())) 
