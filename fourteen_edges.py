@@ -18,8 +18,8 @@ def vertex_star_edges(G, vertex):
 	
 
     for edge in G.edges(vertex):
-        print("in loop")
-        print(G.edges(vertex))
+        #print("in loop")
+        #print(G.edges(vertex))
         edgeSub = (int(edge[0]), int(edge[1]))
 		
         if(edge[0] > edge[1]):
@@ -43,10 +43,11 @@ def dual_edges(vstar,perm):
         dual_label = perm[ ( perm.index(edges_to_numbers[edge]) + 1) % len(perm) ]
         dual_edge = numbers_to_edges[dual_label]
         dual_edges_list.append(dual_edge)
-        print(f"edge {edge}")
-        print(f"label {edges_to_numbers[edge]}")
-        print(f"dual_label {dual_label}")
-        print(f"dual_edge {dual_edge}")
+        #print(perm)
+        #print(f"edge {edge}")
+        #print(f"label {edges_to_numbers[edge]}")
+        #print(f"dual_label {dual_label}")
+        #print(f"dual_edge {dual_edge}")
 	
     return dual_edges_list
 
@@ -57,11 +58,13 @@ def check_cycles(perm):
 
     star_six = vertex_star_edges(G, degree_six)
     dual_six = dual_edges(star_six, perm)
-
+    
+    """
     print(perm)
     print(degree_six)
     print(star_six)
     print(dual_six)
+    """
 
     H = nx.Graph()
     H.add_edges_from(dual_six)
@@ -69,9 +72,9 @@ def check_cycles(perm):
 	#Iterate through the edges and ensure that they are all connected with degree 2.
     for node in H.nodes():
         if(H.degree(node) != 2):
-            print ("\nThis 6-star permutes to a bowtie. There is a node (%s) without two degrees (has %s)." % (node,H.degree(node)))
+            #print ("\nThis 6-star permutes to a bowtie. There is a node (%s) without two degrees (has %s)." % (node,H.degree(node)))
             return False        
-    print("The 6 stars map to cycles!  Winner")
+    #print("The 6 stars map to cycles!  Winner")
     return True
 
 #Returns true if a vertex star maps via the inverse permutation to edges inducing more than one component of G, thus detecting multiple umbrellas.
@@ -93,35 +96,74 @@ def check_components(perm):
 
 def is_connected_algebraic_dual(G, perm):
 
+    print("in is_connected_algebraic_dual")
+
 	#TODO GET VERTICES IN A LIST
 	#TODO CHECK EACH VERTEX-STAR IN THE LIST
 	#TODO IF ONE VERTEX FLUNKS IS_CONNECTED OR IS_EULERIAN, then return False
 
-    for v in G.nodes():
-        vertex_star = vertex_star_edges(G, v)
+    for n in list(G):
+        print(n)
+        vertex_star = vertex_star_edges(G, n)
+        edge_duals = dual_edges(vertex_star, perm)
+        print(perm)
+        print(vertex_star)
+        print(edge_duals)
+        H = nx.Graph()
+        H.add_edges_from(edge_duals)
+        print(H.edges())
+
+        input("pause 1")
+
+
+        if(not nx.is_eulerian(H)):
+
+            #print("False exiting is_connected_algebraic_dual")
+            return False
+
+    
+    #print('True exiting is_connected_algebraic_dual')
+
+    return True
+
+
+    """
+    for nodev in list(G):
+        print("begin loop")
+        print(perm)
+        print(nodev)
+        vertex_star = vertex_star_edges(G, nodev)
+        print(vertex_star)
         edge_duals = dual_edges(vertex_star, perm) 
+        print(edge_duals)
+        x = input("paused")
                     
         #NOTE: H is the induced graph containing only the permuted edges from star.
         H = nx.Graph()
         H.add_edges_from(edge_duals)
+        print(H.edges())
         
         if(not nx.is_eulerian(H)):
-            
+
+            print("exiting is_connected_algebraic_dual") 
             return False
     
+    print("exiting is_connected_algebraic_dual")
     return True 
+    """
 
 
 def analyze_perm(perm):
-   
+
+    print("in analyze perm")   
     write_this_to_file = f""
 
     if is_connected_algebraic_dual(G, perm):
 
         write_this_to_file += f"The permutation {perm} is an algebraic dual permutation of {graph_name}."  
-        print("Write this to file ", write_this_to_file)
-        input("x")
-        print(time.strftime("%a, %d %b %Y %H:%M:%S +0000", time.gmtime())) 
+        #print("Write this to file ", write_this_to_file)
+        #input("x")
+        #print(time.strftime("%a, %d %b %Y %H:%M:%S +0000", time.gmtime())) 
 
         filename = f"{graph_name}-"
         for i in perm:
@@ -142,11 +184,11 @@ def analyze_perm(perm):
 
         #TODO Compute rank of H1(P) via computing the dimension over Z of the facial boundary walks 
         
-        """
+        
         with open(filename, 'w') as f:
             #f.write(write_this_to_file)
             print(f"Wrote file {filename}.")
-        """
+        
 
 
 if __name__ == "__main__":
@@ -200,19 +242,19 @@ if __name__ == "__main__":
     print(graph_files)
     
 
-
+    """
     for graph_file in graph_files:
 
         path_to_file = path_to_files + f"/{graph_file}"
         regex_this = open(path_to_file, 'r')
         regex_this = regex_this.read()
-        print(f"regex this {regex_this}")
+        #print(f"regex this {regex_this}")
         regexed_checker = re.findall(r'\d+', regex_this)
-        print(f"Regexed checker {regexed_checker}")
+        #print(f"Regexed checker {regexed_checker}")
 
         #the [0:-1] part accomodates scraping the last digit from the word graphx in all files
         tuple_perm = tuple(int(i) for i in regexed_checker[0:-1])
-        print(tuple_perm)
+        #print(tuple_perm)
         analyze_perm(tuple_perm)
         check_cycles(tuple_perm)
 
@@ -244,7 +286,7 @@ if __name__ == "__main__":
     
     for perm in perms:
         analyze_perms(perm, sys.argv[1])
-    """
+
 
     #TODO Write code to scrape permutation data out of collections of files
     # pertaining to ingested graph.  There will have to be the use of the os and subprocess commands.
