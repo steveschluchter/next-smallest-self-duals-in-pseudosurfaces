@@ -101,20 +101,24 @@ def is_connected_algebraic_dual(G, perm):
 	#TODO GET VERTICES IN A LIST
 	#TODO CHECK EACH VERTEX-STAR IN THE LIST
 	#TODO IF ONE VERTEX FLUNKS IS_CONNECTED OR IS_EULERIAN, then return False
+    
+    vertices = [v for v in list(G.nodes())]
+    print("Here's vertices!")
+    print(vertices)
 
-    for n in list(G):
-        print(n)
-        vertex_star = vertex_star_edges(G, n)
-        edge_duals = dual_edges(vertex_star, perm)
-        print(perm)
+    for k in [1, 2, 3, 4, 5, 6, 7]:
+        print(k)
+        vertex_star = vertex_star_edges(G, k)
         print(vertex_star)
-        print(edge_duals)
+
+    for k in [1, 2, 3, 4, 5, 6, 7][:]:
+        print(k)
+        print(vertices)
+        vertex_star = vertex_star_edges(G, vertices[k])
+        edge_duals = dual_edges(vertex_star, perm)
         H = nx.Graph()
         H.add_edges_from(edge_duals)
         print(H.edges())
-
-        input("pause 1")
-
 
         if(not nx.is_eulerian(H)):
 
@@ -153,7 +157,7 @@ def is_connected_algebraic_dual(G, perm):
     """
 
 
-def analyze_perm(perm):
+def analyze_perm(G, perm):
 
     print("in analyze perm")   
     write_this_to_file = f""
@@ -235,11 +239,11 @@ if __name__ == "__main__":
     print("edgesToNumbers " + str(edges_to_numbers))
     print("degree_six " + str(degree_six))
 
-    path_to_files = sys.argv[2]
-    stream = os.popen(f"ls {path_to_files}")
-    graph_files = stream.read().split("\n")
-    graph_files = [graph_file for graph_file in graph_files if graph_file != '']
-    print(graph_files)
+    #path_to_files = sys.argv[2]
+    #stream = os.popen(f"ls {path_to_files}")
+    #graph_files = stream.read().split("\n")
+    #graph_files = [graph_file for graph_file in graph_files if graph_file != '']
+    #print(graph_files)
     
 
     """
@@ -265,7 +269,7 @@ if __name__ == "__main__":
     perms = permutations(fourteen, 14)
     
     perm_array = []
-    
+    """
     for i in range(QUOTIENT): 
 
         print("loading up array")
@@ -281,11 +285,12 @@ if __name__ == "__main__":
         print(f"Started processing with {perm_array[0]}")
         with Pool(processes=7) as pool:
            
-            pool.map(analyze_perms, perm_array)
-    
+            pool.map(analyze_perm, perm_array)
+    """
+
     
     for perm in perms:
-        analyze_perms(perm, sys.argv[1])
+        analyze_perm(G, perm)
 
 
     #TODO Write code to scrape permutation data out of collections of files
