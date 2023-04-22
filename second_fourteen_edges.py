@@ -131,7 +131,7 @@ def analyze_perm(graph, permutation, edgestonumbers, numberstoedges, degreesixve
         #TODO Compute rank of H1(P) via computing the dimension over Z of the facial boundary walks 
         
         with open(filename, 'w') as f:
-            #f.write(write_this_to_file)
+            f.write(write_this_to_file)
             print(f"Wrote file {filename}.")
 
         
