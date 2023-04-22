@@ -12,7 +12,7 @@ QUOTIENT = 14*13*12
 #Returns a list of edges incident to a given vertex.
 #Note: Since networkx treats the undirected edge (0,1) as being distinct from the undirected edge (1,0), we make the choice to put the lower-numbered vertex in the first entry in each ordered pair.
 def vertex_star_edges(graph, vertex):
-    print("vertex_star_edges")
+    #print("vertex_star_edges")
     star = []
 	
 
@@ -31,25 +31,24 @@ def vertex_star_edges(graph, vertex):
 		
         star.append(edge_tuple)
 	
+    #print(star)
+
+    #print("leaving vertex_star_edges")
+
     return star
 
-def dual_edges(vstar,perm):
+def dual_edges(vertexstar, permutation, numberstoedges, edgestonumbers):
 	
     dual_edges_list = []
 	
-    for edge in vstar:
-        dual_label = perm[ ( perm.index(edges_to_numbers[edge]) + 1) % len(perm) ]
-        dual_edge = numbers_to_edges[dual_label]
+    for edge in vertexstar:
+        dual_label = permutation[ ( permutation.index(edgestonumbers[edge]) + 1) % len(permutation) ]
+        dual_edge = numberstoedges[dual_label]
         dual_edges_list.append(dual_edge)
-        #print(perm)
-        #print(f"edge {edge}")
-        #print(f"label {edges_to_numbers[edge]}")
-        #print(f"dual_label {dual_label}")
-        #print(f"dual_edge {dual_edge}")
 	
     return dual_edges_list
 
-def is_connected_algebraic_dual(graph, perm, dual_edges):
+def is_connected_algebraic_dual(graph, perm, edgestonumbers, numberstoedges):
 
     print("in is_connected_algebraic_dual")
 
@@ -58,14 +57,13 @@ def is_connected_algebraic_dual(graph, perm, dual_edges):
 	#TODO IF ONE VERTEX FLUNKS IS_CONNECTED OR IS_EULERIAN, then return False
     
     vertices = [v for v in list(graph.nodes())]
-    print("Here's vertices!")
-    print(vertices)
 
     for k in vertices:
         print(k)
         print(vertices)
-        vertex_star = vertex_star_edges(graph, vertices[k])
-        edge_duals = dual_edges(vertex_star, perm)
+        vertex_star = vertex_star_edges(graph, k)
+        edge_duals = dual_edges(vertex_star, perm, numberstoedges, edgestonumbers)
+
         H = nx.Graph()
         H.add_edges_from(edge_duals)
         print(H.edges())
@@ -78,33 +76,29 @@ def is_connected_algebraic_dual(graph, perm, dual_edges):
     
     #print('True exiting is_connected_algebraic_dual')
 
+    
     return True
 
 
 #Determines if a 6-star permutes to edges including a cycle.
 #Note: This is only run under the conditions that perm is an algebraic duality correspondence.
-def check_cycles(graph, permutation):
+def check_cycles(graph, permutation, degreesixvertices):
 	
 
-    star_six = vertex_star_edges(graph, degree_six)
-    dual_six = dual_edges(star_six, perm)
+    starsix = vertex_star_edges(graph, degreesixvertices[0])
+    dualsix = dual_edges(degreesixvertices[0], permutation)
     
-    """
-    print(perm)
-    print(degree_six)
-    print(star_six)
-    print(dual_six)
-    """
 
     H = nx.Graph()
-    H.add_edges_from(dual_six)
+    H.add_edges_from(dualsix)
 
 	#Iterate through the edges and ensure that they are all connected with degree 2.
     for node in H.nodes():
+
         if(H.degree(node) != 2):
-            #print ("\nThis 6-star permutes to a bowtie. There is a node (%s) without two degrees (has %s)." % (node,H.degree(node)))
+
             return False        
-    #print("The 6 stars map to cycles!  Winner")
+
     return True
 
 def analyze_perm(graph, permutation, edgestonumbers, numberstoedges, degreesixvertices):
@@ -113,10 +107,10 @@ def analyze_perm(graph, permutation, edgestonumbers, numberstoedges, degreesixve
 
     if is_connected_algebraic_dual(graph, permutation, edgestonumbers, numberstoedges):
 
-        write_this_to_file += f"The permutation {perm} is an algebraic dual permutation of {graph_name}."  
-        #print("Write this to file ", write_this_to_file)
+        write_this_to_file += f"The permutation {permutation} is an algebraic dual permutation of {graph_name}."  
+        print("Write this to file ", write_this_to_file)
         #input("x")
-        #print(time.strftime("%a, %d %b %Y %H:%M:%S +0000", time.gmtime())) 
+        print(time.strftime("%a, %d %b %Y %H:%M:%S +0000", time.gmtime())) 
 
         filename = f"{graph_name}-"
         for i in permutation:
@@ -125,18 +119,16 @@ def analyze_perm(graph, permutation, edgestonumbers, numberstoedges, degreesixve
 
         #TODO Check to see if each vertex star maps to cycles.
         #Else, make all possible choices of boundary walks of bowties.
-
-        if(check_cycles(perm)):
         
+        if(check_cycles(perm)):
             write_this_to_file += "This perm is a winner!  It maps each vertex star to a cycle."
-            
+
 
 
         #TODO Do check to classify pinchpoint as having one or more umbrellas.
         #There will be at least one special case of a graph having more than one possible pinchpoint.
 
         #TODO Compute rank of H1(P) via computing the dimension over Z of the facial boundary walks 
-        
         
         with open(filename, 'w') as f:
             #f.write(write_this_to_file)
@@ -216,4 +208,7 @@ if __name__ == "__main__":
     
     for permutation in perms:
         analyze_perm(master_graph, permutation, edges_to_numbers, numbers_to_edges, degree_six)
+
+
+    print(time.strftime("Progream ended at %a, %d %b %Y %H:%M:%S Pacific Time."))
     
