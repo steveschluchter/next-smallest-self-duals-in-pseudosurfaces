@@ -53,7 +53,7 @@ def dual_edges(vstar,perm):
 
 #Determines if a 6-star permutes to edges including a cycle.
 #Note: This is only run under the conditions that perm is an algebraic duality correspondence.
-def check_cycles(perm):
+def check_cycles(G, perm):
 	
 
     star_six = vertex_star_edges(G, degree_six)
