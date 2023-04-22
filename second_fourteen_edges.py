@@ -50,8 +50,6 @@ def dual_edges(vertexstar, permutation, numberstoedges, edgestonumbers):
 
 def is_connected_algebraic_dual(graph, perm, edgestonumbers, numberstoedges):
 
-    print("in is_connected_algebraic_dual")
-
 	#TODO GET VERTICES IN A LIST
 	#TODO CHECK EACH VERTEX-STAR IN THE LIST
 	#TODO IF ONE VERTEX FLUNKS IS_CONNECTED OR IS_EULERIAN, then return False
@@ -59,14 +57,11 @@ def is_connected_algebraic_dual(graph, perm, edgestonumbers, numberstoedges):
     vertices = [v for v in list(graph.nodes())]
 
     for k in vertices:
-        print(k)
-        print(vertices)
         vertex_star = vertex_star_edges(graph, k)
         edge_duals = dual_edges(vertex_star, perm, numberstoedges, edgestonumbers)
 
         H = nx.Graph()
         H.add_edges_from(edge_duals)
-        print(H.edges())
 
         if(not nx.is_eulerian(H)):
 
@@ -102,7 +97,6 @@ def check_cycles(graph, permutation, degreesixvertices):
     return True
 
 def analyze_perm(graph, permutation, edgestonumbers, numberstoedges, degreesixvertices):
-    print("in analyze perm")   
     write_this_to_file = f""
 
     if is_connected_algebraic_dual(graph, permutation, edgestonumbers, numberstoedges):
