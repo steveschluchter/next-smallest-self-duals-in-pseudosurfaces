@@ -12,13 +12,11 @@ QUOTIENT = 14*13*12
 #Returns a list of edges incident to a given vertex.
 #Note: Since networkx treats the undirected edge (0,1) as being distinct from the undirected edge (1,0), we make the choice to put the lower-numbered vertex in the first entry in each ordered pair.
 def vertex_star_edges(graph, vertex):
-    #print("vertex_star_edges")
+    
     star = []
-	
-
+    
     for edge in graph.edges(vertex):
-        #print("in loop")
-        #print(G.edges(vertex))
+        
         edge_sub = (int(edge[0]), int(edge[1]))
 		
         if(edge[0] > edge[1]):
@@ -30,10 +28,6 @@ def vertex_star_edges(graph, vertex):
             edge_tuple = (edge_sub[0], edge_sub[1])
 		
         star.append(edge_tuple)
-	
-    #print(star)
-
-    #print("leaving vertex_star_edges")
 
     return star
 
@@ -65,7 +59,6 @@ def is_connected_algebraic_dual(graph, perm, edgestonumbers, numberstoedges):
 
         if(not nx.is_eulerian(H)):
 
-            #print("False exiting is_connected_algebraic_dual")
             return False
 
     
@@ -82,11 +75,8 @@ def check_cycles(graph, permutation, edgestonumbers, numberstoedges, degreesixve
 
     for i in degreesixvertices:
 
-        v = int(i)
-
-        starsix = vertex_star_edges(graph, v)
+        starsix = vertex_star_edges(graph, i)
         dualsix = dual_edges(starsix, permutation, numberstoedges, edgestonumbers)
-
 
         H = nx.Graph()
         H.add_edges_from(dualsix)
@@ -118,7 +108,7 @@ def analyze_perm(graph, permutation, edgestonumbers, numberstoedges, degreesixve
         #TODO Check to see if each vertex star maps to cycles.
         #Else, make all possible choices of boundary walks of bowties.
         
-        if(check_cycles(graph, permutation, edgestonumbers, numberstoedges, degreesixvertces)):
+        if(check_cycles(graph, permutation, edgestonumbers, numberstoedges, degreesixvertices)):
 
             write_this_to_file += "This perm is a winner!  It maps each vertex star to a cycle."
 
