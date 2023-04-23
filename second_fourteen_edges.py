@@ -77,22 +77,26 @@ def is_connected_algebraic_dual(graph, perm, edgestonumbers, numberstoedges):
 
 #Determines if a 6-star permutes to edges including a cycle.
 #Note: This is only run under the conditions that perm is an algebraic duality correspondence.
-def check_cycles(graph, permutation, degreesixvertices):
-	
-
-    starsix = vertex_star_edges(graph, degreesixvertices[0])
-    dualsix = dual_edges(degreesixvertices[0], permutation)
+def check_cycles(graph, permutation, edgestonumbers, numberstoedges, degreesixvertices):
     
 
-    H = nx.Graph()
-    H.add_edges_from(dualsix)
+    for i in degreesixvertices:
 
-	#Iterate through the edges and ensure that they are all connected with degree 2.
-    for node in H.nodes():
+        v = int(i)
 
-        if(H.degree(node) != 2):
+        starsix = vertex_star_edges(graph, v)
+        dualsix = dual_edges(starsix, permutation, numberstoedges, edgestonumbers)
 
-            return False        
+
+        H = nx.Graph()
+        H.add_edges_from(dualsix)
+
+	    #Iterate through the edges and ensure that they are all connected with degree 2.
+        for node in H.nodes():
+
+            if(H.degree(node) != 2):
+
+                return False        
 
     return True
 
@@ -114,9 +118,9 @@ def analyze_perm(graph, permutation, edgestonumbers, numberstoedges, degreesixve
         #TODO Check to see if each vertex star maps to cycles.
         #Else, make all possible choices of boundary walks of bowties.
         
-        if(check_cycles(perm)):
-            write_this_to_file += "This perm is a winner!  It maps each vertex star to a cycle."
+        if(check_cycles(graph, permutation, edgestonumbers, numberstoedges, degreesixvertces)):
 
+            write_this_to_file += "This perm is a winner!  It maps each vertex star to a cycle."
 
 
         #TODO Do check to classify pinchpoint as having one or more umbrellas.
@@ -163,7 +167,7 @@ def analyze_perm(G, perm):
         
         
         with open(filename, 'w') as f:
-            #f.write(write_this_to_file)
+            f.write(write_this_to_file)
             print(f"Wrote file {filename}.")
 """
 
