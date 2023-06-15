@@ -197,6 +197,23 @@ if __name__ == "__main__":
     for permutation in perms:
         analyze_perm(master_graph, permutation, edges_to_numbers, numbers_to_edges, degree_six)
 
+    for i in range(QUOTIENT): 
+
+        print("loading up array")
+        print(time.strftime("%a, %d %b %Y %H:%M:%S +0000", time.gmtime()))        
+
+        perm_array = []
+
+        for j in range(FACTORIAL):
+
+            perm_array.append(next(perms))
+
+        print("Started processing a batch of perms")
+        print(f"Started processing with {perm_array[0]}")
+        with Pool(processes=7) as pool:
+           
+            pool.starmap(analyze_perm, perm_array)
+
 
     print(time.strftime("Progream ended at %a, %d %b %Y %H:%M:%S Pacific Time."))
     
