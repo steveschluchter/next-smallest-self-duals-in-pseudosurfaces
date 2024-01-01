@@ -22,6 +22,26 @@ def get_perm(perm_path: str) -> PERM:
     number_line = tuple(int(num) for num in number_line.split(', '))
     return number_line
 
+def rotation_scheme(seq: list[tuple[NODE]]) -> list[list[NODE]]:
+    rotations = []
+    current = [*seq[0]]
+    seq.pop(0)
+    for _ in range(len(seq)):
+        last = current[-1]
+        for x, y in seq:
+            other = (x == last) * y + (y == last) * x
+            if other:
+                seq.remove((x, y))
+                if other == current[0]:
+                    rotations.append(current)
+                    if seq:
+                        current = [*seq[0]]
+                        seq.pop(0)
+                else:
+                    current.append(other)
+                break
+
+    return rotations
 
 class Graph():
     def __init__(file_path: str, file_type: str) -> None:
@@ -75,10 +95,12 @@ class Graph():
                 return False
         return True
 
-    def check_components(self, perm: PERM) -> bool:
-        def inverse_perm(self, perm: PERM) -> PERM:
-            return tuple()
-
+    def n_inverse_edges_components(self, degree_six: NODE, perm: PERM) -> int:
+        inverse_edges = tuple(
+            self.id_edge_map[perm.index(self.edge_id_map[edge]) + 1]
+            for edge in self.get_vstar(degree_six)
+        )
+        return nx.number_connected_compnonents(nx.Graph(inverse_edges))
 
     def check_cycle(self, node: NODE, perm: PERM) -> bool:
         dual_face = self.get_dual_face(node, perm)
@@ -88,8 +110,37 @@ class Graph():
                 return False
         return True
 
-    def check_bowtie(self, node: NODE, perm: PERM) -> bool:
-        ...
+    def check_bowtie(self, degree_six_node: NODE, perm: PERM) -> bool:
+        without_cross = self.get_dual_face(degree_six_node, perm)
+        for node in without_cross.nodes:
+            if without_cross.degree(node) == 4:
+                cross_node = node
+                break
+        without_cross.remove_node(cross_node)
+        outer_nodes = tuple(without_cross.nodes)
+
+        # alpha and delta are neighbors & beta and gamma are neighbors
+        alpha = outer_nodes[0]
+        beta = None
+        gamma = None
+        delta = None
+        for node in outer_nodes:
+            if without_cross.has_edge(alpha, node)
+                delta = node
+            elif not beta:
+                beta = node
+            else:
+                gamma = node
+
+        passes = [(alpha, beta), (gamma, delta)]
+        for node in list(self.graph.nodes).remove(degree_six_node):
+            dual_face = self.get_dual_face(node, perm)
+            for dual_node in dual_face.nodes:
+                if dual_node == degree_six_node:
+                    passes.append(tuple(dual_face.neighbors(dual_node)))
+
+        if len(rotation_scheme(passes)) > 1:
+            ...
 
 def process_perm(
         perm_path: str,
