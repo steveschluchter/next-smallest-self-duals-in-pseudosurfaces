@@ -84,7 +84,7 @@ class Graph():
             for edge in vstar
         )
 
-    def get_dual_face(self, node: NODE, perm: PERM) -> nx.classes.graph.Graph
+    def get_dual_face(self, node: NODE, perm: PERM) -> nx.classes.graph.Graph:
         return nx.Graph(
             self.get_dual_edges(self.get_vstar(self.graph, node), perm)
         )
@@ -139,8 +139,8 @@ class Graph():
                 if dual_node == degree_six_node:
                     passes.append(tuple(dual_face.neighbors(dual_node)))
 
-        if len(rotation_scheme(passes)) > 1:
-            ...
+        passed = rotation_scheme(passes)
+        ...
 
 def process_perm(
         perm_path: str,
@@ -148,15 +148,13 @@ def process_perm(
     ) -> None:
     perm = get_perm(perm_path)
 
-    if not check_self_dual(graph, perm, edge_id_map, id_edge_map):
+    if not graph.check_self_dual_perm(perm):
         return
 
-    if not degree_sixes:
+    if not graph.degree_sixes:
         return
 
-    boundry_walks = get_boundry_walks(...)
-    n_umbrellas = get_n_umbrellas(boundry_walks)
-    print(n_umbrellas)
+    ...
 
 def main() -> None:
     parser = ArgumentParser()
