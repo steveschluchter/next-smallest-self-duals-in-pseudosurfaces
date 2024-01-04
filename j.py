@@ -5,18 +5,33 @@ from argparse import ArgumentParser
 from sys import exit as sys_exit
 
 from typing import Optional
+from io import TextIOWrapper
 
 
+STANDARD_OUT_STR = 'standard_out'
+RESULTS_FILE_STR = 'results_file'
 TEXT_DIR = 'perm_txts'
+RESULTS_DIR = 'results'
 PERM = tuple[int]
 NODE = int
 EDGE = tuple[NODE]
 EDGE_TO_ID_MAP = dict[EDGE, NODE]
 ID_TO_EDGE_MAP = dict[NODE, EDGE]
 
+def log_info(
+        mssg: str,
+        res_file: Optional[TextIOWrapper] = None,
+        out: Optional[str] = 'all'
+    ) -> None:
+    ALL_STR = 'all'
+    if out in (STANDARD_OUT_STR, ALL_STR):
+        print(mssg)
+    if out in (RESULTS_FILE_STR, ALL_STR):
+        res_file.write(mssg + '\n')
+    return
 
 def get_perm(perm_path: str) -> PERM:
-    with open(file_path) as f:
+    with open(perm_path) as f:
         number_line = f.read()
     number_line = number_line[len('The permutation ('):].split(')')[0]
     number_line = tuple(int(num) for num in number_line.split(', '))
@@ -40,36 +55,35 @@ def rotation_scheme(seq: list[tuple[NODE]]) -> list[list[NODE]]:
                 else:
                     current.append(other)
                 break
-
     return rotations
 
 class Graph():
-    def __init__(file_path: str, file_type: str) -> None:
-        if file_type == 'graph':
-            self.graph = nx.read_edgelist(file_path, nodetype=int)
-        elif file_type == 'perm':
-            self.graph = self.graph_from_perm(file_path)
-        else:
-            sys_exit("Bad file_type. Use 'graph' or 'perm'")
+    def __init__(
+            self,
+            file_path: str,
+            res_file: Optional[TextIOWrapper] = None
+        ) -> None:
+        self.graph = nx.read_edgelist(file_path, nodetype=int)
+        self.degree_six_nodes = self.get_degree_six_nodes()
+        self.edge_id_map = self.get_edge_id_map()
+        self.id_edge_map = self.get_id_edge_map()
 
-        self.degree_six_nodes = get_degree_sixes()
-        self.edge_id_map = get_edge_id_map()
-        self.id_edge_map = get_id_edge_map()
+        self.res_file = res_file
 
     def graph_from_perm(perm_path: str) -> nx.classes.graph.Graph:
         gf = os.path.splitext(os.path.split(perm_path)[-1])[0].split('-')[0]
         return nx.read_edgelist(gf, nodetype=int)
 
-    def get_degree_sixes(self) -> tuple[NODE]:
+    def get_degree_six_nodes(self) -> tuple[NODE]:
         return tuple(
             node for node in self.graph.nodes if self.graph.degree(node) == 6
         )
 
     def get_edge_id_map(self) -> EDGE_TO_ID_MAP:
-        return {edge: id for id, edge in enumerate(self.graph.edges)}
+        return {edge: id for id, edge in enumerate(self.graph.edges, start=1)}
 
     def get_id_edge_map(self) -> ID_TO_EDGE_MAP:
-        return {id: edge for id, edge in enumerate(self.graph.edges)}
+        return {id: edge for id, edge in enumerate(self.graph.edges, start=1)}
 
     def get_vstar(self, node: NODE) -> tuple[EDGE]:
         return tuple((min(edge), max(edge)) for edge in self.graph.edges(node))
@@ -85,13 +99,15 @@ class Graph():
         )
 
     def get_dual_face(self, node: NODE, perm: PERM) -> nx.classes.graph.Graph:
-        return nx.Graph(
-            self.get_dual_edges(self.get_vstar(self.graph, node), perm)
-        )
+        return nx.Graph(self.get_dual_edges(self.get_vstar(node), perm))
 
-    def check_self_dual_perm(perm: PERM): -> bool:
+    def check_self_dual_perm(self, perm: PERM) -> bool:
         for node in self.graph.nodes:
             if not nx.is_eulerian(self.get_dual_face(node, perm)):
+                log_info(
+                    f'Perm-map of star(v_{node}) was not eulerian',
+                    self.res_file
+                )
                 return False
         return True
 
@@ -110,7 +126,15 @@ class Graph():
                 return False
         return True
 
-    def check_bowtie(self, degree_six_node: NODE, perm: PERM) -> bool:
+    def check_bowtie_for_pinch_point(
+        self,
+        degree_six_node: NODE,
+        perm: PERM
+    ) -> bool:
+        log_info(
+            f'perm(star(degree-six node: {degree_six_node})) is a bowtie',
+            self.res_file
+        )
         without_cross = self.get_dual_face(degree_six_node, perm)
         for node in without_cross.nodes:
             if without_cross.degree(node) == 4:
@@ -125,7 +149,7 @@ class Graph():
         gamma = None
         delta = None
         for node in outer_nodes:
-            if without_cross.has_edge(alpha, node)
+            if without_cross.has_edge(alpha, node):
                 delta = node
             elif not beta:
                 beta = node
@@ -139,40 +163,127 @@ class Graph():
                 if dual_node == degree_six_node:
                     passes.append(tuple(dual_face.neighbors(dual_node)))
 
-        passed = rotation_scheme(passes)
+        def check_passes(current_passes):
+            log_info(f'Using pass sequence: {current_passes}', self.res_file)
+            rs = rotation_scheme(passes)
+            loginfo(f'Rotation Scheme is: {rs}', self.res_file)
+            if len(rs) == 2:
+                return True
+
+        if check_passes(passes):
+            return True
+
+        # Other use of bowtie edges
+        passes = [(alpha, gamma), (beta, delta), *(passes[2:])]
+        if check_passes(passes):
+            return True
+
+        log_info(
+            'Neither use of the bowtie produced a pinch point',
+            self.res_file
+        )
+        return False
+
+    def get_n_pinch_points(self, perm: PERM) -> int:
+        npp = 0
+        for node in self.degree_six_nodes:
+            if self.check_cycle(node, perm):
+                if self.n_inverse_edges_components(node, perm) == 2:
+                    npp += 1
+            elif self.check_bowtie_for_pinch_point(node, perm):
+                npp += 1
+        return npp
+
+    def check_orientable(self, perm: PERM) -> bool:
         ...
 
-def process_perm(
-        perm_path: str,
-        graph: Graph,
-    ) -> None:
+def process_perm(perm_path: str, graph: Graph) -> bool:
     perm = get_perm(perm_path)
 
+    log_info('', graph.res_file)
+    log_info('-'*50, graph.res_file)
+    log_info(f'Perm: {perm}', graph.res_file)
+    log_info('-'*50, graph.res_file)
+
     if not graph.check_self_dual_perm(perm):
-        return
+        log_info(f'Perm is not an ADC', graph.res_file)
+        return False
 
-    if not graph.degree_sixes:
-        return
+    n_pinches = graph.get_n_pinches(perm)
+    if n_pinches == 1:
+        log_info('Solution Found: Pinched Projective Plane', graph.res_file)
+        return True
 
-    ...
+    if n_pinches == 2:
+        log_info('Solution Found: 2-pinch-point Sphere', graph.res_file)
+        return True
+
+    if n_pinches == 0:
+        is_orientable = graph.check_orientable(perm)
+        if is_orientable:
+            log_info('Solution Found: Torus', graph.res_file)
+            return True
+        else:
+            log_info('Solution Found: Klien Bottle', graph.res_file)
+            return True
+    else:
+        log_info('No Solution Found', graph.res_file)
+
+    return False
+
 
 def main() -> None:
     parser = ArgumentParser()
-    parser.add_argument('-g', dest='graph_file')
+    parser.add_argument('graph_file')
     parser.add_argument('-m', dest='max_perms', type=int, default=None)
+    parser.add_argument('-r', dest='refresh_results', action='store_true')
     args = parser.parse_args()
 
-    perm_pattern = f'{args.graph_file}-*' if args.graph_file else '*'
-    perm_files = sorted(glob(
-        os.path.join(TEXT_DIR, perm_pattern)
-    ))[:args.max_perms]
+    os.makedirs(RESULTS_DIR, exist_ok=True)
+    if args.refresh_results:
+        for path in glob(os.path.join(RESULTS_DIR, '*')):
+            os.remove(path)
 
-    graph = Graph(args.graph_file, 'graph') if args.graph_file else None
+    results_file = os.path.join(
+        RESULTS_DIR,
+        f'{os.path.split(args.graph_file)[-1]}-results.txt'
+    )
 
-    for perm_file in perm_files:
-        if not graph:
-            graph = Graph(perm_file, 'perm')
-        process_perm(perm_file, graph)
+    perm_pattern = os.path.join(TEXT_DIR, f'{args.graph_file}-*')
+    perm_files = sorted(glob(perm_pattern))[:args.max_perms]
+
+    with open(results_file, 'w') as res_file_wrapper:
+        with open(args.graph_file) as graph_file:
+            graph = Graph(graph_file, res_file_wrapper)
+
+        graph_edge_str = ''
+        for i, edge in enumerate(graph.graph.edges):
+            graph_edge_str += f'Edge {i + 1}: {edge}\n'
+
+        log_info('Graph Edges:', res_file_wrapper)
+        log_info(graph_edge_str, res_file_wrapper)
+
+        if not graph.degree_six_nodes:
+            log_info('No degree six nodes', res_file_wrapper)
+            return
+        log_info(
+            f'Degree six nodes are: {graph.degree_six_nodes}',
+            res_file_wrapper
+        )
+
+        solutions = 0
+        for perm_file in perm_files:
+            perm_solution = process_perm(perm_file, graph)
+            if perm_solution:
+                solutions += 1
+
+        log_info('', res_file_wrapper)
+        log_info('-'*50, res_file_wrapper)
+        log_info(f'Summary', res_file_wrapper)
+        log_info('-'*50, res_file_wrapper)
+        log_info(f'Solutions Found: {solutions}', res_file_wrapper)
+
+    return
 
 if __name__ == '__main__':
     main()
