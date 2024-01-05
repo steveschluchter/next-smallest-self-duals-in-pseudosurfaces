@@ -2,7 +2,8 @@ import os
 from glob import glob
 import networkx as nx
 from argparse import ArgumentParser
-from sys import exit as sys_exit
+#from sys import exit as sys_exit
+import matplotlib.pyplot as plt
 
 from typing import Optional
 from io import TextIOWrapper
@@ -10,19 +11,19 @@ from io import TextIOWrapper
 
 STANDARD_OUT_STR = 'standard_out'
 RESULTS_FILE_STR = 'results_file'
-TEXT_DIR = 'perm_txts'
 RESULTS_DIR = 'results'
 PERM = tuple[int]
 NODE = int
 EDGE = tuple[NODE]
 EDGE_TO_ID_MAP = dict[EDGE, NODE]
 ID_TO_EDGE_MAP = dict[NODE, EDGE]
+DIV_LENGTH = 60
 
 def log_info(
-        mssg: str,
-        res_file: Optional[TextIOWrapper] = None,
-        out: Optional[str] = 'all'
-    ) -> None:
+    mssg: str,
+    res_file: Optional[TextIOWrapper] = None,
+    out: Optional[str] = 'all'
+) -> None:
     ALL_STR = 'all'
     if out in (STANDARD_OUT_STR, ALL_STR):
         print(mssg)
@@ -59,10 +60,10 @@ def rotation_scheme(seq: list[tuple[NODE]]) -> list[list[NODE]]:
 
 class Graph():
     def __init__(
-            self,
-            file_path: str,
-            res_file: Optional[TextIOWrapper] = None
-        ) -> None:
+        self,
+        file_path: str,
+        res_file: Optional[TextIOWrapper] = None
+    ) -> None:
         self.graph = nx.read_edgelist(file_path, nodetype=int)
         self.degree_six_nodes = self.get_degree_six_nodes()
         self.edge_id_map = self.get_edge_id_map()
@@ -88,11 +89,7 @@ class Graph():
     def get_vstar(self, node: NODE) -> tuple[EDGE]:
         return tuple((min(edge), max(edge)) for edge in self.graph.edges(node))
 
-    def get_dual_edges(
-            self,
-            vstar: tuple[EDGE],
-            perm: PERM
-        ) -> tuple[EDGE]:
+    def get_dual_edges(self, vstar: tuple[EDGE], perm: PERM) -> tuple[EDGE]:
         return tuple(
             self.id_edge_map[perm[self.edge_id_map[edge] - 1]]
             for edge in vstar
@@ -104,8 +101,11 @@ class Graph():
     def check_self_dual_perm(self, perm: PERM) -> bool:
         for node in self.graph.nodes:
             if not nx.is_eulerian(self.get_dual_face(node, perm)):
+                if perm == (11, 9, 13, 6, 12, 3, 10, 2, 14, 7, 1, 4, 5, 8):
+                    nx.draw(self.get_dual_face(node, perm), with_labels=True)
+                    plt.show()
                 log_info(
-                    f'Perm-map of star(v_{node}) was not eulerian',
+                    f'perm(star({node})) was not eulerian',
                     self.res_file
                 )
                 return False
@@ -197,44 +197,45 @@ class Graph():
     def check_orientable(self, perm: PERM) -> bool:
         ...
 
-def process_perm(perm_path: str, graph: Graph) -> bool:
+def process_perm(perm_path: str, graph: Graph) -> tuple[bool]:
+    """ Return: (is_ADC_bool, is_solution_bool) """
     perm = get_perm(perm_path)
 
     log_info('', graph.res_file)
-    log_info('-'*50, graph.res_file)
+    log_info('-' * DIV_LENGTH, graph.res_file)
     log_info(f'Perm: {perm}', graph.res_file)
-    log_info('-'*50, graph.res_file)
+    log_info('-' * DIV_LENGTH, graph.res_file)
 
     if not graph.check_self_dual_perm(perm):
         log_info(f'Perm is not an ADC', graph.res_file)
-        return False
+        return (False, False)
 
     n_pinches = graph.get_n_pinches(perm)
     if n_pinches == 1:
         log_info('Solution Found: Pinched Projective Plane', graph.res_file)
-        return True
+        return (False, True)
 
     if n_pinches == 2:
         log_info('Solution Found: 2-pinch-point Sphere', graph.res_file)
-        return True
+        return (False, True)
 
     if n_pinches == 0:
         is_orientable = graph.check_orientable(perm)
         if is_orientable:
             log_info('Solution Found: Torus', graph.res_file)
-            return True
+            return (False, True)
         else:
             log_info('Solution Found: Klien Bottle', graph.res_file)
-            return True
-    else:
-        log_info('No Solution Found', graph.res_file)
+            return (False, True)
 
-    return False
+    log_info('No Solution Found', graph.res_file)
+    return (True, False)
 
 
 def main() -> None:
     parser = ArgumentParser()
     parser.add_argument('graph_file')
+    parser.add_argument('perm_pattern')
     parser.add_argument('-m', dest='max_perms', type=int, default=None)
     parser.add_argument('-r', dest='refresh_results', action='store_true')
     args = parser.parse_args()
@@ -249,8 +250,7 @@ def main() -> None:
         f'{os.path.split(args.graph_file)[-1]}-results.txt'
     )
 
-    perm_pattern = os.path.join(TEXT_DIR, f'{args.graph_file}-*')
-    perm_files = sorted(glob(perm_pattern))[:args.max_perms]
+    perm_files = sorted(glob(args.perm_pattern))[:args.max_perms]
 
     with open(results_file, 'w') as res_file_wrapper:
         with open(args.graph_file) as graph_file:
@@ -271,17 +271,22 @@ def main() -> None:
             res_file_wrapper
         )
 
-        solutions = 0
+        n_adc = 0
+        n_solution = 0
         for perm_file in perm_files:
             perm_solution = process_perm(perm_file, graph)
-            if perm_solution:
-                solutions += 1
+            if perm_solution[0]:
+                n_adc += 1
+                if perm_solution[1]:
+                    solutions += 1
 
         log_info('', res_file_wrapper)
-        log_info('-'*50, res_file_wrapper)
+        log_info('-' * DIV_LENGTH, res_file_wrapper)
         log_info(f'Summary', res_file_wrapper)
-        log_info('-'*50, res_file_wrapper)
-        log_info(f'Solutions Found: {solutions}', res_file_wrapper)
+        log_info('-' * DIV_LENGTH, res_file_wrapper)
+        log_info(f'Permutations checked: {len(perm_files)}', res_file_wrapper)
+        log_info(f'ADCs found: {n_adc}', res_file_wrapper)
+        log_info(f'Solutions found: {n_solution}', res_file_wrapper)
 
     return
 
