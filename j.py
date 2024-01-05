@@ -101,9 +101,9 @@ class Graph():
     def check_self_dual_perm(self, perm: PERM) -> bool:
         for node in self.graph.nodes:
             if not nx.is_eulerian(self.get_dual_face(node, perm)):
-                if perm == (11, 9, 13, 6, 12, 3, 10, 2, 14, 7, 1, 4, 5, 8):
-                    nx.draw(self.get_dual_face(node, perm), with_labels=True)
-                    plt.show()
+                #if perm == (11, 9, 13, 6, 12, 3, 10, 2, 14, 7, 1, 4, 5, 8):
+                #    nx.draw(self.get_dual_face(node, perm), with_labels=True)
+                #    plt.show()
                 log_info(
                     f'perm(star({node})) was not eulerian',
                     self.res_file
@@ -116,7 +116,7 @@ class Graph():
             self.id_edge_map[perm.index(self.edge_id_map[edge]) + 1]
             for edge in self.get_vstar(degree_six)
         )
-        return nx.number_connected_compnonents(nx.Graph(inverse_edges))
+        return nx.number_connected_components(nx.Graph(inverse_edges))
 
     def check_cycle(self, node: NODE, perm: PERM) -> bool:
         dual_face = self.get_dual_face(node, perm)
@@ -148,7 +148,7 @@ class Graph():
         beta = None
         gamma = None
         delta = None
-        for node in outer_nodes:
+        for node in outer_nodes[1:]:
             if without_cross.has_edge(alpha, node):
                 delta = node
             elif not beta:
@@ -157,7 +157,9 @@ class Graph():
                 gamma = node
 
         passes = [(alpha, beta), (gamma, delta)]
-        for node in list(self.graph.nodes).remove(degree_six_node):
+        for node in self.graph.nodes:
+            if node == degree_six_node:
+                continue
             dual_face = self.get_dual_face(node, perm)
             for dual_node in dual_face.nodes:
                 if dual_node == degree_six_node:
@@ -165,12 +167,12 @@ class Graph():
 
         def check_passes(current_passes):
             log_info(f'Using pass sequence: {current_passes}', self.res_file)
-            rs = rotation_scheme(passes)
-            loginfo(f'Rotation Scheme is: {rs}', self.res_file)
-            if len(rs) == 2:
+            rs = rotation_scheme(current_passes)
+            log_info(f'Rotation Scheme is: {rs}', self.res_file)
+            if len(rs) > 1:
                 return True
 
-        if check_passes(passes):
+        if check_passes(passes.copy()):
             return True
 
         # Other use of bowtie edges
@@ -188,7 +190,7 @@ class Graph():
         npp = 0
         for node in self.degree_six_nodes:
             if self.check_cycle(node, perm):
-                if self.n_inverse_edges_components(node, perm) == 2:
+                if self.n_inverse_edges_components(node, perm) > 1:
                     npp += 1
             elif self.check_bowtie_for_pinch_point(node, perm):
                 npp += 1
@@ -210,23 +212,23 @@ def process_perm(perm_path: str, graph: Graph) -> tuple[bool]:
         log_info(f'Perm is not an ADC', graph.res_file)
         return (False, False)
 
-    n_pinches = graph.get_n_pinches(perm)
+    n_pinches = graph.get_n_pinch_points(perm)
     if n_pinches == 1:
         log_info('Solution Found: Pinched Projective Plane', graph.res_file)
-        return (False, True)
+        return (True, True)
 
     if n_pinches == 2:
         log_info('Solution Found: 2-pinch-point Sphere', graph.res_file)
-        return (False, True)
+        return (True, True)
 
     if n_pinches == 0:
         is_orientable = graph.check_orientable(perm)
         if is_orientable:
             log_info('Solution Found: Torus', graph.res_file)
-            return (False, True)
+            return (True, True)
         else:
             log_info('Solution Found: Klien Bottle', graph.res_file)
-            return (False, True)
+            return (True, True)
 
     log_info('No Solution Found', graph.res_file)
     return (True, False)
@@ -278,7 +280,7 @@ def main() -> None:
             if perm_solution[0]:
                 n_adc += 1
                 if perm_solution[1]:
-                    solutions += 1
+                    n_solution += 1
 
         log_info('', res_file_wrapper)
         log_info('-' * DIV_LENGTH, res_file_wrapper)
