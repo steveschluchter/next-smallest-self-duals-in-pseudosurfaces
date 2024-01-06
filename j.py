@@ -126,15 +126,11 @@ class Graph():
                 return False
         return True
 
-    def check_bowtie_for_pinch_point(
+    def get_dual_bowtie_edge_options(
         self,
         degree_six_node: NODE,
         perm: PERM
-    ) -> bool:
-        log_info(
-            f'perm(star(degree-six node: {degree_six_node})) is a bowtie',
-            self.res_file
-        )
+    ) -> list[list[EDGE]]:
         without_cross = self.get_dual_face(degree_six_node, perm)
         for node in without_cross.nodes:
             if without_cross.degree(node) == 4:
@@ -156,32 +152,57 @@ class Graph():
             else:
                 gamma = node
 
-        passes = [(alpha, beta), (gamma, delta)]
+        return [
+            [(alpha, beta), (gamma, delta)],
+            [(alpha, gamma), (beta, delta)]
+        ]
+
+    def get_bowtie_pass_sequences(
+        self,
+        degree_six_node: NODE,
+        perm: PERM
+    ) -> list[list[EDGE]]:
+
+        pass_seqs = self.get_dual_bowtie_edge_options(degree_six_node, perm)
+
         for node in self.graph.nodes:
             if node == degree_six_node:
                 continue
             dual_face = self.get_dual_face(node, perm)
-            for dual_node in dual_face.nodes:
-                if dual_node == degree_six_node:
-                    passes.append(tuple(dual_face.neighbors(dual_node)))
+            if degree_six_node in dual_face.nodes:
+                if len(tuple(dual_face.neighbors(degree_six_node))) == 4:
+                    options = self.get_dual_bowtie_edge_options(node, perm)
+                    for pass_seq in pass_seqs:
+                        for option in options:
+                            pass_seq.extend(option)
+                else:
+                    for pass_seq in pass_seqs:
+                        pass_seq.append(
+                            tuple(dual_face.neighbors(degree_six_node))
+                        )
 
-        def check_passes(current_passes):
-            log_info(f'Using pass sequence: {current_passes}', self.res_file)
-            rs = rotation_scheme(current_passes)
+        return pass_seqs
+
+    def check_bowtie_for_pinch_point(
+        self,
+        degree_six_node: NODE,
+        perm: PERM
+    ) -> bool:
+        log_info(
+            f'perm(star(degree-six node: {degree_six_node})) is a bowtie',
+            self.res_file
+        )
+
+        seqs = self.get_bowtie_pass_sequences(degree_six_node, perm)
+        for passes in seqs:
+            log_info(f'Using pass sequence: {passes}', self.res_file)
+            rs = rotation_scheme(passes)
             log_info(f'Rotation Scheme is: {rs}', self.res_file)
             if len(rs) > 1:
                 return True
 
-        if check_passes(passes.copy()):
-            return True
-
-        # Other use of bowtie edges
-        passes = [(alpha, gamma), (beta, delta), *(passes[2:])]
-        if check_passes(passes):
-            return True
-
         log_info(
-            'Neither use of the bowtie produced a pinch point',
+            'None of the bowtie uses produced a pinch point',
             self.res_file
         )
         return False
