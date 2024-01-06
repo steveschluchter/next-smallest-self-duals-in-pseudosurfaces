@@ -1,9 +1,10 @@
 import os
 from glob import glob
 import networkx as nx
+from itertools import product
 from argparse import ArgumentParser
 #from sys import exit as sys_exit
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 
 from typing import Optional
 from io import TextIOWrapper
@@ -40,8 +41,8 @@ def get_perm(perm_path: str) -> PERM:
 
 def rotation_scheme(seq: list[tuple[NODE]]) -> list[list[NODE]]:
     rotations = []
-    current = [*seq[0]]
-    seq.pop(0)
+    start_tup = seq.pop(0)
+    current = [*start_tup]
     for _ in range(len(seq)):
         last = current[-1]
         for x, y in seq:
@@ -51,8 +52,8 @@ def rotation_scheme(seq: list[tuple[NODE]]) -> list[list[NODE]]:
                 if other == current[0]:
                     rotations.append(current)
                     if seq:
-                        current = [*seq[0]]
-                        seq.pop(0)
+                        start_tup = seq.pop(0)
+                        current = [*start_tup]
                 else:
                     current.append(other)
                 break
@@ -171,10 +172,10 @@ class Graph():
             dual_face = self.get_dual_face(node, perm)
             if degree_six_node in dual_face.nodes:
                 if len(tuple(dual_face.neighbors(degree_six_node))) == 4:
+                    pass_seqs.extend(pass_seqs)
                     options = self.get_dual_bowtie_edge_options(node, perm)
-                    for pass_seq in pass_seqs:
-                        for option in options:
-                            pass_seq.extend(option)
+                    for seq_idx, opt_idx in product(range(2), repeat=2):
+                        pass_seqs[seq_idx].extend(options[opt_idx])
                 else:
                     for pass_seq in pass_seqs:
                         pass_seq.append(
