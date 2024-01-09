@@ -241,15 +241,12 @@ class Graph():
         ]
 
         def get_option_instruction(node, option) -> int:
-            print(f'{node = }')
-            print(f'{option = }')
             return (
                 option if n_dual_bowtie_nodes == 1
                 else option[list(dual_bowtie_nodes).index(node)]
             )
 
         def get_bowtie_walk(center_node, bowtie_passes) -> list[EDGE]:
-            #print(f'{bowtie_passes = }')
             return [
                 (bowtie_passes[0][0], center_node),
                 (center_node, bowtie_passes[0][1]),
@@ -261,21 +258,18 @@ class Graph():
 
         def get_cycle_walk(edges) -> list[EDGE]:
             rs = list(rotation_scheme(edges)[0])
-            #print(f'{rs = }')
-            #print(f'{[tup for tup in zip(rs, rs[1:] + [rs[0]])] = }')
             return [tup for tup in zip(rs, rs[1:] + [rs[0]])]
 
         def get_oriented_walk(edge_count, walk) -> tuple[EDGE]:
             for edge in walk:
                 if edge in edge_count:
                     walk = tuple(tuple(reversed(edge)) for edge in walk)
-            #print(f'{edge_count = }')
-            #print(f'{walk = }')
+                    break
             return walk
 
         for option in options:
             edge_count = defaultdict(lambda: 0)
-            for node, dual_face in enumerate(dual_faces, start=1):
+            for node, dual_face in zip(self.graph.nodes, dual_faces):
                 if node in dual_bowtie_nodes:
                     bowtie_passes = self.get_dual_bowtie_edge_options(
                         node,
@@ -288,24 +282,18 @@ class Graph():
                 else:
                     walk = get_cycle_walk(list(dual_face.edges))
                 if not edge_count:
-                    print(f'{walk = }')
                     for edge in walk:
                         edge_count[edge] = 1
                 else:
                     walk = get_oriented_walk(edge_count, walk)
-                    print(f'oriented {walk = }')
                     for n1, n2 in walk:
                         if (n2, n1) in edge_count:
                             edge_count[(n2, n1)] -= 1
                         else:
                             edge_count[(n1, n2)] += 1
-            print(edge_count)
-            print(f'{len(edge_count) = }')
             if all(count == 0 for count in edge_count.values()):
-                return true
+                return True
         return False
-
-
 
 def process_perm(perm_path: str, graph: Graph) -> tuple[bool]:
     """ Return: (is_ADC_bool, is_solution_bool) """
@@ -321,6 +309,8 @@ def process_perm(perm_path: str, graph: Graph) -> tuple[bool]:
         return (False, False)
 
     n_pinches = graph.get_n_pinch_points(perm)
+    is_orientable = graph.check_orientable(perm)
+    log_info(f'Is orientable: {is_orientable}', graph.res_file)
     if n_pinches == 1:
         log_info('Solution Found: Pinched Projective Plane', graph.res_file)
         return (True, True)
@@ -330,7 +320,6 @@ def process_perm(perm_path: str, graph: Graph) -> tuple[bool]:
         return (True, True)
 
     if n_pinches == 0:
-        is_orientable = graph.check_orientable(perm)
         if is_orientable:
             log_info('Solution Found: Torus', graph.res_file)
             return (True, True)
