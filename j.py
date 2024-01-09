@@ -3,6 +3,7 @@ from glob import glob
 import networkx as nx
 from itertools import product
 from argparse import ArgumentParser
+from copy import deepcopy
 #from sys import exit as sys_exit
 #import matplotlib.pyplot as plt
 
@@ -129,10 +130,10 @@ class Graph():
 
     def get_dual_bowtie_edge_options(
         self,
-        degree_six_node: NODE,
+        source_node: NODE,
         perm: PERM
     ) -> list[list[EDGE]]:
-        without_cross = self.get_dual_face(degree_six_node, perm)
+        without_cross = self.get_dual_face(source_node, perm)
         for node in without_cross.nodes:
             if without_cross.degree(node) == 4:
                 cross_node = node
@@ -158,43 +159,45 @@ class Graph():
             [(alpha, gamma), (beta, delta)]
         ]
 
-    def get_bowtie_pass_sequences(
+    def get_pass_sequences(
         self,
         degree_six_node: NODE,
         perm: PERM
     ) -> list[list[EDGE]]:
-
-        pass_seqs = self.get_dual_bowtie_edge_options(degree_six_node, perm)
-
+        pass_seqs = [[]]
         for node in self.graph.nodes:
-            if node == degree_six_node:
-                continue
             dual_face = self.get_dual_face(node, perm)
             if degree_six_node in dual_face.nodes:
                 if len(tuple(dual_face.neighbors(degree_six_node))) == 4:
-                    pass_seqs.extend(pass_seqs)
                     options = self.get_dual_bowtie_edge_options(node, perm)
-                    for seq_idx, opt_idx in product(range(2), repeat=2):
-                        pass_seqs[seq_idx].extend(options[opt_idx])
+                    if pass_seqs == [[]]:
+                        pass_seqs = options
+                    else:
+                        pass_seqs.extend(deepcopy(pass_seqs))
+                        for option_ind, option in enumerate(options):
+                            pass_seqs[option_ind].extend(option)
                 else:
                     for pass_seq in pass_seqs:
                         pass_seq.append(
                             tuple(dual_face.neighbors(degree_six_node))
                         )
-
+        log_info(
+            f'Sequences found for node {degree_six_node}: {len(pass_seqs)}',
+            self.res_file
+        )
+        if len(pass_seqs) > 2:
+            log_info(
+                f'Found n_pass_seqs > 2 for node {degree_six_node}',
+                self.res_file
+            )
         return pass_seqs
 
-    def check_bowtie_for_pinch_point(
+    def check_pinch_point(
         self,
         degree_six_node: NODE,
         perm: PERM
     ) -> bool:
-        log_info(
-            f'perm(star(degree-six node: {degree_six_node})) is a bowtie',
-            self.res_file
-        )
-
-        seqs = self.get_bowtie_pass_sequences(degree_six_node, perm)
+        seqs = self.get_pass_sequences(degree_six_node, perm)
         for passes in seqs:
             log_info(f'Using pass sequence: {passes}', self.res_file)
             rs = rotation_scheme(passes)
@@ -211,10 +214,7 @@ class Graph():
     def get_n_pinch_points(self, perm: PERM) -> int:
         npp = 0
         for node in self.degree_six_nodes:
-            if self.check_cycle(node, perm):
-                if self.n_inverse_edges_components(node, perm) > 1:
-                    npp += 1
-            elif self.check_bowtie_for_pinch_point(node, perm):
+            if self.check_pinch_point(node, perm):
                 npp += 1
         return npp
 
