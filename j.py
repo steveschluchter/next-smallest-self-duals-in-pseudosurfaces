@@ -4,6 +4,7 @@ import networkx as nx
 from itertools import product
 from argparse import ArgumentParser
 from copy import deepcopy
+from collections import defaultdict
 #from sys import exit as sys_exit
 #import matplotlib.pyplot as plt
 
@@ -40,7 +41,7 @@ def get_perm(perm_path: str) -> PERM:
     number_line = tuple(int(num) for num in number_line.split(', '))
     return number_line
 
-def rotation_scheme(seq: list[tuple[NODE]]) -> list[list[NODE]]:
+def rotation_scheme(seq: list[tuple[NODE]]) -> list[tuple[NODE]]:
     rotations = []
     start_tup = seq.pop(0)
     current = [*start_tup]
@@ -51,7 +52,7 @@ def rotation_scheme(seq: list[tuple[NODE]]) -> list[list[NODE]]:
             if other:
                 seq.remove((x, y))
                 if other == current[0]:
-                    rotations.append(current)
+                    rotations.append(tuple(current))
                     if seq:
                         start_tup = seq.pop(0)
                         current = [*start_tup]
@@ -212,14 +213,99 @@ class Graph():
         return False
 
     def get_n_pinch_points(self, perm: PERM) -> int:
-        npp = 0
-        for node in self.degree_six_nodes:
-            if self.check_pinch_point(node, perm):
-                npp += 1
-        return npp
+        return sum(
+            1 for node in self.degree_six_nodes
+            if self.check_pinch_point(node, perm)
+        )
+
+    def get_dual_bowtie_nodes(self, perm: PERM) -> dict[NODE, NODE]:
+        dual_bowtie_nodes = {}
+        for degree_six_node in self.degree_six_nodes:
+            dual_face = self.get_dual_face(degree_six_node, perm)
+            for df_node in dual_face.nodes:
+                if len(tuple(dual_face.neighbors(df_node))) == 4:
+                    dual_bowtie_nodes[degree_six_node] = df_node
+        return dual_bowtie_nodes
 
     def check_orientable(self, perm: PERM) -> bool:
-        ...
+        dual_bowtie_nodes = self.get_dual_bowtie_nodes(perm)
+        n_dual_bowtie_nodes = len(dual_bowtie_nodes)
+        if n_dual_bowtie_nodes == 0:
+            options = (None,)
+        elif n_dual_bowtie_nodes == 1:
+            options = (0, 1)
+        elif n_dual_bowtie_nodes == 2:
+            options = tuple(product(range(2), repeat=2))
+        dual_faces = [
+            self.get_dual_face(node, perm) for node in self.graph.nodes
+        ]
+
+        def get_option_instruction(node, option) -> int:
+            print(f'{node = }')
+            print(f'{option = }')
+            return (
+                option if n_dual_bowtie_nodes == 1
+                else option[list(dual_bowtie_nodes).index(node)]
+            )
+
+        def get_bowtie_walk(center_node, bowtie_passes) -> list[EDGE]:
+            #print(f'{bowtie_passes = }')
+            return [
+                (bowtie_passes[0][0], center_node),
+                (center_node, bowtie_passes[0][1]),
+                (bowtie_passes[0][1], bowtie_passes[1][0]),
+                (bowtie_passes[1][0], center_node),
+                (center_node, bowtie_passes[1][1]),
+                (bowtie_passes[1][1], bowtie_passes[0][0])
+            ]
+
+        def get_cycle_walk(edges) -> list[EDGE]:
+            rs = list(rotation_scheme(edges)[0])
+            #print(f'{rs = }')
+            #print(f'{[tup for tup in zip(rs, rs[1:] + [rs[0]])] = }')
+            return [tup for tup in zip(rs, rs[1:] + [rs[0]])]
+
+        def get_oriented_walk(edge_count, walk) -> tuple[EDGE]:
+            for edge in walk:
+                if edge in edge_count:
+                    walk = tuple(tuple(reversed(edge)) for edge in walk)
+            #print(f'{edge_count = }')
+            #print(f'{walk = }')
+            return walk
+
+        for option in options:
+            edge_count = defaultdict(lambda: 0)
+            for node, dual_face in enumerate(dual_faces, start=1):
+                if node in dual_bowtie_nodes:
+                    bowtie_passes = self.get_dual_bowtie_edge_options(
+                        node,
+                        perm
+                    )[get_option_instruction(node, option)]
+                    walk = get_bowtie_walk(
+                        dual_bowtie_nodes[node],
+                        bowtie_passes
+                    )
+                else:
+                    walk = get_cycle_walk(list(dual_face.edges))
+                if not edge_count:
+                    print(f'{walk = }')
+                    for edge in walk:
+                        edge_count[edge] = 1
+                else:
+                    walk = get_oriented_walk(edge_count, walk)
+                    print(f'oriented {walk = }')
+                    for n1, n2 in walk:
+                        if (n2, n1) in edge_count:
+                            edge_count[(n2, n1)] -= 1
+                        else:
+                            edge_count[(n1, n2)] += 1
+            print(edge_count)
+            print(f'{len(edge_count) = }')
+            if all(count == 0 for count in edge_count.values()):
+                return true
+        return False
+
+
 
 def process_perm(perm_path: str, graph: Graph) -> tuple[bool]:
     """ Return: (is_ADC_bool, is_solution_bool) """
