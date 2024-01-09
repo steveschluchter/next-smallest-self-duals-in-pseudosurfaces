@@ -1,1 +1,0 @@
-The permutation (7, 14, 6, 5, 11, 9, 3, 8, 2, 12, 4, 13, 1, 10) is an algebraic dual permutation of graph11.
