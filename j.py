@@ -5,10 +5,10 @@ from itertools import product
 from argparse import ArgumentParser
 from copy import deepcopy
 from collections import defaultdict
-#from sys import exit as sys_exit
-#import matplotlib.pyplot as plt
+from itertools import permutations
 
 from typing import Optional
+from typing import Union
 from io import TextIOWrapper
 
 
@@ -104,9 +104,6 @@ class Graph():
     def check_self_dual_perm(self, perm: PERM) -> bool:
         for node in self.graph.nodes:
             if not nx.is_eulerian(self.get_dual_face(node, perm)):
-                #if perm == (11, 9, 13, 6, 12, 3, 10, 2, 14, 7, 1, 4, 5, 8):
-                #    nx.draw(self.get_dual_face(node, perm), with_labels=True)
-                #    plt.show()
                 log_info(
                     f'perm(star({node})) was not eulerian',
                     self.res_file
@@ -295,9 +292,10 @@ class Graph():
                 return True
         return False
 
-def process_perm(perm_path: str, graph: Graph) -> tuple[bool]:
+def process_perm(perm: Union[str, tuple[int]], graph: Graph) -> tuple[bool]:
     """ Return: (is_ADC_bool, is_solution_bool) """
-    perm = get_perm(perm_path)
+    if isinstance(perm, str):
+        perm = get_perm(perm)
 
     log_info('', graph.res_file)
     log_info('-' * DIV_LENGTH, graph.res_file)
@@ -349,8 +347,6 @@ def main() -> None:
         f'{os.path.split(args.graph_file)[-1]}-results.txt'
     )
 
-    perm_files = sorted(glob(args.perm_pattern))[:args.max_perms]
-
     with open(results_file, 'w') as res_file_wrapper:
         with open(args.graph_file) as graph_file:
             graph = Graph(graph_file, res_file_wrapper)
@@ -370,10 +366,19 @@ def main() -> None:
             res_file_wrapper
         )
 
+        perms = (
+            permutations(range(1, len(graph.graph.edges) + 1))
+            if args.perm_pattern == 'all'
+            else sorted(glob(args.perm_pattern))
+        )
+
         n_adc = 0
         n_solution = 0
-        for perm_file in perm_files:
-            perm_solution = process_perm(perm_file, graph)
+        for perm_n, perm in enumerate(perms, start=1):
+            if args.max_perms and perm_n > args.max_perms:
+                perm_n -= 1
+                break
+            perm_solution = process_perm(perm, graph)
             if perm_solution[0]:
                 n_adc += 1
                 if perm_solution[1]:
@@ -383,7 +388,7 @@ def main() -> None:
         log_info('-' * DIV_LENGTH, res_file_wrapper)
         log_info(f'Summary', res_file_wrapper)
         log_info('-' * DIV_LENGTH, res_file_wrapper)
-        log_info(f'Permutations checked: {len(perm_files)}', res_file_wrapper)
+        log_info(f'Permutations checked: {perm_n}', res_file_wrapper)
         log_info(f'ADCs found: {n_adc}', res_file_wrapper)
         log_info(f'Solutions found: {n_solution}', res_file_wrapper)
 
