@@ -6,6 +6,8 @@ from argparse import ArgumentParser
 from copy import deepcopy
 from collections import defaultdict
 from itertools import permutations
+from tqdm import tqdm
+from math import factorial
 
 from typing import Optional
 from typing import Union
@@ -104,10 +106,6 @@ class Graph():
     def check_self_dual_perm(self, perm: PERM) -> bool:
         for node in self.graph.nodes:
             if not nx.is_eulerian(self.get_dual_face(node, perm)):
-                log_info(
-                    f'perm(star({node})) was not eulerian',
-                    self.res_file
-                )
                 return False
         return True
 
@@ -190,7 +188,7 @@ class Graph():
             )
         return pass_seqs
 
-    def check_pinch_point(
+    def check_pinchpoint(
         self,
         degree_six_node: NODE,
         perm: PERM
@@ -209,10 +207,10 @@ class Graph():
         )
         return False
 
-    def get_n_pinch_points(self, perm: PERM) -> int:
+    def get_n_pinchpoints(self, perm: PERM) -> int:
         return sum(
             1 for node in self.degree_six_nodes
-            if self.check_pinch_point(node, perm)
+            if self.check_pinchpoint(node, perm)
         )
 
     def get_dual_bowtie_nodes(self, perm: PERM) -> dict[NODE, NODE]:
@@ -292,32 +290,42 @@ class Graph():
                 return True
         return False
 
-def process_perm(perm: Union[str, tuple[int]], graph: Graph) -> tuple[bool]:
+def process_perm(
+        perm: Union[str, tuple[int]],
+        graph: Graph,
+        log_level: int
+    ) -> tuple[bool]:
     """ Return: (is_ADC_bool, is_solution_bool) """
     if isinstance(perm, str):
         perm = get_perm(perm)
+
+    if not graph.check_self_dual_perm(perm):
+        if log_level > 1:
+            log_info('', graph.res_file)
+            log_info('-' * DIV_LENGTH, graph.res_file)
+            log_info(f'Perm: {perm}', graph.res_file)
+            log_info('-' * DIV_LENGTH, graph.res_file)
+            log_info(f'Perm is not an ADC', graph.res_file)
+        return (False, False)
 
     log_info('', graph.res_file)
     log_info('-' * DIV_LENGTH, graph.res_file)
     log_info(f'Perm: {perm}', graph.res_file)
     log_info('-' * DIV_LENGTH, graph.res_file)
 
-    if not graph.check_self_dual_perm(perm):
-        log_info(f'Perm is not an ADC', graph.res_file)
-        return (False, False)
-
-    n_pinches = graph.get_n_pinch_points(perm)
+    n_pinchpoints = graph.get_n_pinchpoints(perm)
     is_orientable = graph.check_orientable(perm)
+    log_info(f'Number of pinchpoints: {n_pinchpoints}', graph.res_file)
     log_info(f'Is orientable: {is_orientable}', graph.res_file)
-    if n_pinches == 1:
+    if n_pinchpoints == 1:
         log_info('Solution Found: Pinched Projective Plane', graph.res_file)
         return (True, True)
 
-    if n_pinches == 2:
+    if n_pinchpoints == 2:
         log_info('Solution Found: 2-pinch-point Sphere', graph.res_file)
         return (True, True)
 
-    if n_pinches == 0:
+    if n_pinchpoints == 0:
         if is_orientable:
             log_info('Solution Found: Torus', graph.res_file)
             return (True, True)
@@ -335,6 +343,7 @@ def main() -> None:
     parser.add_argument('perm_pattern')
     parser.add_argument('-m', dest='max_perms', type=int, default=None)
     parser.add_argument('-r', dest='refresh_results', action='store_true')
+    parser.add_argument('-v', dest='log_level', type=int, default=1)
     args = parser.parse_args()
 
     os.makedirs(RESULTS_DIR, exist_ok=True)
@@ -366,19 +375,20 @@ def main() -> None:
             res_file_wrapper
         )
 
-        perms = (
-            permutations(range(1, len(graph.graph.edges) + 1))
-            if args.perm_pattern == 'all'
-            else sorted(glob(args.perm_pattern))
-        )
+        if args.perm_pattern == 'all':
+            perms = permutations(range(1, len(graph.graph.edges) + 1))
+            n_perms = args.max_perms or factorial(len(graph.graph.edges))
+        else:
+            perms = sorted(glob(args.perm_pattern))
+            n_perms = min(args.max_perms, len(perms))
 
         n_adc = 0
         n_solution = 0
-        for perm_n, perm in enumerate(perms, start=1):
+        for perm_n, perm in enumerate(tqdm(perms, total=n_perms), start=1):
             if args.max_perms and perm_n > args.max_perms:
                 perm_n -= 1
                 break
-            perm_solution = process_perm(perm, graph)
+            perm_solution = process_perm(perm, graph, args.log_level)
             if perm_solution[0]:
                 n_adc += 1
                 if perm_solution[1]:
