@@ -23,6 +23,10 @@ EDGE = tuple[NODE]
 EDGE_TO_ID_MAP = dict[EDGE, NODE]
 ID_TO_EDGE_MAP = dict[NODE, EDGE]
 DIV_LENGTH = 60
+PINCHED_PORJECTIVE_PLANE = 'Pinched Projective Plane'
+TWO_PINCHPOINT_SPHERE = '2-pinchpoint Sphere'
+TORUS = 'Torus'
+KLIEN_BOTTLE = 'Klien Bottle'
 
 def log_info(
     mssg: str,
@@ -294,8 +298,7 @@ def process_perm(
         perm: Union[str, tuple[int]],
         graph: Graph,
         log_level: int
-    ) -> tuple[bool]:
-    """ Return: (is_ADC_bool, is_solution_bool) """
+    ) -> str:
     if isinstance(perm, str):
         perm = get_perm(perm)
 
@@ -306,7 +309,7 @@ def process_perm(
             log_info(f'Perm: {perm}', graph.res_file)
             log_info('-' * DIV_LENGTH, graph.res_file)
             log_info(f'Perm is not an ADC', graph.res_file)
-        return (False, False)
+        return ''
 
     log_info('', graph.res_file)
     log_info('-' * DIV_LENGTH, graph.res_file)
@@ -318,23 +321,20 @@ def process_perm(
     log_info(f'Number of pinchpoints: {n_pinchpoints}', graph.res_file)
     log_info(f'Is orientable: {is_orientable}', graph.res_file)
     if n_pinchpoints == 1:
-        log_info('Solution Found: Pinched Projective Plane', graph.res_file)
-        return (True, True)
+        log_info(f'Solution Found: {PINCHED_PORJECTIVE_PLANE}', graph.res_file)
+        return PINCHED_PORJECTIVE_PLANE
 
     if n_pinchpoints == 2:
-        log_info('Solution Found: 2-pinch-point Sphere', graph.res_file)
-        return (True, True)
+        log_info(f'Solution Found: {TWO_PINCHPOINT_SPHERE}', graph.res_file)
+        return TWO_PINCHPOINT_SPHERE
 
     if n_pinchpoints == 0:
         if is_orientable:
-            log_info('Solution Found: Torus', graph.res_file)
-            return (True, True)
+            log_info(f'Solution Found: {TORUS}', graph.res_file)
+            return TORUS
         else:
-            log_info('Solution Found: Klien Bottle', graph.res_file)
-            return (True, True)
-
-    log_info('No Solution Found', graph.res_file)
-    return (True, False)
+            log_info(f'Solution Found: {KLIEN_BOTTLE}', graph.res_file)
+            return KLIEN_BOTTLE
 
 
 def main() -> None:
@@ -383,16 +383,20 @@ def main() -> None:
             n_perms = min(args.max_perms, len(perms))
 
         n_adc = 0
-        n_solution = 0
+        solution_count = {
+            PINCHED_PORJECTIVE_PLANE: 0,
+            TWO_PINCHPOINT_SPHERE: 0,
+            TORUS: 0,
+            KLIEN_BOTTLE: 0,
+        }
         for perm_n, perm in enumerate(tqdm(perms, total=n_perms), start=1):
             if args.max_perms and perm_n > args.max_perms:
                 perm_n -= 1
                 break
             perm_solution = process_perm(perm, graph, args.log_level)
-            if perm_solution[0]:
+            if perm_solution:
                 n_adc += 1
-                if perm_solution[1]:
-                    n_solution += 1
+                solution_count[perm_solution] += 1
 
         log_info('', res_file_wrapper)
         log_info('-' * DIV_LENGTH, res_file_wrapper)
@@ -400,7 +404,8 @@ def main() -> None:
         log_info('-' * DIV_LENGTH, res_file_wrapper)
         log_info(f'Permutations checked: {perm_n}', res_file_wrapper)
         log_info(f'ADCs found: {n_adc}', res_file_wrapper)
-        log_info(f'Solutions found: {n_solution}', res_file_wrapper)
+        for solution, count in solution_count.items():
+            log_info(f'{solution} found: {count}', res_file_wrapper)
 
     return
 
