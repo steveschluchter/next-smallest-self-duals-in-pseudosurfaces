@@ -113,13 +113,6 @@ class Graph():
                 return False
         return True
 
-    def n_inverse_edges_components(self, degree_six: NODE, perm: PERM) -> int:
-        inverse_edges = tuple(
-            self.id_edge_map[perm.index(self.edge_id_map[edge]) + 1]
-            for edge in self.get_vstar(degree_six)
-        )
-        return nx.number_connected_components(nx.Graph(inverse_edges))
-
     def check_cycle(self, node: NODE, perm: PERM) -> bool:
         dual_face = self.get_dual_face(node, perm)
         node_degrees = dict(dual_face.degree(dual_face.nodes))
@@ -380,7 +373,9 @@ def main() -> None:
             n_perms = args.max_perms or factorial(len(graph.graph.edges))
         else:
             perms = sorted(glob(args.perm_pattern))
-            n_perms = min(args.max_perms, len(perms))
+            n_perms = len(perms)
+            if not perms:
+                exit(f'Didn\'t find perms with pattern: {args.perm_pattern}')
 
         n_adc = 0
         solution_count = {
