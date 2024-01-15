@@ -192,8 +192,12 @@ class Graph():
                         pass_seqs = options
                     else:
                         pass_seqs.extend(deepcopy(pass_seqs))
-                        for option_ind, option in enumerate(options):
-                            pass_seqs[option_ind].extend(option)
+                        n_seqs = len(pass_seqs)
+                        for seq_i, seq in enumerate(pass_seqs):
+                            if seq_i < n_seqs // 2:
+                                pass_seqs[option_ind].extend(options[0])
+                            else:
+                                pass_seqs[option_ind].extend(options[1])
                 # If degree_six_node isn't at the center of a bowtie, we know
                 # it only has two neighbors which respresent a pass
                 else:
