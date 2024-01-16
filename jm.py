@@ -9,7 +9,7 @@ from itertools import permutations
 from tqdm import tqdm
 from math import factorial
 
-import multiprocessing
+from multiprocessing import Pool
 from functools import partial
 
 from typing import Optional
@@ -34,7 +34,6 @@ TWO_PINCHPOINT_SPHERE = '2-pinchpoint Sphere'
 TORUS = 'Torus'
 KLIEN_BOTTLE = 'Klien Bottle'
 
-result_queue = multiprocessing.Queue()
 ALL_PERMS_N = factorial(14)
 
 def log_info(
@@ -240,7 +239,11 @@ class Graph():
         Perform rotation_scheme on each pass sequence for degree_six_node. If
         any produce more than 1 cycle (umbrella), we have found a pinchpoint.
         """
-        seqs = self.get_pass_sequences(degree_six_node, perm, perm_log=perm_log)
+        seqs = self.get_pass_sequences(
+            degree_six_node,
+            perm,
+            perm_log=perm_log
+        )
         for passes in seqs:
             log_perm(f'Using pass sequence: {passes}', perm_log=perm_log)
             rs = rotation_scheme(passes)
@@ -408,7 +411,10 @@ def process_perm(
         perm_log=perm_log
     )
     if n_pinchpoints == 1:
-        log_perm(f'Solution Found: {PINCHED_PORJECTIVE_PLANE}', perm_log=perm_log)
+        log_perm(
+            f'Solution Found: {PINCHED_PORJECTIVE_PLANE}',
+            perm_log=perm_log
+        )
         return PINCHED_PORJECTIVE_PLANE, perm_log
 
     if n_pinchpoints == 2:
@@ -466,10 +472,10 @@ def main() -> None:
 
         if args.perm_pattern == 'all':
             perms = permutations(range(1, len(graph.graph.edges) + 1))
-            n_perms = args.max_perms or ALL_PERMS_N
+            total_perms = args.max_perms or ALL_PERMS_N
         else:
             perms = sorted(glob(args.perm_pattern))
-            n_perms = len(perms)
+            total_perms = len(perms)
             if not perms:
                 exit(f'Didn\'t find perms with pattern: {args.perm_pattern}')
 
@@ -480,14 +486,16 @@ def main() -> None:
             TORUS: 0,
             KLIEN_BOTTLE: 0,
         }
-        with multiprocessing.Pool(processes=args.n_processes) as pool:
-            #print(n_perms)
+        with Pool(processes=args.n_processes) as pool:
             results = pool.imap_unordered(
                 partial(process_perm, graph=graph, log_level=args.log_level),
-                tqdm(perms, total=n_perms)
+                perms
             )
 
-            for perm_n, (perm_solution, log) in enumerate(results, start=1):
+            for perm_n, (perm_solution, log) in tqdm(
+                enumerate(results, start=1),
+                total=total_perms
+            ):
                 if args.max_perms and perm_n > args.max_perms:
                     perm_n -= 1
                     pool.terminate()
