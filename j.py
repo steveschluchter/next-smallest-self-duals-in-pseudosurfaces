@@ -8,6 +8,8 @@ from collections import defaultdict
 from itertools import permutations
 from tqdm import tqdm
 from math import factorial
+from re import finditer
+from functools import partial
 
 from typing import Optional
 from typing import Union
@@ -16,31 +18,41 @@ from io import TextIOWrapper
 
 STANDARD_OUT_STR = 'standard_out'
 RESULTS_FILE_STR = 'results_file'
+PERM_LOG_STR = 'perm_log_file'
 RESULTS_DIR = 'results'
 PERM = tuple[int]
 NODE = int
 EDGE = tuple[NODE]
 PASS = tuple[NODE]
+FACE_WALK = list[EDGE]
+GRAPH_WALK = tuple[FACE_WALK]
 EDGE_TO_ID_MAP = dict[EDGE, NODE]
 ID_TO_EDGE_MAP = dict[NODE, EDGE]
+PERM_LOG = list[str]
 DIV_LENGTH = 60
 PINCHED_PORJECTIVE_PLANE = 'Pinched Projective Plane'
 TWO_PINCHPOINT_SPHERE = '2-pinchpoint Sphere'
 TORUS = 'Torus'
 KLIEN_BOTTLE = 'Klien Bottle'
 
+ALL_PERMS_N = factorial(14)
+
 def log_info(
     mssg: str,
+    out: Optional[tuple[str]] = (STANDARD_OUT_STR, RESULTS_FILE_STR),
     res_file: Optional[TextIOWrapper] = None,
-    out: Optional[str] = 'all'
+    perm_log: Optional[list[str]] = None,
 ) -> None:
-    """ Log to screena and/or results file """
-    ALL_STR = 'all'
-    if out in (STANDARD_OUT_STR, ALL_STR):
+    """ Log to screen, results file, and/or individual perm log """
+    if STANDARD_OUT_STR in out:
         print(mssg)
-    if out in (RESULTS_FILE_STR, ALL_STR):
+    if RESULTS_FILE_STR in out:
         res_file.write(mssg + '\n')
+    if PERM_LOG_STR in out:
+        perm_log.append(mssg)
     return
+
+log_perm = partial(log_info, out=PERM_LOG_STR)
 
 def get_perm(perm_path: str) -> PERM:
     """ Parse individual perm from ADC-logging script """
@@ -80,15 +92,12 @@ class Graph():
     def __init__(
         self,
         file_path: str,
-        res_file: Optional[TextIOWrapper] = None
     ) -> None:
         """ Store frequently used values """
         self.graph = nx.read_edgelist(file_path, nodetype=int)
         self.degree_six_nodes = self.get_degree_six_nodes()
         self.edge_id_map = self.get_edge_id_map()
         self.id_edge_map = self.get_id_edge_map()
-
-        self.res_file = res_file
 
     def get_degree_six_nodes(self) -> tuple[NODE]:
         return tuple(
@@ -167,88 +176,6 @@ class Graph():
             [(alpha, gamma), (beta, delta)]
         ]
 
-    def get_pass_sequences(
-        self,
-        degree_six_node: NODE,
-        perm: PERM
-    ) -> list[list[PASS]]:
-        """
-        Get list of lists of passes through degree_six_node from
-        dual(vstar(node)) for all nodes in self.groph.
-        Pass (node_1, node2)
-            = (node_1, degree_six_node), (degree_six_node, node_2)
-        """
-        pass_seqs = [[]]
-        for node in self.graph.nodes:
-            dual_face = self.get_dual_face(node, perm)
-            if degree_six_node in dual_face.nodes:
-                """
-                If degree_six_node is the center of the bowtie, make a pass_seq
-                for each of the options from get_dual_bowtie_edge_options
-                """
-                if len(tuple(dual_face.neighbors(degree_six_node))) == 4:
-                    options = self.get_dual_bowtie_edge_options(node, perm)
-                    if pass_seqs == [[]]:
-                        pass_seqs = options
-                    else:
-                        pass_seqs.extend(deepcopy(pass_seqs))
-                        n_seqs = len(pass_seqs)
-                        for seq_i, seq in enumerate(pass_seqs):
-                            if seq_i < n_seqs // 2:
-                                pass_seqs[option_ind].extend(options[0])
-                            else:
-                                pass_seqs[option_ind].extend(options[1])
-                # If degree_six_node isn't at the center of a bowtie, we know
-                # it only has two neighbors which respresent a pass
-                else:
-                    for pass_seq in pass_seqs:
-                        pass_seq.append(
-                            tuple(dual_face.neighbors(degree_six_node))
-                        )
-        log_info(
-            f'Sequences found for node {degree_six_node}: {len(pass_seqs)}',
-            self.res_file
-        )
-        """
-        Note interesting casses where two nodes map to bowties with the same
-        center node
-        """
-        if len(pass_seqs) > 2:
-            log_info(
-                f'Found n_pass_seqs > 2 for node {degree_six_node}',
-                self.res_file
-            )
-        return pass_seqs
-
-    def check_pinchpoint(
-        self,
-        degree_six_node: NODE,
-        perm: PERM
-    ) -> bool:
-        """
-        Perform rotation_scheme on each pass sequence for degree_six_node. If
-        any produce more than 1 cycle (umbrella), we have found a pinchpoint.
-        """
-        seqs = self.get_pass_sequences(degree_six_node, perm)
-        for passes in seqs:
-            log_info(f'Using pass sequence: {passes}', self.res_file)
-            rs = rotation_scheme(passes)
-            log_info(f'Rotation Scheme is: {rs}', self.res_file)
-            if len(rs) > 1:
-                return True
-
-        log_info(
-            'None of the bowtie uses produced a pinch point',
-            self.res_file
-        )
-        return False
-
-    def get_n_pinchpoints(self, perm: PERM) -> int:
-        return sum(
-            1 for node in self.degree_six_nodes
-            if self.check_pinchpoint(node, perm)
-        )
-
     def get_dual_bowtie_nodes(self, perm: PERM) -> dict[NODE, NODE]:
         """
         Get dictionary of degree six node(s) (keys), if the dual of their
@@ -262,13 +189,9 @@ class Graph():
                     dual_bowtie_nodes[degree_six_node] = df_node
         return dual_bowtie_nodes
 
-    def check_orientable(self, perm: PERM) -> bool:
+    def get_dual_graph_walks(self, perm: PERM) -> list[GRAPH_WALK]:
         """
-        Check if it is possible to impose a consistent orientation on
-        dual(vstar(node)) for all nodes in self.graph. This means is it
-        possible to use each edge exacty as many times in one direction
-        (node_1, node_2) as the other (node_2, node_1) over all of their
-        boundry walks.
+        Get
         """
         # Determine how any bowties there are and therefore how many options we
         # have for the use of the bowtie edges
@@ -297,7 +220,7 @@ class Graph():
                 else option[list(dual_bowtie_nodes).index(node)]
             )
 
-        def get_bowtie_walk(center_node, bowtie_passes) -> list[EDGE]:
+        def get_bowtie_walk(center_node, bowtie_passes) -> FACE_WALK:
             """ Unpack bowtie passes into walk edges """
             return [
                 (bowtie_passes[0][0], center_node),
@@ -308,11 +231,72 @@ class Graph():
                 (bowtie_passes[1][1], bowtie_passes[0][0])
             ]
 
-        def get_cycle_walk(edges: list[EDGE]) -> list[EDGE]:
+        def get_cycle_walk(edges: list[EDGE]) -> FACE_WALK:
             """ Organize cycle edges with rotation_scheme """
             rs = list(rotation_scheme(edges)[0])
             return [tup for tup in zip(rs, rs[1:] + [rs[0]])]
 
+        dual_graph_walk_options = []
+        for option in options:
+            graph_walk = []
+            for node, dual_face in zip(self.graph.nodes, dual_faces):
+                if node in dual_bowtie_nodes:
+                    bowtie_passes = self.get_dual_bowtie_edge_options(
+                        node,
+                        perm
+                    )[get_option_instruction(node, option)]
+                    face_walk = get_bowtie_walk(
+                        dual_bowtie_nodes[node],
+                        bowtie_passes
+                    )
+                else:
+                    face_walk = get_cycle_walk(list(dual_face.edges))
+                graph_walk.append(face_walk)
+
+            dual_graph_walk_options.append(tuple(graph_walk))
+
+        return dual_graph_walk_options
+
+    def check_pinchpoint(
+        self,
+        degree_six_node: NODE,
+        graph_walk: GRAPH_WALK,
+        perm_log: PERM_LOG
+    ) -> bool:
+        pass_seq = []
+        for face_walk in graph_walk:
+            for edge_1, edge_2 in zip(
+                    face_walk,
+                    face_walk[1:] + [face_walk[0]]
+                ):
+                if edge_1[1] == degree_six_node and edge_2[0] == degree_six_node:
+                    pass_seq.append((edge_1[0], edge_2[1]))
+
+        log_perm(
+            f'Using pass sequence around node {degree_six_node}: {pass_seq}',
+            perm_log=perm_log
+        )
+        rs = rotation_scheme(pass_seq)
+        log_perm(f'Rotation Scheme is: {rs}', perm_log=perm_log)
+        return len(rs) > 1
+
+    def get_n_pinchpoints(
+        self,
+        graph_walk: GRAPH_WALK,
+        perm_log: PERM_LOG
+    ) -> int:
+        return sum(
+            1 for node in self.degree_six_nodes
+            if self.check_pinchpoint(node, graph_walk, perm_log=perm_log)
+        )
+
+    def check_orientable(
+        self,
+        graph_walk: GRAPH_WALK,
+        perm_log: PERM_LOG
+    ) -> bool:
+        """
+        """
         def get_oriented_walk(edge_count, walk) -> tuple[EDGE]:
             """
             If any edge in walk present in same direction in edge_count,
@@ -324,86 +308,74 @@ class Graph():
                     break
             return walk
 
-        for option in options:
-            edge_count = defaultdict(lambda: 0)
-            for node, dual_face in zip(self.graph.nodes, dual_faces):
-                if node in dual_bowtie_nodes:
-                    # Get relevant bowtie walk for current node and option
-                    bowtie_passes = self.get_dual_bowtie_edge_options(
-                        node,
-                        perm
-                    )[get_option_instruction(node, option)]
-                    walk = get_bowtie_walk(
-                        dual_bowtie_nodes[node],
-                        bowtie_passes
-                    )
+        edge_count = defaultdict(lambda: 0)
+        for face_walk in graph_walk:
+            face_walk = get_oriented_walk(edge_count, face_walk)
+            for n1, n2 in face_walk:
+                if (n2, n1) in edge_count:
+                    edge_count[(n2, n1)] -= 1
                 else:
-                    walk = get_cycle_walk(list(dual_face.edges))
-                if not edge_count:
-                    for edge in walk:
-                        edge_count[edge] = 1
+                    edge_count[(n1, n2)] += 1
+
+        return all(count == 0 for count in edge_count.values())
+
+    def check_dual_graph_walks(self, perm: PERM, perm_log: PERM_LOG) -> None:
+        """"""
+        log_perm_filled = partial(log_perm, perm_log=perm_log)
+        dual_graph_walks = self.get_dual_graph_walks(perm)
+        for walk in dual_graph_walks:
+            n_pinchpoints = self.get_n_pinchpoints(walk, perm_log=perm_log)
+            is_orientable = self.check_orientable(walk, perm_log=perm_log)
+            log_perm_filled(f'Number of pinchpoints: {n_pinchpoints}')
+            log_perm_filled(f'Is orientable: {is_orientable}')
+
+            if n_pinchpoints == 1:
+                log_perm_filled(f'Solution Found: {PINCHED_PORJECTIVE_PLANE}')
+            if n_pinchpoints == 2:
+                log_perm_filled(f'Solution Found: {TWO_PINCHPOINT_SPHERE}')
+            if n_pinchpoints == 0:
+                if is_orientable:
+                    log_perm_filled(f'Solution Found: {TORUS}')
                 else:
-                    # If not the first walk, need to orient walk based on
-                    # previous use of edges
-                    walk = get_oriented_walk(edge_count, walk)
-                    for n1, n2 in walk:
-                        if (n2, n1) in edge_count:
-                            edge_count[(n2, n1)] -= 1
-                        else:
-                            edge_count[(n1, n2)] += 1
-            if (
-                    all(count == 0 for count in edge_count.values())
-                    and len(edge_count) == 14
-                ):
-                return True
-        return False
+                    log_perm_filled(f'Solution Found: {KLIEN_BOTTLE}')
+
 
 def process_perm(
         perm: Union[str, tuple[int]],
         graph: Graph,
         log_level: int
-    ) -> str:
+    ) -> tuple[str, PERM_LOG]:
     """
     Return the 2-complex name, if any, in which graph.graph may be embedded
     where perm is assumed to represent an algebraic dual correspondence (ADC).
     """
+    perm_log = []
+    log_perm_filled = partial(log_perm, perm_log=perm_log)
+
     if isinstance(perm, str):
         perm = get_perm(perm)
 
     if not graph.check_self_dual_perm(perm):
         # Log separately if not an ADC to avoid excessive logging
         if log_level > 1:
-            log_info('', graph.res_file)
-            log_info('-' * DIV_LENGTH, graph.res_file)
-            log_info(f'Perm: {perm}', graph.res_file)
-            log_info('-' * DIV_LENGTH, graph.res_file)
-            log_info(f'Perm is not an ADC', graph.res_file)
-        return ''
+            log_perm_filled(
+                '\n'
+                + '-' * DIV_LENGTH + '\n'
+                + f'Perm: {perm}\n'
+                + '-' * DIV_LENGTH + '\n'
+                + f'Perm is not an ADC'
+            )
+        return perm_log
 
-    log_info('', graph.res_file)
-    log_info('-' * DIV_LENGTH, graph.res_file)
-    log_info(f'Perm: {perm}', graph.res_file)
-    log_info('-' * DIV_LENGTH, graph.res_file)
+    log_perm_filled(
+        '\n'
+        + '-' * DIV_LENGTH + '\n'
+        + f'Perm: {perm}\n'
+        + '-' * DIV_LENGTH
+    )
+    graph.check_dual_graph_walks(perm, perm_log)
 
-    n_pinchpoints = graph.get_n_pinchpoints(perm)
-    is_orientable = graph.check_orientable(perm)
-    log_info(f'Number of pinchpoints: {n_pinchpoints}', graph.res_file)
-    log_info(f'Is orientable: {is_orientable}', graph.res_file)
-    if n_pinchpoints == 1:
-        log_info(f'Solution Found: {PINCHED_PORJECTIVE_PLANE}', graph.res_file)
-        return PINCHED_PORJECTIVE_PLANE
-
-    if n_pinchpoints == 2:
-        log_info(f'Solution Found: {TWO_PINCHPOINT_SPHERE}', graph.res_file)
-        return TWO_PINCHPOINT_SPHERE
-
-    if n_pinchpoints == 0:
-        if is_orientable:
-            log_info(f'Solution Found: {TORUS}', graph.res_file)
-            return TORUS
-        else:
-            log_info(f'Solution Found: {KLIEN_BOTTLE}', graph.res_file)
-            return KLIEN_BOTTLE
+    return perm_log
 
 
 def main() -> None:
@@ -416,6 +388,7 @@ def main() -> None:
     parser.add_argument('-m', dest='max_perms', type=int, default=None)
     parser.add_argument('-r', dest='refresh_results', action='store_true')
     parser.add_argument('-v', dest='log_level', type=int, default=1)
+    parser.add_argument('-n', dest='n_processes', type=int, default=1)
     args = parser.parse_args()
 
     os.makedirs(RESULTS_DIR, exist_ok=True)
@@ -428,31 +401,29 @@ def main() -> None:
         f'{os.path.split(args.graph_file)[-1]}-results.txt'
     )
 
-    with open(results_file, 'w') as res_file_wrapper:
+    with open(results_file, 'w') as res_file_handle:
         with open(args.graph_file) as graph_file:
-            graph = Graph(graph_file, res_file_wrapper)
+            graph = Graph(graph_file)
 
-        graph_edge_str = ''
+        log_main = partial(log_info, res_file=res_file_handle)
+        log_main('Graph Edges:')
         for i, edge in enumerate(graph.graph.edges):
-            graph_edge_str += f'Edge {i + 1}: {edge}\n'
-
-        log_info('Graph Edges:', res_file_wrapper)
-        log_info(graph_edge_str, res_file_wrapper)
+            log_main(f'Edge {i + 1}: {edge}', res_file=res_file_handle)
 
         if not graph.degree_six_nodes:
-            log_info('No degree six nodes', res_file_wrapper)
+            log_main('No degree six nodes', res_file=res_file_handle)
             return
-        log_info(
+        log_main(
             f'Degree six nodes are: {graph.degree_six_nodes}',
-            res_file_wrapper
+            res_file=res_file_handle
         )
 
         if args.perm_pattern == 'all':
             perms = permutations(range(1, len(graph.graph.edges) + 1))
-            n_perms = args.max_perms or factorial(len(graph.graph.edges))
+            total_perms = args.max_perms or ALL_PERMS_N
         else:
             perms = sorted(glob(args.perm_pattern))
-            n_perms = len(perms)
+            total_perms = len(perms)
             if not perms:
                 exit(f'Didn\'t find perms with pattern: {args.perm_pattern}')
 
@@ -463,23 +434,31 @@ def main() -> None:
             TORUS: 0,
             KLIEN_BOTTLE: 0,
         }
-        for perm_n, perm in enumerate(tqdm(perms, total=n_perms), start=1):
-            if args.max_perms and perm_n > args.max_perms:
-                perm_n -= 1
-                break
-            perm_solution = process_perm(perm, graph, args.log_level)
-            if perm_solution:
-                n_adc += 1
-                solution_count[perm_solution] += 1
+        for perm_n, perm in tqdm(enumerate(perms, start=1), total=total_perms):
+                if args.max_perms and perm_n > args.max_perms:
+                    perm_n -= 1
+                    break
+                log = process_perm(perm, graph, args.log_level)
+                joined_log = '\n'.join(log)
+                if 'Solution Found' in joined_log:
+                    n_adc += 1
+                    for solution in solution_count:
+                        if solution in joined_log:
+                            solution_count[solution] += sum(
+                                1 for _ in finditer(solution, joined_log)
+                            )
+                    log_main(joined_log)
 
-        log_info('', res_file_wrapper)
-        log_info('-' * DIV_LENGTH, res_file_wrapper)
-        log_info(f'Summary', res_file_wrapper)
-        log_info('-' * DIV_LENGTH, res_file_wrapper)
-        log_info(f'Permutations checked: {perm_n}', res_file_wrapper)
-        log_info(f'ADCs found: {n_adc}', res_file_wrapper)
+        log_main(
+            '\n'
+            + '-' * DIV_LENGTH + '\n'
+            + f'Summary\n'
+            + '-' * DIV_LENGTH + '\n'
+            + f'Permutations checked: {perm_n}\n'
+            + f'ADCs found: {n_adc}'
+        )
         for solution, count in solution_count.items():
-            log_info(f'{solution} found: {count}', res_file_wrapper)
+            log_main(f'{solution} found: {count}')
 
     return
 
