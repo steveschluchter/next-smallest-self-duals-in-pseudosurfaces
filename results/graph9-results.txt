@@ -18,6 +18,7 @@ Degree six nodes are: (1,)
 ------------------------------------------------------------
 Perm: (11, 13, 8, 12, 7, 14, 5, 3, 10, 9, 1, 4, 2, 6)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
 Using pass sequence around node 1: [(6, 4), (6, 2), (4, 5), (7, 3), (3, 2), (7, 5)]
 Rotation Scheme is: [(6, 4, 5, 7, 3, 2)]
 Number of pinchpoints: 0
@@ -27,6 +28,7 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (1, 13, 8, 12, 5, 14, 7, 3, 10, 9, 11, 4, 2, 6)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
 Using pass sequence around node 1: [(6, 2), (4, 2), (4, 5), (7, 3), (3, 6), (7, 5)]
 Rotation Scheme is: [(6, 2, 4, 5, 7, 3)]
 Number of pinchpoints: 0
@@ -36,6 +38,7 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (1, 14, 7, 11, 6, 13, 8, 2, 10, 9, 12, 4, 3, 5)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
 Using pass sequence around node 1: [(7, 2), (3, 2), (3, 5), (6, 4), (4, 7), (6, 5)]
 Rotation Scheme is: [(7, 2, 3, 5, 6, 4)]
 Number of pinchpoints: 0
@@ -45,6 +48,7 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (11, 8, 13, 12, 14, 7, 3, 5, 10, 9, 4, 1, 6, 2)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
 Using pass sequence around node 1: [(6, 4), (4, 5), (6, 2), (7, 3), (7, 5), (3, 2)]
 Rotation Scheme is: [(6, 4, 5, 7, 3, 2)]
 Number of pinchpoints: 0
@@ -54,6 +58,7 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (12, 14, 7, 11, 8, 13, 6, 2, 10, 9, 1, 4, 3, 5)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
 Using pass sequence around node 1: [(7, 3), (7, 2), (3, 5), (6, 4), (4, 2), (6, 5)]
 Rotation Scheme is: [(7, 3, 5, 6, 4, 2)]
 Number of pinchpoints: 0
@@ -63,6 +68,7 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (1, 2, 3, 11, 8, 5, 6, 14, 9, 12, 10, 4, 7, 13)
 ------------------------------------------------------------
+star(1) maps to a bowtie
 Using pass sequence around node 1: [(2, 3), (6, 4), (7, 2), (7, 3), (5, 4), (5, 6)]
 Rotation Scheme is: [(2, 3, 7), (6, 4, 5)]
 Number of pinchpoints: 1
@@ -77,6 +83,7 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (1, 2, 3, 12, 6, 7, 13, 5, 9, 11, 4, 10, 14, 8)
 ------------------------------------------------------------
+star(1) maps to a bowtie
 Using pass sequence around node 1: [(2, 4), (7, 3), (6, 2), (5, 3), (6, 4), (5, 7)]
 Rotation Scheme is: [(2, 4, 6), (7, 3, 5)]
 Number of pinchpoints: 1
@@ -91,6 +98,7 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (12, 7, 14, 11, 13, 8, 2, 6, 10, 9, 4, 1, 5, 3)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
 Using pass sequence around node 1: [(7, 3), (3, 5), (7, 2), (6, 4), (6, 5), (4, 2)]
 Rotation Scheme is: [(7, 3, 5, 6, 4, 2)]
 Number of pinchpoints: 0
@@ -100,6 +108,7 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (1, 3, 2, 11, 5, 8, 14, 6, 9, 12, 4, 10, 13, 7)
 ------------------------------------------------------------
+star(1) maps to a bowtie
 Using pass sequence around node 1: [(2, 3), (6, 4), (7, 2), (5, 4), (7, 3), (5, 6)]
 Rotation Scheme is: [(2, 3, 7), (6, 4, 5)]
 Number of pinchpoints: 1
@@ -114,6 +123,7 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (1, 3, 2, 12, 7, 6, 5, 13, 9, 11, 10, 4, 8, 14)
 ------------------------------------------------------------
+star(1) maps to a bowtie
 Using pass sequence around node 1: [(2, 4), (7, 3), (6, 2), (6, 4), (5, 3), (5, 7)]
 Rotation Scheme is: [(2, 4, 6), (7, 3, 5)]
 Number of pinchpoints: 1
@@ -128,6 +138,7 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (13, 2, 3, 11, 8, 9, 6, 14, 5, 12, 10, 4, 7, 1)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
 Using pass sequence around node 1: [(3, 4), (6, 7), (7, 3), (5, 4), (6, 2), (5, 2)]
 Rotation Scheme is: [(3, 4, 5, 2, 6, 7)]
 Number of pinchpoints: 0
@@ -137,6 +148,7 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (13, 3, 2, 11, 9, 8, 14, 6, 5, 12, 4, 10, 1, 7)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
 Using pass sequence around node 1: [(3, 4), (6, 7), (5, 4), (7, 3), (6, 2), (5, 2)]
 Rotation Scheme is: [(3, 4, 5, 2, 6, 7)]
 Number of pinchpoints: 0
@@ -146,6 +158,7 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (14, 2, 3, 12, 9, 7, 13, 5, 6, 11, 4, 10, 1, 8)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
 Using pass sequence around node 1: [(4, 3), (7, 6), (5, 3), (6, 4), (7, 2), (5, 2)]
 Rotation Scheme is: [(4, 3, 5, 2, 7, 6)]
 Number of pinchpoints: 0
@@ -155,6 +168,7 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (14, 3, 2, 12, 7, 9, 5, 13, 6, 11, 10, 4, 8, 1)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
 Using pass sequence around node 1: [(4, 3), (7, 6), (6, 4), (5, 3), (7, 2), (5, 2)]
 Rotation Scheme is: [(4, 3, 5, 2, 7, 6)]
 Number of pinchpoints: 0
@@ -164,6 +178,7 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (1, 7, 14, 11, 13, 6, 2, 8, 10, 9, 4, 12, 5, 3)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
 Using pass sequence around node 1: [(7, 2), (3, 2), (3, 5), (6, 4), (6, 5), (4, 7)]
 Rotation Scheme is: [(7, 2, 3, 5, 6, 4)]
 Number of pinchpoints: 0
@@ -173,6 +188,7 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (1, 8, 13, 12, 14, 5, 3, 7, 10, 9, 4, 11, 6, 2)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
 Using pass sequence around node 1: [(6, 2), (4, 2), (4, 5), (7, 3), (7, 5), (3, 6)]
 Rotation Scheme is: [(6, 2, 4, 5, 7, 3)]
 Number of pinchpoints: 0
@@ -182,6 +198,7 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (2, 1, 14, 9, 10, 12, 11, 13, 4, 5, 7, 6, 8, 3)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
 Using pass sequence around node 1: [(2, 3), (5, 3), (6, 2), (7, 6), (5, 4), (7, 4)]
 Rotation Scheme is: [(2, 3, 5, 4, 7, 6)]
 Number of pinchpoints: 0
@@ -191,6 +208,7 @@ Solution Found: Torus
 ------------------------------------------------------------
 Perm: (2, 14, 1, 9, 12, 10, 13, 11, 4, 5, 6, 7, 3, 8)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
 Using pass sequence around node 1: [(2, 3), (5, 3), (7, 6), (6, 2), (5, 4), (7, 4)]
 Rotation Scheme is: [(2, 3, 5, 4, 7, 6)]
 Number of pinchpoints: 0
@@ -200,6 +218,7 @@ Solution Found: Torus
 ------------------------------------------------------------
 Perm: (3, 1, 13, 9, 10, 11, 12, 14, 4, 6, 8, 5, 7, 2)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
 Using pass sequence around node 1: [(2, 4), (5, 4), (7, 2), (6, 7), (5, 3), (6, 3)]
 Rotation Scheme is: [(2, 4, 5, 3, 6, 7)]
 Number of pinchpoints: 0
@@ -209,6 +228,7 @@ Solution Found: Torus
 ------------------------------------------------------------
 Perm: (3, 13, 1, 9, 11, 10, 14, 12, 4, 6, 5, 8, 2, 7)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
 Using pass sequence around node 1: [(2, 4), (5, 4), (6, 7), (7, 2), (5, 3), (6, 3)]
 Rotation Scheme is: [(2, 4, 5, 3, 6, 7)]
 Number of pinchpoints: 0
@@ -218,6 +238,7 @@ Solution Found: Torus
 ------------------------------------------------------------
 Perm: (5, 13, 8, 12, 1, 14, 11, 3, 10, 9, 7, 4, 2, 6)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
 Using pass sequence around node 1: [(2, 6), (4, 6), (4, 5), (7, 3), (3, 2), (7, 5)]
 Rotation Scheme is: [(2, 6, 4, 5, 7, 3)]
 Number of pinchpoints: 0
@@ -227,6 +248,7 @@ Solution Found: Torus
 ------------------------------------------------------------
 Perm: (5, 2, 3, 11, 8, 1, 6, 14, 13, 12, 10, 4, 7, 9)
 ------------------------------------------------------------
+star(1) maps to a bowtie
 Using pass sequence around node 1: [(6, 4), (2, 3), (7, 6), (7, 3), (5, 4), (5, 2)]
 Rotation Scheme is: [(6, 4, 5, 2, 3, 7)]
 Number of pinchpoints: 0
@@ -241,6 +263,7 @@ Solution Found: Torus
 ------------------------------------------------------------
 Perm: (5, 3, 2, 11, 1, 8, 14, 6, 13, 12, 4, 10, 9, 7)
 ------------------------------------------------------------
+star(1) maps to a bowtie
 Using pass sequence around node 1: [(6, 4), (2, 3), (7, 6), (5, 4), (7, 3), (5, 2)]
 Rotation Scheme is: [(6, 4, 5, 2, 3, 7)]
 Number of pinchpoints: 0
@@ -255,6 +278,7 @@ Solution Found: Torus
 ------------------------------------------------------------
 Perm: (5, 8, 13, 12, 14, 1, 3, 11, 10, 9, 4, 7, 6, 2)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
 Using pass sequence around node 1: [(2, 6), (4, 6), (4, 5), (7, 3), (7, 5), (3, 2)]
 Rotation Scheme is: [(2, 6, 4, 5, 7, 3)]
 Number of pinchpoints: 0
@@ -264,6 +288,7 @@ Solution Found: Torus
 ------------------------------------------------------------
 Perm: (6, 14, 7, 11, 1, 13, 12, 2, 10, 9, 8, 4, 3, 5)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
 Using pass sequence around node 1: [(2, 7), (3, 7), (3, 5), (6, 4), (4, 2), (6, 5)]
 Rotation Scheme is: [(2, 7, 3, 5, 6, 4)]
 Number of pinchpoints: 0
@@ -273,6 +298,7 @@ Solution Found: Torus
 ------------------------------------------------------------
 Perm: (6, 2, 3, 12, 1, 7, 13, 5, 14, 11, 4, 10, 9, 8)
 ------------------------------------------------------------
+star(1) maps to a bowtie
 Using pass sequence around node 1: [(7, 3), (2, 4), (6, 7), (5, 3), (6, 4), (5, 2)]
 Rotation Scheme is: [(7, 3, 5, 2, 4, 6)]
 Number of pinchpoints: 0
@@ -287,6 +313,7 @@ Solution Found: Torus
 ------------------------------------------------------------
 Perm: (6, 3, 2, 12, 7, 1, 5, 13, 14, 11, 10, 4, 8, 9)
 ------------------------------------------------------------
+star(1) maps to a bowtie
 Using pass sequence around node 1: [(7, 3), (2, 4), (6, 7), (6, 4), (5, 3), (5, 2)]
 Rotation Scheme is: [(7, 3, 5, 2, 4, 6)]
 Number of pinchpoints: 0
@@ -301,6 +328,7 @@ Solution Found: Torus
 ------------------------------------------------------------
 Perm: (6, 7, 14, 11, 13, 1, 2, 12, 10, 9, 4, 8, 5, 3)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
 Using pass sequence around node 1: [(2, 7), (3, 7), (3, 5), (6, 4), (6, 5), (4, 2)]
 Rotation Scheme is: [(2, 7, 3, 5, 6, 4)]
 Number of pinchpoints: 0
@@ -310,6 +338,7 @@ Solution Found: Torus
 ------------------------------------------------------------
 Perm: (7, 13, 8, 12, 11, 14, 1, 3, 10, 9, 5, 4, 2, 6)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
 Using pass sequence around node 1: [(4, 2), (6, 2), (4, 5), (7, 3), (6, 3), (7, 5)]
 Rotation Scheme is: [(4, 2, 6, 3, 7, 5)]
 Number of pinchpoints: 0
@@ -319,6 +348,7 @@ Solution Found: Torus
 ------------------------------------------------------------
 Perm: (7, 8, 13, 12, 14, 11, 3, 1, 10, 9, 4, 5, 6, 2)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
 Using pass sequence around node 1: [(4, 2), (4, 5), (6, 2), (7, 3), (7, 5), (6, 3)]
 Rotation Scheme is: [(4, 2, 6, 3, 7, 5)]
 Number of pinchpoints: 0
@@ -328,6 +358,7 @@ Solution Found: Torus
 ------------------------------------------------------------
 Perm: (8, 14, 7, 11, 12, 13, 1, 2, 10, 9, 6, 4, 3, 5)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
 Using pass sequence around node 1: [(3, 2), (7, 2), (3, 5), (6, 4), (7, 4), (6, 5)]
 Rotation Scheme is: [(3, 2, 7, 4, 6, 5)]
 Number of pinchpoints: 0
@@ -337,6 +368,7 @@ Solution Found: Torus
 ------------------------------------------------------------
 Perm: (8, 7, 14, 11, 13, 12, 2, 1, 10, 9, 4, 6, 5, 3)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
 Using pass sequence around node 1: [(3, 2), (3, 5), (7, 2), (6, 4), (6, 5), (7, 4)]
 Rotation Scheme is: [(3, 2, 7, 4, 6, 5)]
 Number of pinchpoints: 0
@@ -346,6 +378,7 @@ Solution Found: Torus
 ------------------------------------------------------------
 Perm: (9, 2, 3, 11, 8, 13, 6, 14, 1, 12, 10, 4, 7, 5)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
 Using pass sequence around node 1: [(3, 4), (7, 2), (7, 3), (5, 4), (6, 2), (6, 5)]
 Rotation Scheme is: [(3, 4, 5, 6, 2, 7)]
 Number of pinchpoints: 0
@@ -355,6 +388,7 @@ Solution Found: Torus
 ------------------------------------------------------------
 Perm: (9, 2, 3, 12, 14, 7, 13, 5, 1, 11, 4, 10, 6, 8)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
 Using pass sequence around node 1: [(4, 3), (6, 2), (5, 3), (6, 4), (7, 2), (7, 5)]
 Rotation Scheme is: [(4, 3, 5, 7, 2, 6)]
 Number of pinchpoints: 0
@@ -364,6 +398,7 @@ Solution Found: Torus
 ------------------------------------------------------------
 Perm: (9, 3, 2, 11, 13, 8, 14, 6, 1, 12, 4, 10, 5, 7)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
 Using pass sequence around node 1: [(3, 4), (7, 2), (5, 4), (7, 3), (6, 2), (6, 5)]
 Rotation Scheme is: [(3, 4, 5, 6, 2, 7)]
 Number of pinchpoints: 0
@@ -373,6 +408,7 @@ Solution Found: Torus
 ------------------------------------------------------------
 Perm: (9, 3, 2, 12, 7, 14, 5, 13, 1, 11, 10, 4, 8, 6)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
 Using pass sequence around node 1: [(4, 3), (6, 2), (6, 4), (5, 3), (7, 2), (7, 5)]
 Rotation Scheme is: [(4, 3, 5, 7, 2, 6)]
 Number of pinchpoints: 0

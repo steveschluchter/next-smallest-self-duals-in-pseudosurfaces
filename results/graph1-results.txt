@@ -18,6 +18,8 @@ Degree six nodes are: (1, 2)
 ------------------------------------------------------------
 Perm: (10, 11, 14, 2, 1, 7, 8, 5, 12, 4, 13, 6, 3, 9)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a six-cycle
 Using pass sequence around node 1: [(2, 3), (6, 5), (7, 4), (7, 6), (4, 3), (5, 2)]
 Rotation Scheme is: [(2, 3, 4, 7, 6, 5)]
 Using pass sequence around node 2: [(6, 1), (3, 7), (4, 6), (4, 7), (1, 5), (5, 3)]
@@ -36,6 +38,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (10, 11, 14, 2, 1, 7, 9, 5, 13, 3, 12, 6, 4, 8)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a six-cycle
 Using pass sequence around node 1: [(2, 3), (6, 4), (7, 5), (7, 6), (5, 3), (4, 2)]
 Rotation Scheme is: [(2, 3, 5, 7, 6, 4)]
 Using pass sequence around node 2: [(6, 1), (3, 7), (5, 6), (5, 7), (1, 4), (4, 3)]
@@ -54,6 +58,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (10, 11, 14, 2, 7, 1, 8, 5, 12, 13, 4, 6, 3, 9)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a six-cycle
 Using pass sequence around node 1: [(2, 3), (6, 5), (7, 4), (7, 6), (4, 3), (5, 2)]
 Rotation Scheme is: [(2, 3, 4, 7, 6, 5)]
 Using pass sequence around node 2: [(6, 1), (3, 7), (4, 6), (4, 7), (5, 3), (1, 5)]
@@ -72,6 +78,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (10, 11, 14, 2, 7, 1, 9, 5, 13, 12, 3, 6, 4, 8)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a six-cycle
 Using pass sequence around node 1: [(2, 3), (6, 4), (7, 5), (7, 6), (5, 3), (4, 2)]
 Rotation Scheme is: [(2, 3, 5, 7, 6, 4)]
 Using pass sequence around node 2: [(6, 1), (3, 7), (5, 6), (5, 7), (4, 3), (1, 4)]
@@ -90,6 +98,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (10, 11, 14, 7, 1, 2, 3, 5, 12, 9, 13, 6, 8, 4)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a six-cycle
 Using pass sequence around node 1: [(3, 2), (6, 4), (7, 4), (7, 6), (5, 2), (5, 3)]
 Rotation Scheme is: [(3, 2, 5), (6, 4, 7)]
 Using pass sequence around node 2: [(6, 3), (1, 7), (5, 6), (4, 7), (4, 3), (1, 5)]
@@ -108,6 +118,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (10, 11, 14, 7, 1, 2, 4, 5, 13, 8, 12, 6, 9, 3)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a six-cycle
 Using pass sequence around node 1: [(3, 2), (6, 5), (7, 5), (7, 6), (4, 2), (4, 3)]
 Rotation Scheme is: [(3, 2, 4), (6, 5, 7)]
 Using pass sequence around node 2: [(6, 3), (1, 7), (4, 6), (5, 7), (5, 3), (1, 4)]
@@ -126,6 +138,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (10, 11, 14, 7, 12, 8, 4, 5, 13, 2, 1, 6, 9, 3)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 5), (3, 6), (7, 5), (7, 6), (4, 3), (4, 2)]
 Rotation Scheme is: [(2, 5, 7, 6, 3, 4)]
 Using pass sequence around node 2: [(6, 3), (4, 7), (6, 1), (5, 7), (5, 3), (1, 4)]
@@ -158,6 +172,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (10, 11, 14, 7, 13, 9, 3, 5, 12, 2, 1, 6, 8, 4)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 4), (3, 6), (7, 4), (7, 6), (5, 3), (5, 2)]
 Rotation Scheme is: [(2, 4, 7, 6, 3, 5)]
 Using pass sequence around node 2: [(6, 3), (5, 7), (6, 1), (4, 7), (4, 3), (1, 5)]
@@ -190,6 +206,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (10, 11, 14, 7, 2, 1, 3, 5, 12, 13, 9, 6, 8, 4)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a six-cycle
 Using pass sequence around node 1: [(3, 2), (6, 4), (7, 4), (7, 6), (5, 3), (5, 2)]
 Rotation Scheme is: [(3, 2, 5), (6, 4, 7)]
 Using pass sequence around node 2: [(6, 3), (1, 7), (5, 6), (4, 7), (4, 3), (1, 5)]
@@ -208,6 +226,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (10, 11, 14, 7, 2, 1, 4, 5, 13, 12, 8, 6, 9, 3)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a six-cycle
 Using pass sequence around node 1: [(3, 2), (6, 5), (7, 5), (7, 6), (4, 3), (4, 2)]
 Rotation Scheme is: [(3, 2, 4), (6, 5, 7)]
 Using pass sequence around node 2: [(6, 3), (1, 7), (4, 6), (5, 7), (5, 3), (1, 4)]
@@ -226,6 +246,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (10, 11, 14, 7, 8, 12, 4, 5, 13, 1, 2, 6, 9, 3)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 5), (3, 6), (7, 5), (7, 6), (4, 2), (4, 3)]
 Rotation Scheme is: [(2, 5, 7, 6, 3, 4)]
 Using pass sequence around node 2: [(6, 3), (4, 7), (6, 1), (5, 7), (5, 3), (1, 4)]
@@ -258,6 +280,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (10, 11, 14, 7, 9, 13, 3, 5, 12, 1, 2, 6, 8, 4)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 4), (3, 6), (7, 4), (7, 6), (5, 2), (5, 3)]
 Rotation Scheme is: [(2, 4, 7, 6, 3, 5)]
 Using pass sequence around node 2: [(6, 3), (5, 7), (6, 1), (4, 7), (4, 3), (1, 5)]
@@ -290,6 +314,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (10, 11, 2, 14, 1, 7, 8, 12, 5, 4, 13, 3, 6, 9)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a six-cycle
 Using pass sequence around node 1: [(2, 3), (6, 5), (7, 4), (4, 3), (7, 6), (5, 2)]
 Rotation Scheme is: [(2, 3, 4, 7, 6, 5)]
 Using pass sequence around node 2: [(6, 1), (3, 7), (4, 6), (4, 7), (1, 5), (5, 3)]
@@ -308,6 +334,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (10, 11, 2, 14, 1, 7, 9, 13, 5, 3, 12, 4, 6, 8)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a six-cycle
 Using pass sequence around node 1: [(2, 3), (6, 4), (7, 5), (5, 3), (7, 6), (4, 2)]
 Rotation Scheme is: [(2, 3, 5, 7, 6, 4)]
 Using pass sequence around node 2: [(6, 1), (3, 7), (5, 6), (5, 7), (1, 4), (4, 3)]
@@ -326,6 +354,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (10, 11, 2, 14, 7, 1, 8, 12, 5, 13, 4, 3, 6, 9)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a six-cycle
 Using pass sequence around node 1: [(2, 3), (6, 5), (7, 4), (4, 3), (7, 6), (5, 2)]
 Rotation Scheme is: [(2, 3, 4, 7, 6, 5)]
 Using pass sequence around node 2: [(6, 1), (3, 7), (4, 6), (4, 7), (5, 3), (1, 5)]
@@ -344,6 +374,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (10, 11, 2, 14, 7, 1, 9, 13, 5, 12, 3, 4, 6, 8)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a six-cycle
 Using pass sequence around node 1: [(2, 3), (6, 4), (7, 5), (5, 3), (7, 6), (4, 2)]
 Rotation Scheme is: [(2, 3, 5, 7, 6, 4)]
 Using pass sequence around node 2: [(6, 1), (3, 7), (5, 6), (5, 7), (4, 3), (1, 4)]
@@ -362,6 +394,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (10, 11, 7, 14, 1, 2, 3, 12, 5, 9, 13, 8, 6, 4)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a six-cycle
 Using pass sequence around node 1: [(3, 2), (6, 4), (7, 4), (7, 6), (5, 2), (5, 3)]
 Rotation Scheme is: [(3, 2, 5), (6, 4, 7)]
 Using pass sequence around node 2: [(6, 3), (1, 7), (5, 6), (4, 7), (4, 3), (1, 5)]
@@ -380,6 +414,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (10, 11, 7, 14, 1, 2, 4, 13, 5, 8, 12, 9, 6, 3)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a six-cycle
 Using pass sequence around node 1: [(3, 2), (6, 5), (7, 5), (7, 6), (4, 2), (4, 3)]
 Rotation Scheme is: [(3, 2, 4), (6, 5, 7)]
 Using pass sequence around node 2: [(6, 3), (1, 7), (4, 6), (5, 7), (5, 3), (1, 4)]
@@ -398,6 +434,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (10, 11, 7, 14, 12, 8, 4, 13, 5, 2, 1, 9, 6, 3)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 5), (3, 6), (7, 5), (7, 6), (4, 3), (4, 2)]
 Rotation Scheme is: [(2, 5, 7, 6, 3, 4)]
 Using pass sequence around node 2: [(6, 3), (4, 7), (6, 1), (5, 7), (5, 3), (1, 4)]
@@ -430,6 +468,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (10, 11, 7, 14, 13, 9, 3, 12, 5, 2, 1, 8, 6, 4)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 4), (3, 6), (7, 4), (7, 6), (5, 3), (5, 2)]
 Rotation Scheme is: [(2, 4, 7, 6, 3, 5)]
 Using pass sequence around node 2: [(6, 3), (5, 7), (6, 1), (4, 7), (4, 3), (1, 5)]
@@ -462,6 +502,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (10, 11, 7, 14, 2, 1, 3, 12, 5, 13, 9, 8, 6, 4)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a six-cycle
 Using pass sequence around node 1: [(3, 2), (6, 4), (7, 4), (7, 6), (5, 3), (5, 2)]
 Rotation Scheme is: [(3, 2, 5), (6, 4, 7)]
 Using pass sequence around node 2: [(6, 3), (1, 7), (5, 6), (4, 7), (4, 3), (1, 5)]
@@ -480,6 +522,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (10, 11, 7, 14, 2, 1, 4, 13, 5, 12, 8, 9, 6, 3)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a six-cycle
 Using pass sequence around node 1: [(3, 2), (6, 5), (7, 5), (7, 6), (4, 3), (4, 2)]
 Rotation Scheme is: [(3, 2, 4), (6, 5, 7)]
 Using pass sequence around node 2: [(6, 3), (1, 7), (4, 6), (5, 7), (5, 3), (1, 4)]
@@ -498,6 +542,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (10, 11, 7, 14, 8, 12, 4, 13, 5, 1, 2, 9, 6, 3)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 5), (3, 6), (7, 5), (7, 6), (4, 2), (4, 3)]
 Rotation Scheme is: [(2, 5, 7, 6, 3, 4)]
 Using pass sequence around node 2: [(6, 3), (4, 7), (6, 1), (5, 7), (5, 3), (1, 4)]
@@ -530,6 +576,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (10, 11, 7, 14, 9, 13, 3, 12, 5, 1, 2, 8, 6, 4)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 4), (3, 6), (7, 4), (7, 6), (5, 2), (5, 3)]
 Rotation Scheme is: [(2, 4, 7, 6, 3, 5)]
 Using pass sequence around node 2: [(6, 3), (5, 7), (6, 1), (4, 7), (4, 3), (1, 5)]
@@ -562,6 +610,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (10, 3, 12, 2, 1, 5, 9, 7, 13, 11, 14, 8, 4, 6)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 4), (3, 6), (5, 4), (5, 3), (7, 2), (7, 6)]
 Rotation Scheme is: [(2, 4, 5, 3, 6, 7)]
 Using pass sequence around node 2: [(6, 1), (6, 5), (3, 7), (4, 5), (4, 3), (1, 7)]
@@ -594,6 +644,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (10, 3, 12, 2, 5, 1, 9, 7, 13, 14, 11, 8, 4, 6)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 4), (3, 6), (5, 4), (5, 3), (7, 6), (7, 2)]
 Rotation Scheme is: [(2, 4, 5, 3, 6, 7)]
 Using pass sequence around node 2: [(6, 1), (6, 5), (3, 7), (4, 5), (4, 3), (1, 7)]
@@ -626,6 +678,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (10, 3, 12, 5, 1, 2, 11, 7, 14, 9, 13, 8, 6, 4)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 4), (3, 6), (7, 4), (7, 6), (5, 2), (5, 3)]
 Rotation Scheme is: [(2, 4, 7, 6, 3, 5)]
 Using pass sequence around node 2: [(6, 1), (6, 3), (5, 7), (4, 7), (4, 3), (1, 5)]
@@ -658,6 +712,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (10, 3, 12, 5, 13, 9, 11, 7, 14, 2, 1, 8, 6, 4)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(6, 4), (3, 2), (7, 4), (7, 6), (5, 3), (5, 2)]
 Rotation Scheme is: [(6, 4, 7), (3, 2, 5)]
 Using pass sequence around node 2: [(5, 6), (6, 3), (1, 7), (4, 7), (4, 3), (1, 5)]
@@ -676,6 +732,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (10, 3, 12, 5, 2, 1, 11, 7, 14, 13, 9, 8, 6, 4)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 4), (3, 6), (7, 4), (7, 6), (5, 3), (5, 2)]
 Rotation Scheme is: [(2, 4, 7, 6, 3, 5)]
 Using pass sequence around node 2: [(6, 1), (6, 3), (5, 7), (4, 7), (4, 3), (1, 5)]
@@ -708,6 +766,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (10, 3, 12, 5, 9, 13, 11, 7, 14, 1, 2, 8, 6, 4)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(6, 4), (3, 2), (7, 4), (7, 6), (5, 2), (5, 3)]
 Rotation Scheme is: [(6, 4, 7), (3, 2, 5)]
 Using pass sequence around node 2: [(5, 6), (6, 3), (1, 7), (4, 7), (4, 3), (1, 5)]
@@ -726,6 +786,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (10, 3, 2, 12, 1, 5, 9, 13, 7, 11, 14, 4, 8, 6)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 4), (3, 6), (5, 4), (5, 3), (7, 2), (7, 6)]
 Rotation Scheme is: [(2, 4, 5, 3, 6, 7)]
 Using pass sequence around node 2: [(6, 1), (6, 5), (3, 7), (4, 5), (4, 3), (1, 7)]
@@ -758,6 +820,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (10, 3, 2, 12, 5, 1, 9, 13, 7, 14, 11, 4, 8, 6)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 4), (3, 6), (5, 4), (5, 3), (7, 6), (7, 2)]
 Rotation Scheme is: [(2, 4, 5, 3, 6, 7)]
 Using pass sequence around node 2: [(6, 1), (6, 5), (3, 7), (4, 5), (4, 3), (1, 7)]
@@ -790,6 +854,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (10, 3, 5, 12, 1, 2, 11, 14, 7, 9, 13, 6, 8, 4)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 4), (3, 6), (7, 4), (7, 6), (5, 2), (5, 3)]
 Rotation Scheme is: [(2, 4, 7, 6, 3, 5)]
 Using pass sequence around node 2: [(6, 1), (6, 3), (5, 7), (4, 7), (4, 3), (1, 5)]
@@ -822,6 +888,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (10, 3, 5, 12, 13, 9, 11, 14, 7, 2, 1, 6, 8, 4)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(6, 4), (3, 2), (7, 4), (7, 6), (5, 3), (5, 2)]
 Rotation Scheme is: [(6, 4, 7), (3, 2, 5)]
 Using pass sequence around node 2: [(5, 6), (6, 3), (1, 7), (4, 7), (4, 3), (1, 5)]
@@ -840,6 +908,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (10, 3, 5, 12, 2, 1, 11, 14, 7, 13, 9, 6, 8, 4)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 4), (3, 6), (7, 4), (7, 6), (5, 3), (5, 2)]
 Rotation Scheme is: [(2, 4, 7, 6, 3, 5)]
 Using pass sequence around node 2: [(6, 1), (6, 3), (5, 7), (4, 7), (4, 3), (1, 5)]
@@ -872,6 +942,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (10, 3, 5, 12, 9, 13, 11, 14, 7, 1, 2, 6, 8, 4)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(6, 4), (3, 2), (7, 4), (7, 6), (5, 2), (5, 3)]
 Rotation Scheme is: [(6, 4, 7), (3, 2, 5)]
 Using pass sequence around node 2: [(5, 6), (6, 3), (1, 7), (4, 7), (4, 3), (1, 5)]
@@ -890,6 +962,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (10, 4, 13, 2, 1, 5, 8, 7, 12, 11, 14, 9, 3, 6)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 5), (3, 6), (4, 5), (4, 3), (7, 2), (7, 6)]
 Rotation Scheme is: [(2, 5, 4, 3, 6, 7)]
 Using pass sequence around node 2: [(6, 1), (6, 4), (3, 7), (5, 4), (5, 3), (1, 7)]
@@ -922,6 +996,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (10, 4, 13, 2, 5, 1, 8, 7, 12, 14, 11, 9, 3, 6)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 5), (3, 6), (4, 5), (4, 3), (7, 6), (7, 2)]
 Rotation Scheme is: [(2, 5, 4, 3, 6, 7)]
 Using pass sequence around node 2: [(6, 1), (6, 4), (3, 7), (5, 4), (5, 3), (1, 7)]
@@ -954,6 +1030,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (10, 4, 13, 5, 1, 2, 11, 7, 14, 8, 12, 9, 6, 3)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 5), (3, 6), (7, 5), (7, 6), (4, 2), (4, 3)]
 Rotation Scheme is: [(2, 5, 7, 6, 3, 4)]
 Using pass sequence around node 2: [(6, 1), (6, 3), (4, 7), (5, 7), (5, 3), (1, 4)]
@@ -986,6 +1064,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (10, 4, 13, 5, 12, 8, 11, 7, 14, 2, 1, 9, 6, 3)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(6, 5), (3, 2), (7, 5), (7, 6), (4, 3), (4, 2)]
 Rotation Scheme is: [(6, 5, 7), (3, 2, 4)]
 Using pass sequence around node 2: [(4, 6), (6, 3), (1, 7), (5, 7), (5, 3), (1, 4)]
@@ -1004,6 +1084,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (10, 4, 13, 5, 2, 1, 11, 7, 14, 12, 8, 9, 6, 3)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 5), (3, 6), (7, 5), (7, 6), (4, 3), (4, 2)]
 Rotation Scheme is: [(2, 5, 7, 6, 3, 4)]
 Using pass sequence around node 2: [(6, 1), (6, 3), (4, 7), (5, 7), (5, 3), (1, 4)]
@@ -1036,6 +1118,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (10, 4, 13, 5, 8, 12, 11, 7, 14, 1, 2, 9, 6, 3)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(6, 5), (3, 2), (7, 5), (7, 6), (4, 2), (4, 3)]
 Rotation Scheme is: [(6, 5, 7), (3, 2, 4)]
 Using pass sequence around node 2: [(4, 6), (6, 3), (1, 7), (5, 7), (5, 3), (1, 4)]
@@ -1054,6 +1138,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (10, 4, 2, 13, 1, 5, 8, 12, 7, 11, 14, 3, 9, 6)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 5), (3, 6), (4, 5), (4, 3), (7, 2), (7, 6)]
 Rotation Scheme is: [(2, 5, 4, 3, 6, 7)]
 Using pass sequence around node 2: [(6, 1), (6, 4), (3, 7), (5, 4), (5, 3), (1, 7)]
@@ -1086,6 +1172,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (10, 4, 2, 13, 5, 1, 8, 12, 7, 14, 11, 3, 9, 6)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 5), (3, 6), (4, 5), (4, 3), (7, 6), (7, 2)]
 Rotation Scheme is: [(2, 5, 4, 3, 6, 7)]
 Using pass sequence around node 2: [(6, 1), (6, 4), (3, 7), (5, 4), (5, 3), (1, 7)]
@@ -1118,6 +1206,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (10, 4, 5, 13, 1, 2, 11, 14, 7, 8, 12, 6, 9, 3)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 5), (3, 6), (7, 5), (7, 6), (4, 2), (4, 3)]
 Rotation Scheme is: [(2, 5, 7, 6, 3, 4)]
 Using pass sequence around node 2: [(6, 1), (6, 3), (4, 7), (5, 7), (5, 3), (1, 4)]
@@ -1150,6 +1240,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (10, 4, 5, 13, 12, 8, 11, 14, 7, 2, 1, 6, 9, 3)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(6, 5), (3, 2), (7, 5), (7, 6), (4, 3), (4, 2)]
 Rotation Scheme is: [(6, 5, 7), (3, 2, 4)]
 Using pass sequence around node 2: [(4, 6), (6, 3), (1, 7), (5, 7), (5, 3), (1, 4)]
@@ -1168,6 +1260,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (10, 4, 5, 13, 2, 1, 11, 14, 7, 12, 8, 6, 9, 3)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 5), (3, 6), (7, 5), (7, 6), (4, 3), (4, 2)]
 Rotation Scheme is: [(2, 5, 7, 6, 3, 4)]
 Using pass sequence around node 2: [(6, 1), (6, 3), (4, 7), (5, 7), (5, 3), (1, 4)]
@@ -1200,6 +1294,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (10, 4, 5, 13, 8, 12, 11, 14, 7, 1, 2, 6, 9, 3)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(6, 5), (3, 2), (7, 5), (7, 6), (4, 2), (4, 3)]
 Rotation Scheme is: [(6, 5, 7), (3, 2, 4)]
 Using pass sequence around node 2: [(4, 6), (6, 3), (1, 7), (5, 7), (5, 3), (1, 4)]
@@ -1218,6 +1314,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (10, 8, 12, 5, 13, 4, 11, 2, 14, 7, 1, 3, 6, 9)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(6, 5), (2, 3), (4, 7), (4, 3), (7, 6), (2, 5)]
 Rotation Scheme is: [(6, 5, 2, 3, 4, 7)]
 Using pass sequence around node 2: [(4, 6), (6, 1), (3, 7), (7, 4), (5, 3), (5, 1)]
@@ -1236,6 +1334,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (10, 8, 12, 5, 4, 13, 11, 2, 14, 1, 7, 3, 6, 9)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(6, 5), (2, 3), (4, 7), (4, 3), (7, 6), (2, 5)]
 Rotation Scheme is: [(6, 5, 2, 3, 4, 7)]
 Using pass sequence around node 2: [(4, 6), (6, 1), (3, 7), (7, 4), (5, 1), (5, 3)]
@@ -1254,6 +1354,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (10, 8, 12, 7, 11, 14, 4, 2, 13, 1, 5, 3, 9, 6)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 5), (3, 6), (4, 5), (4, 3), (7, 2), (7, 6)]
 Rotation Scheme is: [(2, 5, 4, 3, 6, 7)]
 Using pass sequence around node 2: [(6, 4), (3, 7), (6, 1), (5, 4), (5, 3), (1, 7)]
@@ -1286,6 +1388,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (10, 8, 12, 7, 14, 11, 4, 2, 13, 5, 1, 3, 9, 6)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 5), (3, 6), (4, 5), (4, 3), (7, 6), (7, 2)]
 Rotation Scheme is: [(2, 5, 4, 3, 6, 7)]
 Using pass sequence around node 2: [(6, 4), (3, 7), (6, 1), (5, 4), (5, 3), (1, 7)]
@@ -1318,6 +1422,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (10, 8, 5, 12, 13, 4, 11, 14, 2, 7, 1, 6, 3, 9)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(6, 5), (2, 3), (4, 7), (7, 6), (4, 3), (2, 5)]
 Rotation Scheme is: [(6, 5, 2, 3, 4, 7)]
 Using pass sequence around node 2: [(4, 6), (6, 1), (3, 7), (7, 4), (5, 3), (5, 1)]
@@ -1336,6 +1442,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (10, 8, 5, 12, 4, 13, 11, 14, 2, 1, 7, 6, 3, 9)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(6, 5), (2, 3), (4, 7), (7, 6), (4, 3), (2, 5)]
 Rotation Scheme is: [(6, 5, 2, 3, 4, 7)]
 Using pass sequence around node 2: [(4, 6), (6, 1), (3, 7), (7, 4), (5, 1), (5, 3)]
@@ -1354,6 +1462,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (10, 8, 7, 12, 11, 14, 4, 13, 2, 1, 5, 9, 3, 6)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 5), (3, 6), (4, 5), (4, 3), (7, 2), (7, 6)]
 Rotation Scheme is: [(2, 5, 4, 3, 6, 7)]
 Using pass sequence around node 2: [(6, 4), (3, 7), (6, 1), (5, 4), (5, 3), (1, 7)]
@@ -1386,6 +1496,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (10, 8, 7, 12, 14, 11, 4, 13, 2, 5, 1, 9, 3, 6)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 5), (3, 6), (4, 5), (4, 3), (7, 6), (7, 2)]
 Rotation Scheme is: [(2, 5, 4, 3, 6, 7)]
 Using pass sequence around node 2: [(6, 4), (3, 7), (6, 1), (5, 4), (5, 3), (1, 7)]
@@ -1418,6 +1530,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (10, 9, 13, 5, 12, 3, 11, 2, 14, 7, 1, 4, 6, 8)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(6, 4), (2, 3), (5, 7), (5, 3), (7, 6), (2, 4)]
 Rotation Scheme is: [(6, 4, 2, 3, 5, 7)]
 Using pass sequence around node 2: [(5, 6), (6, 1), (3, 7), (7, 5), (4, 3), (4, 1)]
@@ -1436,6 +1550,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (10, 9, 13, 5, 3, 12, 11, 2, 14, 1, 7, 4, 6, 8)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(6, 4), (2, 3), (5, 7), (5, 3), (7, 6), (2, 4)]
 Rotation Scheme is: [(6, 4, 2, 3, 5, 7)]
 Using pass sequence around node 2: [(5, 6), (6, 1), (3, 7), (7, 5), (4, 1), (4, 3)]
@@ -1454,6 +1570,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (10, 9, 13, 7, 11, 14, 3, 2, 12, 1, 5, 4, 8, 6)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 4), (3, 6), (5, 4), (5, 3), (7, 2), (7, 6)]
 Rotation Scheme is: [(2, 4, 5, 3, 6, 7)]
 Using pass sequence around node 2: [(6, 5), (3, 7), (6, 1), (4, 5), (4, 3), (1, 7)]
@@ -1486,6 +1604,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (10, 9, 13, 7, 14, 11, 3, 2, 12, 5, 1, 4, 8, 6)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 4), (3, 6), (5, 4), (5, 3), (7, 6), (7, 2)]
 Rotation Scheme is: [(2, 4, 5, 3, 6, 7)]
 Using pass sequence around node 2: [(6, 5), (3, 7), (6, 1), (4, 5), (4, 3), (1, 7)]
@@ -1518,6 +1638,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (10, 9, 5, 13, 12, 3, 11, 14, 2, 7, 1, 6, 4, 8)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(6, 4), (2, 3), (5, 7), (7, 6), (5, 3), (2, 4)]
 Rotation Scheme is: [(6, 4, 2, 3, 5, 7)]
 Using pass sequence around node 2: [(5, 6), (6, 1), (3, 7), (7, 5), (4, 3), (4, 1)]
@@ -1536,6 +1658,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (10, 9, 5, 13, 3, 12, 11, 14, 2, 1, 7, 6, 4, 8)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(6, 4), (2, 3), (5, 7), (7, 6), (5, 3), (2, 4)]
 Rotation Scheme is: [(6, 4, 2, 3, 5, 7)]
 Using pass sequence around node 2: [(5, 6), (6, 1), (3, 7), (7, 5), (4, 1), (4, 3)]
@@ -1554,6 +1678,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (10, 9, 7, 13, 11, 14, 3, 12, 2, 1, 5, 8, 4, 6)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 4), (3, 6), (5, 4), (5, 3), (7, 2), (7, 6)]
 Rotation Scheme is: [(2, 4, 5, 3, 6, 7)]
 Using pass sequence around node 2: [(6, 5), (3, 7), (6, 1), (4, 5), (4, 3), (1, 7)]
@@ -1586,6 +1712,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (10, 9, 7, 13, 14, 11, 3, 12, 2, 5, 1, 8, 4, 6)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 4), (3, 6), (5, 4), (5, 3), (7, 6), (7, 2)]
 Rotation Scheme is: [(2, 4, 5, 3, 6, 7)]
 Using pass sequence around node 2: [(6, 5), (3, 7), (6, 1), (4, 5), (4, 3), (1, 7)]
@@ -1618,6 +1746,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (11, 10, 14, 2, 1, 7, 8, 6, 12, 4, 13, 5, 3, 9)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a six-cycle
 Using pass sequence around node 1: [(2, 3), (7, 5), (6, 4), (7, 6), (4, 3), (5, 2)]
 Rotation Scheme is: [(2, 3, 4, 6, 7, 5)]
 Using pass sequence around node 2: [(7, 1), (3, 6), (4, 7), (4, 6), (1, 5), (5, 3)]
@@ -1636,6 +1766,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (11, 10, 14, 2, 1, 7, 9, 6, 13, 3, 12, 5, 4, 8)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a six-cycle
 Using pass sequence around node 1: [(2, 3), (7, 4), (6, 5), (7, 6), (5, 3), (4, 2)]
 Rotation Scheme is: [(2, 3, 5, 6, 7, 4)]
 Using pass sequence around node 2: [(7, 1), (3, 6), (5, 7), (5, 6), (1, 4), (4, 3)]
@@ -1654,6 +1786,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (11, 10, 14, 2, 7, 1, 8, 6, 12, 13, 4, 5, 3, 9)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a six-cycle
 Using pass sequence around node 1: [(2, 3), (7, 5), (6, 4), (7, 6), (4, 3), (5, 2)]
 Rotation Scheme is: [(2, 3, 4, 6, 7, 5)]
 Using pass sequence around node 2: [(7, 1), (3, 6), (4, 7), (4, 6), (5, 3), (1, 5)]
@@ -1672,6 +1806,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (11, 10, 14, 2, 7, 1, 9, 6, 13, 12, 3, 5, 4, 8)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a six-cycle
 Using pass sequence around node 1: [(2, 3), (7, 4), (6, 5), (7, 6), (5, 3), (4, 2)]
 Rotation Scheme is: [(2, 3, 5, 6, 7, 4)]
 Using pass sequence around node 2: [(7, 1), (3, 6), (5, 7), (5, 6), (4, 3), (1, 4)]
@@ -1690,6 +1826,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (11, 10, 14, 7, 1, 2, 3, 6, 12, 9, 13, 5, 8, 4)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a six-cycle
 Using pass sequence around node 1: [(3, 2), (7, 4), (6, 4), (7, 6), (5, 2), (5, 3)]
 Rotation Scheme is: [(3, 2, 5), (7, 4, 6)]
 Using pass sequence around node 2: [(7, 3), (1, 6), (5, 7), (4, 6), (4, 3), (1, 5)]
@@ -1708,6 +1846,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (11, 10, 14, 7, 1, 2, 4, 6, 13, 8, 12, 5, 9, 3)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a six-cycle
 Using pass sequence around node 1: [(3, 2), (7, 5), (6, 5), (7, 6), (4, 2), (4, 3)]
 Rotation Scheme is: [(3, 2, 4), (7, 5, 6)]
 Using pass sequence around node 2: [(7, 3), (1, 6), (4, 7), (5, 6), (5, 3), (1, 4)]
@@ -1726,6 +1866,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (11, 10, 14, 7, 12, 8, 4, 6, 13, 2, 1, 5, 9, 3)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 5), (3, 7), (6, 5), (7, 6), (4, 3), (4, 2)]
 Rotation Scheme is: [(2, 5, 6, 7, 3, 4)]
 Using pass sequence around node 2: [(7, 3), (4, 6), (7, 1), (5, 6), (5, 3), (1, 4)]
@@ -1758,6 +1900,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (11, 10, 14, 7, 13, 9, 3, 6, 12, 2, 1, 5, 8, 4)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 4), (3, 7), (6, 4), (7, 6), (5, 3), (5, 2)]
 Rotation Scheme is: [(2, 4, 6, 7, 3, 5)]
 Using pass sequence around node 2: [(7, 3), (5, 6), (7, 1), (4, 6), (4, 3), (1, 5)]
@@ -1790,6 +1934,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (11, 10, 14, 7, 2, 1, 3, 6, 12, 13, 9, 5, 8, 4)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a six-cycle
 Using pass sequence around node 1: [(3, 2), (7, 4), (6, 4), (7, 6), (5, 3), (5, 2)]
 Rotation Scheme is: [(3, 2, 5), (7, 4, 6)]
 Using pass sequence around node 2: [(7, 3), (1, 6), (5, 7), (4, 6), (4, 3), (1, 5)]
@@ -1808,6 +1954,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (11, 10, 14, 7, 2, 1, 4, 6, 13, 12, 8, 5, 9, 3)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a six-cycle
 Using pass sequence around node 1: [(3, 2), (7, 5), (6, 5), (7, 6), (4, 3), (4, 2)]
 Rotation Scheme is: [(3, 2, 4), (7, 5, 6)]
 Using pass sequence around node 2: [(7, 3), (1, 6), (4, 7), (5, 6), (5, 3), (1, 4)]
@@ -1826,6 +1974,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (11, 10, 14, 7, 8, 12, 4, 6, 13, 1, 2, 5, 9, 3)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 5), (3, 7), (6, 5), (7, 6), (4, 2), (4, 3)]
 Rotation Scheme is: [(2, 5, 6, 7, 3, 4)]
 Using pass sequence around node 2: [(7, 3), (4, 6), (7, 1), (5, 6), (5, 3), (1, 4)]
@@ -1858,6 +2008,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (11, 10, 14, 7, 9, 13, 3, 6, 12, 1, 2, 5, 8, 4)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 4), (3, 7), (6, 4), (7, 6), (5, 2), (5, 3)]
 Rotation Scheme is: [(2, 4, 6, 7, 3, 5)]
 Using pass sequence around node 2: [(7, 3), (5, 6), (7, 1), (4, 6), (4, 3), (1, 5)]
@@ -1890,6 +2042,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (11, 10, 2, 14, 1, 7, 8, 12, 6, 4, 13, 3, 5, 9)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a six-cycle
 Using pass sequence around node 1: [(2, 3), (7, 5), (6, 4), (4, 3), (7, 6), (5, 2)]
 Rotation Scheme is: [(2, 3, 4, 6, 7, 5)]
 Using pass sequence around node 2: [(7, 1), (3, 6), (4, 7), (4, 6), (1, 5), (5, 3)]
@@ -1908,6 +2062,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (11, 10, 2, 14, 1, 7, 9, 13, 6, 3, 12, 4, 5, 8)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a six-cycle
 Using pass sequence around node 1: [(2, 3), (7, 4), (6, 5), (5, 3), (7, 6), (4, 2)]
 Rotation Scheme is: [(2, 3, 5, 6, 7, 4)]
 Using pass sequence around node 2: [(7, 1), (3, 6), (5, 7), (5, 6), (1, 4), (4, 3)]
@@ -1926,6 +2082,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (11, 10, 2, 14, 7, 1, 8, 12, 6, 13, 4, 3, 5, 9)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a six-cycle
 Using pass sequence around node 1: [(2, 3), (7, 5), (6, 4), (4, 3), (7, 6), (5, 2)]
 Rotation Scheme is: [(2, 3, 4, 6, 7, 5)]
 Using pass sequence around node 2: [(7, 1), (3, 6), (4, 7), (4, 6), (5, 3), (1, 5)]
@@ -1944,6 +2102,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (11, 10, 2, 14, 7, 1, 9, 13, 6, 12, 3, 4, 5, 8)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a six-cycle
 Using pass sequence around node 1: [(2, 3), (7, 4), (6, 5), (5, 3), (7, 6), (4, 2)]
 Rotation Scheme is: [(2, 3, 5, 6, 7, 4)]
 Using pass sequence around node 2: [(7, 1), (3, 6), (5, 7), (5, 6), (4, 3), (1, 4)]
@@ -1962,6 +2122,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (11, 10, 7, 14, 1, 2, 3, 12, 6, 9, 13, 8, 5, 4)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a six-cycle
 Using pass sequence around node 1: [(3, 2), (7, 4), (6, 4), (7, 6), (5, 2), (5, 3)]
 Rotation Scheme is: [(3, 2, 5), (7, 4, 6)]
 Using pass sequence around node 2: [(7, 3), (1, 6), (5, 7), (4, 6), (4, 3), (1, 5)]
@@ -1980,6 +2142,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (11, 10, 7, 14, 1, 2, 4, 13, 6, 8, 12, 9, 5, 3)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a six-cycle
 Using pass sequence around node 1: [(3, 2), (7, 5), (6, 5), (7, 6), (4, 2), (4, 3)]
 Rotation Scheme is: [(3, 2, 4), (7, 5, 6)]
 Using pass sequence around node 2: [(7, 3), (1, 6), (4, 7), (5, 6), (5, 3), (1, 4)]
@@ -1998,6 +2162,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (11, 10, 7, 14, 12, 8, 4, 13, 6, 2, 1, 9, 5, 3)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 5), (3, 7), (6, 5), (7, 6), (4, 3), (4, 2)]
 Rotation Scheme is: [(2, 5, 6, 7, 3, 4)]
 Using pass sequence around node 2: [(7, 3), (4, 6), (7, 1), (5, 6), (5, 3), (1, 4)]
@@ -2030,6 +2196,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (11, 10, 7, 14, 13, 9, 3, 12, 6, 2, 1, 8, 5, 4)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 4), (3, 7), (6, 4), (7, 6), (5, 3), (5, 2)]
 Rotation Scheme is: [(2, 4, 6, 7, 3, 5)]
 Using pass sequence around node 2: [(7, 3), (5, 6), (7, 1), (4, 6), (4, 3), (1, 5)]
@@ -2062,6 +2230,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (11, 10, 7, 14, 2, 1, 3, 12, 6, 13, 9, 8, 5, 4)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a six-cycle
 Using pass sequence around node 1: [(3, 2), (7, 4), (6, 4), (7, 6), (5, 3), (5, 2)]
 Rotation Scheme is: [(3, 2, 5), (7, 4, 6)]
 Using pass sequence around node 2: [(7, 3), (1, 6), (5, 7), (4, 6), (4, 3), (1, 5)]
@@ -2080,6 +2250,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (11, 10, 7, 14, 2, 1, 4, 13, 6, 12, 8, 9, 5, 3)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a six-cycle
 Using pass sequence around node 1: [(3, 2), (7, 5), (6, 5), (7, 6), (4, 3), (4, 2)]
 Rotation Scheme is: [(3, 2, 4), (7, 5, 6)]
 Using pass sequence around node 2: [(7, 3), (1, 6), (4, 7), (5, 6), (5, 3), (1, 4)]
@@ -2098,6 +2270,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (11, 10, 7, 14, 8, 12, 4, 13, 6, 1, 2, 9, 5, 3)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 5), (3, 7), (6, 5), (7, 6), (4, 2), (4, 3)]
 Rotation Scheme is: [(2, 5, 6, 7, 3, 4)]
 Using pass sequence around node 2: [(7, 3), (4, 6), (7, 1), (5, 6), (5, 3), (1, 4)]
@@ -2130,6 +2304,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (11, 10, 7, 14, 9, 13, 3, 12, 6, 1, 2, 8, 5, 4)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 4), (3, 7), (6, 4), (7, 6), (5, 2), (5, 3)]
 Rotation Scheme is: [(2, 4, 6, 7, 3, 5)]
 Using pass sequence around node 2: [(7, 3), (5, 6), (7, 1), (4, 6), (4, 3), (1, 5)]
@@ -2162,6 +2338,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (11, 3, 12, 2, 1, 6, 9, 7, 13, 10, 14, 8, 4, 5)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 4), (3, 7), (5, 4), (5, 3), (6, 2), (6, 7)]
 Rotation Scheme is: [(2, 4, 5, 3, 7, 6)]
 Using pass sequence around node 2: [(7, 1), (7, 5), (3, 6), (4, 5), (4, 3), (1, 6)]
@@ -2194,6 +2372,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (11, 3, 12, 2, 6, 1, 9, 7, 13, 14, 10, 8, 4, 5)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 4), (3, 7), (5, 4), (5, 3), (6, 7), (6, 2)]
 Rotation Scheme is: [(2, 4, 5, 3, 7, 6)]
 Using pass sequence around node 2: [(7, 1), (7, 5), (3, 6), (4, 5), (4, 3), (1, 6)]
@@ -2226,6 +2406,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (11, 3, 12, 6, 1, 2, 10, 7, 14, 9, 13, 8, 5, 4)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 4), (3, 7), (6, 4), (6, 7), (5, 2), (5, 3)]
 Rotation Scheme is: [(2, 4, 6, 7, 3, 5)]
 Using pass sequence around node 2: [(7, 1), (7, 3), (5, 6), (4, 6), (4, 3), (1, 5)]
@@ -2258,6 +2440,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (11, 3, 12, 6, 13, 9, 10, 7, 14, 2, 1, 8, 5, 4)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(7, 4), (3, 2), (6, 4), (6, 7), (5, 3), (5, 2)]
 Rotation Scheme is: [(7, 4, 6), (3, 2, 5)]
 Using pass sequence around node 2: [(5, 7), (7, 3), (1, 6), (4, 6), (4, 3), (1, 5)]
@@ -2276,6 +2460,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (11, 3, 12, 6, 2, 1, 10, 7, 14, 13, 9, 8, 5, 4)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 4), (3, 7), (6, 4), (6, 7), (5, 3), (5, 2)]
 Rotation Scheme is: [(2, 4, 6, 7, 3, 5)]
 Using pass sequence around node 2: [(7, 1), (7, 3), (5, 6), (4, 6), (4, 3), (1, 5)]
@@ -2308,6 +2494,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (11, 3, 12, 6, 9, 13, 10, 7, 14, 1, 2, 8, 5, 4)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(7, 4), (3, 2), (6, 4), (6, 7), (5, 2), (5, 3)]
 Rotation Scheme is: [(7, 4, 6), (3, 2, 5)]
 Using pass sequence around node 2: [(5, 7), (7, 3), (1, 6), (4, 6), (4, 3), (1, 5)]
@@ -2326,6 +2514,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (11, 3, 2, 12, 1, 6, 9, 13, 7, 10, 14, 4, 8, 5)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 4), (3, 7), (5, 4), (5, 3), (6, 2), (6, 7)]
 Rotation Scheme is: [(2, 4, 5, 3, 7, 6)]
 Using pass sequence around node 2: [(7, 1), (7, 5), (3, 6), (4, 5), (4, 3), (1, 6)]
@@ -2358,6 +2548,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (11, 3, 2, 12, 6, 1, 9, 13, 7, 14, 10, 4, 8, 5)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 4), (3, 7), (5, 4), (5, 3), (6, 7), (6, 2)]
 Rotation Scheme is: [(2, 4, 5, 3, 7, 6)]
 Using pass sequence around node 2: [(7, 1), (7, 5), (3, 6), (4, 5), (4, 3), (1, 6)]
@@ -2390,6 +2582,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (11, 3, 6, 12, 1, 2, 10, 14, 7, 9, 13, 5, 8, 4)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 4), (3, 7), (6, 4), (6, 7), (5, 2), (5, 3)]
 Rotation Scheme is: [(2, 4, 6, 7, 3, 5)]
 Using pass sequence around node 2: [(7, 1), (7, 3), (5, 6), (4, 6), (4, 3), (1, 5)]
@@ -2422,6 +2616,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (11, 3, 6, 12, 13, 9, 10, 14, 7, 2, 1, 5, 8, 4)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(7, 4), (3, 2), (6, 4), (6, 7), (5, 3), (5, 2)]
 Rotation Scheme is: [(7, 4, 6), (3, 2, 5)]
 Using pass sequence around node 2: [(5, 7), (7, 3), (1, 6), (4, 6), (4, 3), (1, 5)]
@@ -2440,6 +2636,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (11, 3, 6, 12, 2, 1, 10, 14, 7, 13, 9, 5, 8, 4)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 4), (3, 7), (6, 4), (6, 7), (5, 3), (5, 2)]
 Rotation Scheme is: [(2, 4, 6, 7, 3, 5)]
 Using pass sequence around node 2: [(7, 1), (7, 3), (5, 6), (4, 6), (4, 3), (1, 5)]
@@ -2472,6 +2670,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (11, 3, 6, 12, 9, 13, 10, 14, 7, 1, 2, 5, 8, 4)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(7, 4), (3, 2), (6, 4), (6, 7), (5, 2), (5, 3)]
 Rotation Scheme is: [(7, 4, 6), (3, 2, 5)]
 Using pass sequence around node 2: [(5, 7), (7, 3), (1, 6), (4, 6), (4, 3), (1, 5)]
@@ -2490,6 +2690,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (11, 4, 13, 2, 1, 6, 8, 7, 12, 10, 14, 9, 3, 5)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 5), (3, 7), (4, 5), (4, 3), (6, 2), (6, 7)]
 Rotation Scheme is: [(2, 5, 4, 3, 7, 6)]
 Using pass sequence around node 2: [(7, 1), (7, 4), (3, 6), (5, 4), (5, 3), (1, 6)]
@@ -2522,6 +2724,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (11, 4, 13, 2, 6, 1, 8, 7, 12, 14, 10, 9, 3, 5)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 5), (3, 7), (4, 5), (4, 3), (6, 7), (6, 2)]
 Rotation Scheme is: [(2, 5, 4, 3, 7, 6)]
 Using pass sequence around node 2: [(7, 1), (7, 4), (3, 6), (5, 4), (5, 3), (1, 6)]
@@ -2554,6 +2758,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (11, 4, 13, 6, 1, 2, 10, 7, 14, 8, 12, 9, 5, 3)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 5), (3, 7), (6, 5), (6, 7), (4, 2), (4, 3)]
 Rotation Scheme is: [(2, 5, 6, 7, 3, 4)]
 Using pass sequence around node 2: [(7, 1), (7, 3), (4, 6), (5, 6), (5, 3), (1, 4)]
@@ -2586,6 +2792,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (11, 4, 13, 6, 12, 8, 10, 7, 14, 2, 1, 9, 5, 3)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(7, 5), (3, 2), (6, 5), (6, 7), (4, 3), (4, 2)]
 Rotation Scheme is: [(7, 5, 6), (3, 2, 4)]
 Using pass sequence around node 2: [(4, 7), (7, 3), (1, 6), (5, 6), (5, 3), (1, 4)]
@@ -2604,6 +2812,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (11, 4, 13, 6, 2, 1, 10, 7, 14, 12, 8, 9, 5, 3)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 5), (3, 7), (6, 5), (6, 7), (4, 3), (4, 2)]
 Rotation Scheme is: [(2, 5, 6, 7, 3, 4)]
 Using pass sequence around node 2: [(7, 1), (7, 3), (4, 6), (5, 6), (5, 3), (1, 4)]
@@ -2636,6 +2846,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (11, 4, 13, 6, 8, 12, 10, 7, 14, 1, 2, 9, 5, 3)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(7, 5), (3, 2), (6, 5), (6, 7), (4, 2), (4, 3)]
 Rotation Scheme is: [(7, 5, 6), (3, 2, 4)]
 Using pass sequence around node 2: [(4, 7), (7, 3), (1, 6), (5, 6), (5, 3), (1, 4)]
@@ -2654,6 +2866,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (11, 4, 2, 13, 1, 6, 8, 12, 7, 10, 14, 3, 9, 5)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 5), (3, 7), (4, 5), (4, 3), (6, 2), (6, 7)]
 Rotation Scheme is: [(2, 5, 4, 3, 7, 6)]
 Using pass sequence around node 2: [(7, 1), (7, 4), (3, 6), (5, 4), (5, 3), (1, 6)]
@@ -2686,6 +2900,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (11, 4, 2, 13, 6, 1, 8, 12, 7, 14, 10, 3, 9, 5)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 5), (3, 7), (4, 5), (4, 3), (6, 7), (6, 2)]
 Rotation Scheme is: [(2, 5, 4, 3, 7, 6)]
 Using pass sequence around node 2: [(7, 1), (7, 4), (3, 6), (5, 4), (5, 3), (1, 6)]
@@ -2718,6 +2934,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (11, 4, 6, 13, 1, 2, 10, 14, 7, 8, 12, 5, 9, 3)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 5), (3, 7), (6, 5), (6, 7), (4, 2), (4, 3)]
 Rotation Scheme is: [(2, 5, 6, 7, 3, 4)]
 Using pass sequence around node 2: [(7, 1), (7, 3), (4, 6), (5, 6), (5, 3), (1, 4)]
@@ -2750,6 +2968,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (11, 4, 6, 13, 12, 8, 10, 14, 7, 2, 1, 5, 9, 3)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(7, 5), (3, 2), (6, 5), (6, 7), (4, 3), (4, 2)]
 Rotation Scheme is: [(7, 5, 6), (3, 2, 4)]
 Using pass sequence around node 2: [(4, 7), (7, 3), (1, 6), (5, 6), (5, 3), (1, 4)]
@@ -2768,6 +2988,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (11, 4, 6, 13, 2, 1, 10, 14, 7, 12, 8, 5, 9, 3)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 5), (3, 7), (6, 5), (6, 7), (4, 3), (4, 2)]
 Rotation Scheme is: [(2, 5, 6, 7, 3, 4)]
 Using pass sequence around node 2: [(7, 1), (7, 3), (4, 6), (5, 6), (5, 3), (1, 4)]
@@ -2800,6 +3022,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (11, 4, 6, 13, 8, 12, 10, 14, 7, 1, 2, 5, 9, 3)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(7, 5), (3, 2), (6, 5), (6, 7), (4, 2), (4, 3)]
 Rotation Scheme is: [(7, 5, 6), (3, 2, 4)]
 Using pass sequence around node 2: [(4, 7), (7, 3), (1, 6), (5, 6), (5, 3), (1, 4)]
@@ -2818,6 +3042,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (11, 8, 12, 6, 13, 4, 10, 2, 14, 7, 1, 3, 5, 9)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(7, 5), (2, 3), (4, 6), (4, 3), (6, 7), (2, 5)]
 Rotation Scheme is: [(7, 5, 2, 3, 4, 6)]
 Using pass sequence around node 2: [(4, 7), (7, 1), (3, 6), (6, 4), (5, 3), (5, 1)]
@@ -2836,6 +3062,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (11, 8, 12, 6, 4, 13, 10, 2, 14, 1, 7, 3, 5, 9)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(7, 5), (2, 3), (4, 6), (4, 3), (6, 7), (2, 5)]
 Rotation Scheme is: [(7, 5, 2, 3, 4, 6)]
 Using pass sequence around node 2: [(4, 7), (7, 1), (3, 6), (6, 4), (5, 1), (5, 3)]
@@ -2854,6 +3082,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (11, 8, 12, 7, 10, 14, 4, 2, 13, 1, 6, 3, 9, 5)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 5), (3, 7), (4, 5), (4, 3), (6, 2), (7, 6)]
 Rotation Scheme is: [(2, 5, 4, 3, 7, 6)]
 Using pass sequence around node 2: [(7, 4), (3, 6), (7, 1), (5, 4), (5, 3), (1, 6)]
@@ -2886,6 +3116,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (11, 8, 12, 7, 14, 10, 4, 2, 13, 6, 1, 3, 9, 5)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 5), (3, 7), (4, 5), (4, 3), (7, 6), (6, 2)]
 Rotation Scheme is: [(2, 5, 4, 3, 7, 6)]
 Using pass sequence around node 2: [(7, 4), (3, 6), (7, 1), (5, 4), (5, 3), (1, 6)]
@@ -2918,6 +3150,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (11, 8, 6, 12, 13, 4, 10, 14, 2, 7, 1, 5, 3, 9)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(7, 5), (2, 3), (4, 6), (6, 7), (4, 3), (2, 5)]
 Rotation Scheme is: [(7, 5, 2, 3, 4, 6)]
 Using pass sequence around node 2: [(4, 7), (7, 1), (3, 6), (6, 4), (5, 3), (5, 1)]
@@ -2936,6 +3170,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (11, 8, 6, 12, 4, 13, 10, 14, 2, 1, 7, 5, 3, 9)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(7, 5), (2, 3), (4, 6), (6, 7), (4, 3), (2, 5)]
 Rotation Scheme is: [(7, 5, 2, 3, 4, 6)]
 Using pass sequence around node 2: [(4, 7), (7, 1), (3, 6), (6, 4), (5, 1), (5, 3)]
@@ -2954,6 +3190,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (11, 8, 7, 12, 10, 14, 4, 13, 2, 1, 6, 9, 3, 5)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 5), (3, 7), (4, 5), (4, 3), (6, 2), (7, 6)]
 Rotation Scheme is: [(2, 5, 4, 3, 7, 6)]
 Using pass sequence around node 2: [(7, 4), (3, 6), (7, 1), (5, 4), (5, 3), (1, 6)]
@@ -2986,6 +3224,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (11, 8, 7, 12, 14, 10, 4, 13, 2, 6, 1, 9, 3, 5)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 5), (3, 7), (4, 5), (4, 3), (7, 6), (6, 2)]
 Rotation Scheme is: [(2, 5, 4, 3, 7, 6)]
 Using pass sequence around node 2: [(7, 4), (3, 6), (7, 1), (5, 4), (5, 3), (1, 6)]
@@ -3018,6 +3258,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (11, 9, 13, 6, 12, 3, 10, 2, 14, 7, 1, 4, 5, 8)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(7, 4), (2, 3), (5, 6), (5, 3), (6, 7), (2, 4)]
 Rotation Scheme is: [(7, 4, 2, 3, 5, 6)]
 Using pass sequence around node 2: [(5, 7), (7, 1), (3, 6), (6, 5), (4, 3), (4, 1)]
@@ -3036,6 +3278,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (11, 9, 13, 6, 3, 12, 10, 2, 14, 1, 7, 4, 5, 8)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(7, 4), (2, 3), (5, 6), (5, 3), (6, 7), (2, 4)]
 Rotation Scheme is: [(7, 4, 2, 3, 5, 6)]
 Using pass sequence around node 2: [(5, 7), (7, 1), (3, 6), (6, 5), (4, 1), (4, 3)]
@@ -3054,6 +3298,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (11, 9, 13, 7, 10, 14, 3, 2, 12, 1, 6, 4, 8, 5)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 4), (3, 7), (5, 4), (5, 3), (6, 2), (7, 6)]
 Rotation Scheme is: [(2, 4, 5, 3, 7, 6)]
 Using pass sequence around node 2: [(7, 5), (3, 6), (7, 1), (4, 5), (4, 3), (1, 6)]
@@ -3086,6 +3332,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (11, 9, 13, 7, 14, 10, 3, 2, 12, 6, 1, 4, 8, 5)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 4), (3, 7), (5, 4), (5, 3), (7, 6), (6, 2)]
 Rotation Scheme is: [(2, 4, 5, 3, 7, 6)]
 Using pass sequence around node 2: [(7, 5), (3, 6), (7, 1), (4, 5), (4, 3), (1, 6)]
@@ -3118,6 +3366,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (11, 9, 6, 13, 12, 3, 10, 14, 2, 7, 1, 5, 4, 8)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(7, 4), (2, 3), (5, 6), (6, 7), (5, 3), (2, 4)]
 Rotation Scheme is: [(7, 4, 2, 3, 5, 6)]
 Using pass sequence around node 2: [(5, 7), (7, 1), (3, 6), (6, 5), (4, 3), (4, 1)]
@@ -3136,6 +3386,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (11, 9, 6, 13, 3, 12, 10, 14, 2, 1, 7, 5, 4, 8)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(7, 4), (2, 3), (5, 6), (6, 7), (5, 3), (2, 4)]
 Rotation Scheme is: [(7, 4, 2, 3, 5, 6)]
 Using pass sequence around node 2: [(5, 7), (7, 1), (3, 6), (6, 5), (4, 1), (4, 3)]
@@ -3154,6 +3406,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (11, 9, 7, 13, 10, 14, 3, 12, 2, 1, 6, 8, 4, 5)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 4), (3, 7), (5, 4), (5, 3), (6, 2), (7, 6)]
 Rotation Scheme is: [(2, 4, 5, 3, 7, 6)]
 Using pass sequence around node 2: [(7, 5), (3, 6), (7, 1), (4, 5), (4, 3), (1, 6)]
@@ -3186,6 +3440,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (11, 9, 7, 13, 14, 10, 3, 12, 2, 6, 1, 8, 4, 5)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 4), (3, 7), (5, 4), (5, 3), (7, 6), (6, 2)]
 Rotation Scheme is: [(2, 4, 5, 3, 7, 6)]
 Using pass sequence around node 2: [(7, 5), (3, 6), (7, 1), (4, 5), (4, 3), (1, 6)]
@@ -3218,6 +3474,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (1, 3, 12, 2, 10, 5, 9, 7, 13, 11, 6, 8, 4, 14)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 4), (3, 6), (7, 2), (5, 4), (5, 3), (7, 6)]
 Rotation Scheme is: [(2, 4, 5, 3, 6, 7)]
 Using pass sequence around node 2: [(6, 1), (1, 5), (3, 7), (4, 5), (4, 3), (7, 6)]
@@ -3250,6 +3508,8 @@ Solution Found: Torus
 ------------------------------------------------------------
 Perm: (1, 3, 12, 2, 11, 6, 9, 7, 13, 10, 5, 8, 4, 14)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 4), (3, 7), (6, 2), (5, 4), (5, 3), (6, 7)]
 Rotation Scheme is: [(2, 4, 5, 3, 7, 6)]
 Using pass sequence around node 2: [(7, 1), (1, 5), (3, 6), (4, 5), (4, 3), (6, 7)]
@@ -3282,6 +3542,8 @@ Solution Found: Torus
 ------------------------------------------------------------
 Perm: (1, 3, 12, 2, 5, 10, 9, 7, 13, 6, 11, 8, 4, 14)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 4), (3, 6), (7, 2), (5, 4), (5, 3), (7, 6)]
 Rotation Scheme is: [(2, 4, 5, 3, 6, 7)]
 Using pass sequence around node 2: [(6, 1), (1, 5), (3, 7), (4, 5), (4, 3), (7, 6)]
@@ -3314,6 +3576,8 @@ Solution Found: Torus
 ------------------------------------------------------------
 Perm: (1, 3, 12, 2, 6, 11, 9, 7, 13, 5, 10, 8, 4, 14)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 4), (3, 7), (6, 2), (5, 4), (5, 3), (6, 7)]
 Rotation Scheme is: [(2, 4, 5, 3, 7, 6)]
 Using pass sequence around node 2: [(7, 1), (1, 5), (3, 6), (4, 5), (4, 3), (6, 7)]
@@ -3346,6 +3610,8 @@ Solution Found: Torus
 ------------------------------------------------------------
 Perm: (1, 3, 2, 12, 10, 5, 9, 13, 7, 11, 6, 4, 8, 14)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 4), (3, 6), (7, 2), (5, 4), (5, 3), (7, 6)]
 Rotation Scheme is: [(2, 4, 5, 3, 6, 7)]
 Using pass sequence around node 2: [(6, 1), (1, 5), (3, 7), (4, 5), (4, 3), (7, 6)]
@@ -3378,6 +3644,8 @@ Solution Found: Torus
 ------------------------------------------------------------
 Perm: (1, 3, 2, 12, 11, 6, 9, 13, 7, 10, 5, 4, 8, 14)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 4), (3, 7), (6, 2), (5, 4), (5, 3), (6, 7)]
 Rotation Scheme is: [(2, 4, 5, 3, 7, 6)]
 Using pass sequence around node 2: [(7, 1), (1, 5), (3, 6), (4, 5), (4, 3), (6, 7)]
@@ -3410,6 +3678,8 @@ Solution Found: Torus
 ------------------------------------------------------------
 Perm: (1, 3, 2, 12, 5, 10, 9, 13, 7, 6, 11, 4, 8, 14)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 4), (3, 6), (7, 2), (5, 4), (5, 3), (7, 6)]
 Rotation Scheme is: [(2, 4, 5, 3, 6, 7)]
 Using pass sequence around node 2: [(6, 1), (1, 5), (3, 7), (4, 5), (4, 3), (7, 6)]
@@ -3442,6 +3712,8 @@ Solution Found: Torus
 ------------------------------------------------------------
 Perm: (1, 3, 2, 12, 6, 11, 9, 13, 7, 5, 10, 4, 8, 14)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 4), (3, 7), (6, 2), (5, 4), (5, 3), (6, 7)]
 Rotation Scheme is: [(2, 4, 5, 3, 7, 6)]
 Using pass sequence around node 2: [(7, 1), (1, 5), (3, 6), (4, 5), (4, 3), (6, 7)]
@@ -3474,6 +3746,8 @@ Solution Found: Torus
 ------------------------------------------------------------
 Perm: (1, 4, 13, 2, 10, 5, 8, 7, 12, 11, 6, 9, 3, 14)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 5), (3, 6), (7, 2), (4, 5), (4, 3), (7, 6)]
 Rotation Scheme is: [(2, 5, 4, 3, 6, 7)]
 Using pass sequence around node 2: [(6, 1), (1, 4), (3, 7), (5, 4), (5, 3), (7, 6)]
@@ -3506,6 +3780,8 @@ Solution Found: Torus
 ------------------------------------------------------------
 Perm: (1, 4, 13, 2, 11, 6, 8, 7, 12, 10, 5, 9, 3, 14)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 5), (3, 7), (6, 2), (4, 5), (4, 3), (6, 7)]
 Rotation Scheme is: [(2, 5, 4, 3, 7, 6)]
 Using pass sequence around node 2: [(7, 1), (1, 4), (3, 6), (5, 4), (5, 3), (6, 7)]
@@ -3538,6 +3814,8 @@ Solution Found: Torus
 ------------------------------------------------------------
 Perm: (1, 4, 13, 2, 5, 10, 8, 7, 12, 6, 11, 9, 3, 14)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 5), (3, 6), (7, 2), (4, 5), (4, 3), (7, 6)]
 Rotation Scheme is: [(2, 5, 4, 3, 6, 7)]
 Using pass sequence around node 2: [(6, 1), (1, 4), (3, 7), (5, 4), (5, 3), (7, 6)]
@@ -3570,6 +3848,8 @@ Solution Found: Torus
 ------------------------------------------------------------
 Perm: (1, 4, 13, 2, 6, 11, 8, 7, 12, 5, 10, 9, 3, 14)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 5), (3, 7), (6, 2), (4, 5), (4, 3), (6, 7)]
 Rotation Scheme is: [(2, 5, 4, 3, 7, 6)]
 Using pass sequence around node 2: [(7, 1), (1, 4), (3, 6), (5, 4), (5, 3), (6, 7)]
@@ -3602,6 +3882,8 @@ Solution Found: Torus
 ------------------------------------------------------------
 Perm: (1, 4, 2, 13, 10, 5, 8, 12, 7, 11, 6, 3, 9, 14)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 5), (3, 6), (7, 2), (4, 5), (4, 3), (7, 6)]
 Rotation Scheme is: [(2, 5, 4, 3, 6, 7)]
 Using pass sequence around node 2: [(6, 1), (1, 4), (3, 7), (5, 4), (5, 3), (7, 6)]
@@ -3634,6 +3916,8 @@ Solution Found: Torus
 ------------------------------------------------------------
 Perm: (1, 4, 2, 13, 11, 6, 8, 12, 7, 10, 5, 3, 9, 14)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 5), (3, 7), (6, 2), (4, 5), (4, 3), (6, 7)]
 Rotation Scheme is: [(2, 5, 4, 3, 7, 6)]
 Using pass sequence around node 2: [(7, 1), (1, 4), (3, 6), (5, 4), (5, 3), (6, 7)]
@@ -3666,6 +3950,8 @@ Solution Found: Torus
 ------------------------------------------------------------
 Perm: (1, 4, 2, 13, 5, 10, 8, 12, 7, 6, 11, 3, 9, 14)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 5), (3, 6), (7, 2), (4, 5), (4, 3), (7, 6)]
 Rotation Scheme is: [(2, 5, 4, 3, 6, 7)]
 Using pass sequence around node 2: [(6, 1), (1, 4), (3, 7), (5, 4), (5, 3), (7, 6)]
@@ -3698,6 +3984,8 @@ Solution Found: Torus
 ------------------------------------------------------------
 Perm: (1, 4, 2, 13, 6, 11, 8, 12, 7, 5, 10, 3, 9, 14)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(2, 5), (3, 7), (6, 2), (4, 5), (4, 3), (6, 7)]
 Rotation Scheme is: [(2, 5, 4, 3, 7, 6)]
 Using pass sequence around node 2: [(7, 1), (1, 4), (3, 6), (5, 4), (5, 3), (6, 7)]
@@ -3730,6 +4018,8 @@ Solution Found: Torus
 ------------------------------------------------------------
 Perm: (14, 3, 12, 2, 5, 6, 9, 7, 13, 10, 11, 8, 4, 1)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(6, 4), (3, 7), (5, 4), (5, 3), (2, 6), (2, 7)]
 Rotation Scheme is: [(6, 4, 5, 3, 7, 2)]
 Using pass sequence around node 2: [(6, 5), (3, 7), (4, 5), (4, 3), (6, 1), (7, 1)]
@@ -3762,6 +4052,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (14, 3, 12, 2, 6, 5, 9, 7, 13, 11, 10, 8, 4, 1)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(6, 4), (3, 7), (5, 4), (5, 3), (2, 7), (2, 6)]
 Rotation Scheme is: [(6, 4, 5, 3, 7, 2)]
 Using pass sequence around node 2: [(6, 5), (3, 7), (4, 5), (4, 3), (7, 1), (6, 1)]
@@ -3794,6 +4086,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (14, 3, 2, 12, 5, 6, 9, 13, 7, 10, 11, 4, 8, 1)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(6, 4), (3, 7), (5, 4), (5, 3), (2, 6), (2, 7)]
 Rotation Scheme is: [(6, 4, 5, 3, 7, 2)]
 Using pass sequence around node 2: [(6, 5), (3, 7), (4, 5), (4, 3), (6, 1), (7, 1)]
@@ -3826,6 +4120,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (14, 3, 2, 12, 6, 5, 9, 13, 7, 11, 10, 4, 8, 1)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(6, 4), (3, 7), (5, 4), (5, 3), (2, 7), (2, 6)]
 Rotation Scheme is: [(6, 4, 5, 3, 7, 2)]
 Using pass sequence around node 2: [(6, 5), (3, 7), (4, 5), (4, 3), (7, 1), (6, 1)]
@@ -3858,6 +4154,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (14, 4, 13, 2, 5, 6, 8, 7, 12, 10, 11, 9, 3, 1)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(6, 5), (3, 7), (4, 5), (4, 3), (2, 6), (2, 7)]
 Rotation Scheme is: [(6, 5, 4, 3, 7, 2)]
 Using pass sequence around node 2: [(6, 4), (3, 7), (5, 4), (5, 3), (6, 1), (7, 1)]
@@ -3890,6 +4188,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (14, 4, 13, 2, 6, 5, 8, 7, 12, 11, 10, 9, 3, 1)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(6, 5), (3, 7), (4, 5), (4, 3), (2, 7), (2, 6)]
 Rotation Scheme is: [(6, 5, 4, 3, 7, 2)]
 Using pass sequence around node 2: [(6, 4), (3, 7), (5, 4), (5, 3), (7, 1), (6, 1)]
@@ -3922,6 +4222,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (14, 4, 2, 13, 5, 6, 8, 12, 7, 10, 11, 3, 9, 1)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(6, 5), (3, 7), (4, 5), (4, 3), (2, 6), (2, 7)]
 Rotation Scheme is: [(6, 5, 4, 3, 7, 2)]
 Using pass sequence around node 2: [(6, 4), (3, 7), (5, 4), (5, 3), (6, 1), (7, 1)]
@@ -3954,6 +4256,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (14, 4, 2, 13, 6, 5, 8, 12, 7, 11, 10, 3, 9, 1)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(6, 5), (3, 7), (4, 5), (4, 3), (2, 7), (2, 6)]
 Rotation Scheme is: [(6, 5, 4, 3, 7, 2)]
 Using pass sequence around node 2: [(6, 4), (3, 7), (5, 4), (5, 3), (7, 1), (6, 1)]
@@ -3986,6 +4290,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (14, 8, 12, 7, 10, 11, 4, 2, 13, 5, 6, 3, 9, 1)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(6, 5), (3, 7), (4, 5), (4, 3), (6, 2), (7, 2)]
 Rotation Scheme is: [(6, 5, 4, 3, 7, 2)]
 Using pass sequence around node 2: [(6, 4), (3, 7), (5, 4), (5, 3), (1, 6), (1, 7)]
@@ -4018,6 +4324,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (14, 8, 12, 7, 11, 10, 4, 2, 13, 6, 5, 3, 9, 1)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(6, 5), (3, 7), (4, 5), (4, 3), (7, 2), (6, 2)]
 Rotation Scheme is: [(6, 5, 4, 3, 7, 2)]
 Using pass sequence around node 2: [(6, 4), (3, 7), (5, 4), (5, 3), (1, 7), (1, 6)]
@@ -4050,6 +4358,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (14, 8, 7, 12, 10, 11, 4, 13, 2, 5, 6, 9, 3, 1)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(6, 5), (3, 7), (4, 5), (4, 3), (6, 2), (7, 2)]
 Rotation Scheme is: [(6, 5, 4, 3, 7, 2)]
 Using pass sequence around node 2: [(6, 4), (3, 7), (5, 4), (5, 3), (1, 6), (1, 7)]
@@ -4082,6 +4392,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (14, 8, 7, 12, 11, 10, 4, 13, 2, 6, 5, 9, 3, 1)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(6, 5), (3, 7), (4, 5), (4, 3), (7, 2), (6, 2)]
 Rotation Scheme is: [(6, 5, 4, 3, 7, 2)]
 Using pass sequence around node 2: [(6, 4), (3, 7), (5, 4), (5, 3), (1, 7), (1, 6)]
@@ -4114,6 +4426,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (14, 9, 13, 7, 10, 11, 3, 2, 12, 5, 6, 4, 8, 1)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(6, 4), (3, 7), (5, 4), (5, 3), (6, 2), (7, 2)]
 Rotation Scheme is: [(6, 4, 5, 3, 7, 2)]
 Using pass sequence around node 2: [(6, 5), (3, 7), (4, 5), (4, 3), (1, 6), (1, 7)]
@@ -4146,6 +4460,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (14, 9, 13, 7, 11, 10, 3, 2, 12, 6, 5, 4, 8, 1)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(6, 4), (3, 7), (5, 4), (5, 3), (7, 2), (6, 2)]
 Rotation Scheme is: [(6, 4, 5, 3, 7, 2)]
 Using pass sequence around node 2: [(6, 5), (3, 7), (4, 5), (4, 3), (1, 7), (1, 6)]
@@ -4178,6 +4494,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (14, 9, 7, 13, 10, 11, 3, 12, 2, 5, 6, 8, 4, 1)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(6, 4), (3, 7), (5, 4), (5, 3), (6, 2), (7, 2)]
 Rotation Scheme is: [(6, 4, 5, 3, 7, 2)]
 Using pass sequence around node 2: [(6, 5), (3, 7), (4, 5), (4, 3), (1, 6), (1, 7)]
@@ -4210,6 +4528,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (14, 9, 7, 13, 11, 10, 3, 12, 2, 6, 5, 8, 4, 1)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(6, 4), (3, 7), (5, 4), (5, 3), (7, 2), (6, 2)]
 Rotation Scheme is: [(6, 4, 5, 3, 7, 2)]
 Using pass sequence around node 2: [(6, 5), (3, 7), (4, 5), (4, 3), (1, 7), (1, 6)]
@@ -4242,6 +4562,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (1, 8, 12, 7, 10, 5, 4, 2, 13, 11, 6, 3, 9, 14)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(6, 2), (2, 5), (3, 7), (4, 5), (4, 3), (7, 6)]
 Rotation Scheme is: [(6, 2, 5, 4, 3, 7)]
 Using pass sequence around node 2: [(1, 4), (3, 6), (7, 1), (5, 4), (5, 3), (7, 6)]
@@ -4274,6 +4596,8 @@ Solution Found: Torus
 ------------------------------------------------------------
 Perm: (1, 8, 12, 7, 11, 6, 4, 2, 13, 10, 5, 3, 9, 14)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(7, 2), (2, 5), (3, 6), (4, 5), (4, 3), (6, 7)]
 Rotation Scheme is: [(7, 2, 5, 4, 3, 6)]
 Using pass sequence around node 2: [(1, 4), (3, 7), (6, 1), (5, 4), (5, 3), (6, 7)]
@@ -4306,6 +4630,8 @@ Solution Found: Torus
 ------------------------------------------------------------
 Perm: (1, 8, 12, 7, 5, 10, 4, 2, 13, 6, 11, 3, 9, 14)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(6, 2), (2, 5), (3, 7), (4, 5), (4, 3), (7, 6)]
 Rotation Scheme is: [(6, 2, 5, 4, 3, 7)]
 Using pass sequence around node 2: [(1, 4), (3, 6), (7, 1), (5, 4), (5, 3), (7, 6)]
@@ -4338,6 +4664,8 @@ Solution Found: Torus
 ------------------------------------------------------------
 Perm: (1, 8, 12, 7, 6, 11, 4, 2, 13, 5, 10, 3, 9, 14)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(7, 2), (2, 5), (3, 6), (4, 5), (4, 3), (6, 7)]
 Rotation Scheme is: [(7, 2, 5, 4, 3, 6)]
 Using pass sequence around node 2: [(1, 4), (3, 7), (6, 1), (5, 4), (5, 3), (6, 7)]
@@ -4370,6 +4698,8 @@ Solution Found: Torus
 ------------------------------------------------------------
 Perm: (1, 8, 7, 12, 10, 5, 4, 13, 2, 11, 6, 9, 3, 14)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(6, 2), (2, 5), (3, 7), (4, 5), (4, 3), (7, 6)]
 Rotation Scheme is: [(6, 2, 5, 4, 3, 7)]
 Using pass sequence around node 2: [(1, 4), (3, 6), (7, 1), (5, 4), (5, 3), (7, 6)]
@@ -4402,6 +4732,8 @@ Solution Found: Torus
 ------------------------------------------------------------
 Perm: (1, 8, 7, 12, 11, 6, 4, 13, 2, 10, 5, 9, 3, 14)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(7, 2), (2, 5), (3, 6), (4, 5), (4, 3), (6, 7)]
 Rotation Scheme is: [(7, 2, 5, 4, 3, 6)]
 Using pass sequence around node 2: [(1, 4), (3, 7), (6, 1), (5, 4), (5, 3), (6, 7)]
@@ -4434,6 +4766,8 @@ Solution Found: Torus
 ------------------------------------------------------------
 Perm: (1, 8, 7, 12, 5, 10, 4, 13, 2, 6, 11, 9, 3, 14)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(6, 2), (2, 5), (3, 7), (4, 5), (4, 3), (7, 6)]
 Rotation Scheme is: [(6, 2, 5, 4, 3, 7)]
 Using pass sequence around node 2: [(1, 4), (3, 6), (7, 1), (5, 4), (5, 3), (7, 6)]
@@ -4466,6 +4800,8 @@ Solution Found: Torus
 ------------------------------------------------------------
 Perm: (1, 8, 7, 12, 6, 11, 4, 13, 2, 5, 10, 9, 3, 14)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(7, 2), (2, 5), (3, 6), (4, 5), (4, 3), (6, 7)]
 Rotation Scheme is: [(7, 2, 5, 4, 3, 6)]
 Using pass sequence around node 2: [(1, 4), (3, 7), (6, 1), (5, 4), (5, 3), (6, 7)]
@@ -4498,6 +4834,8 @@ Solution Found: Torus
 ------------------------------------------------------------
 Perm: (1, 9, 13, 7, 10, 5, 3, 2, 12, 11, 6, 4, 8, 14)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(6, 2), (2, 4), (3, 7), (5, 4), (5, 3), (7, 6)]
 Rotation Scheme is: [(6, 2, 4, 5, 3, 7)]
 Using pass sequence around node 2: [(1, 5), (3, 6), (7, 1), (4, 5), (4, 3), (7, 6)]
@@ -4530,6 +4868,8 @@ Solution Found: Torus
 ------------------------------------------------------------
 Perm: (1, 9, 13, 7, 11, 6, 3, 2, 12, 10, 5, 4, 8, 14)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(7, 2), (2, 4), (3, 6), (5, 4), (5, 3), (6, 7)]
 Rotation Scheme is: [(7, 2, 4, 5, 3, 6)]
 Using pass sequence around node 2: [(1, 5), (3, 7), (6, 1), (4, 5), (4, 3), (6, 7)]
@@ -4562,6 +4902,8 @@ Solution Found: Torus
 ------------------------------------------------------------
 Perm: (1, 9, 13, 7, 5, 10, 3, 2, 12, 6, 11, 4, 8, 14)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(6, 2), (2, 4), (3, 7), (5, 4), (5, 3), (7, 6)]
 Rotation Scheme is: [(6, 2, 4, 5, 3, 7)]
 Using pass sequence around node 2: [(1, 5), (3, 6), (7, 1), (4, 5), (4, 3), (7, 6)]
@@ -4594,6 +4936,8 @@ Solution Found: Torus
 ------------------------------------------------------------
 Perm: (1, 9, 13, 7, 6, 11, 3, 2, 12, 5, 10, 4, 8, 14)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(7, 2), (2, 4), (3, 6), (5, 4), (5, 3), (6, 7)]
 Rotation Scheme is: [(7, 2, 4, 5, 3, 6)]
 Using pass sequence around node 2: [(1, 5), (3, 7), (6, 1), (4, 5), (4, 3), (6, 7)]
@@ -4626,6 +4970,8 @@ Solution Found: Torus
 ------------------------------------------------------------
 Perm: (1, 9, 7, 13, 10, 5, 3, 12, 2, 11, 6, 8, 4, 14)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(6, 2), (2, 4), (3, 7), (5, 4), (5, 3), (7, 6)]
 Rotation Scheme is: [(6, 2, 4, 5, 3, 7)]
 Using pass sequence around node 2: [(1, 5), (3, 6), (7, 1), (4, 5), (4, 3), (7, 6)]
@@ -4658,6 +5004,8 @@ Solution Found: Torus
 ------------------------------------------------------------
 Perm: (1, 9, 7, 13, 11, 6, 3, 12, 2, 10, 5, 8, 4, 14)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(7, 2), (2, 4), (3, 6), (5, 4), (5, 3), (6, 7)]
 Rotation Scheme is: [(7, 2, 4, 5, 3, 6)]
 Using pass sequence around node 2: [(1, 5), (3, 7), (6, 1), (4, 5), (4, 3), (6, 7)]
@@ -4690,6 +5038,8 @@ Solution Found: Torus
 ------------------------------------------------------------
 Perm: (1, 9, 7, 13, 5, 10, 3, 12, 2, 6, 11, 8, 4, 14)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(6, 2), (2, 4), (3, 7), (5, 4), (5, 3), (7, 6)]
 Rotation Scheme is: [(6, 2, 4, 5, 3, 7)]
 Using pass sequence around node 2: [(1, 5), (3, 6), (7, 1), (4, 5), (4, 3), (7, 6)]
@@ -4722,6 +5072,8 @@ Solution Found: Torus
 ------------------------------------------------------------
 Perm: (1, 9, 7, 13, 6, 11, 3, 12, 2, 5, 10, 8, 4, 14)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(7, 2), (2, 4), (3, 6), (5, 4), (5, 3), (6, 7)]
 Rotation Scheme is: [(7, 2, 4, 5, 3, 6)]
 Using pass sequence around node 2: [(1, 5), (3, 7), (6, 1), (4, 5), (4, 3), (6, 7)]
@@ -4754,6 +5106,8 @@ Solution Found: Torus
 ------------------------------------------------------------
 Perm: (5, 3, 10, 12, 13, 9, 6, 14, 7, 2, 1, 11, 8, 4)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(4, 6), (6, 2), (3, 7), (7, 4), (5, 3), (5, 2)]
 Rotation Scheme is: [(4, 6, 2, 5, 3, 7)]
 Using pass sequence around node 2: [(6, 5), (1, 3), (4, 7), (7, 6), (4, 3), (1, 5)]
@@ -4772,6 +5126,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (5, 3, 10, 12, 9, 13, 6, 14, 7, 1, 2, 11, 8, 4)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(4, 6), (6, 2), (3, 7), (7, 4), (5, 2), (5, 3)]
 Rotation Scheme is: [(4, 6, 2, 5, 3, 7)]
 Using pass sequence around node 2: [(6, 5), (1, 3), (4, 7), (7, 6), (4, 3), (1, 5)]
@@ -4790,6 +5146,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (5, 3, 12, 10, 13, 9, 6, 7, 14, 2, 1, 8, 11, 4)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(4, 6), (6, 2), (3, 7), (7, 4), (5, 3), (5, 2)]
 Rotation Scheme is: [(4, 6, 2, 5, 3, 7)]
 Using pass sequence around node 2: [(6, 5), (1, 3), (4, 7), (4, 3), (7, 6), (1, 5)]
@@ -4808,6 +5166,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (5, 3, 12, 10, 9, 13, 6, 7, 14, 1, 2, 8, 11, 4)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(4, 6), (6, 2), (3, 7), (7, 4), (5, 2), (5, 3)]
 Rotation Scheme is: [(4, 6, 2, 5, 3, 7)]
 Using pass sequence around node 2: [(6, 5), (1, 3), (4, 7), (4, 3), (7, 6), (1, 5)]
@@ -4826,6 +5186,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (5, 3, 12, 2, 14, 6, 9, 7, 13, 10, 1, 8, 4, 11)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(6, 4), (3, 7), (6, 2), (5, 4), (5, 3), (2, 7)]
 Rotation Scheme is: [(6, 4, 5, 3, 7, 2)]
 Using pass sequence around node 2: [(1, 5), (3, 6), (4, 5), (4, 3), (7, 6), (7, 1)]
@@ -4858,6 +5220,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (5, 3, 12, 2, 6, 14, 9, 7, 13, 1, 10, 8, 4, 11)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(6, 4), (3, 7), (6, 2), (5, 4), (5, 3), (2, 7)]
 Rotation Scheme is: [(6, 4, 5, 3, 7, 2)]
 Using pass sequence around node 2: [(1, 5), (3, 6), (4, 5), (4, 3), (7, 1), (7, 6)]
@@ -4890,6 +5254,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (5, 3, 2, 12, 14, 6, 9, 13, 7, 10, 1, 4, 8, 11)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(6, 4), (3, 7), (6, 2), (5, 4), (5, 3), (2, 7)]
 Rotation Scheme is: [(6, 4, 5, 3, 7, 2)]
 Using pass sequence around node 2: [(1, 5), (3, 6), (4, 5), (4, 3), (7, 6), (7, 1)]
@@ -4922,6 +5288,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (5, 3, 2, 12, 6, 14, 9, 13, 7, 1, 10, 4, 8, 11)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(6, 4), (3, 7), (6, 2), (5, 4), (5, 3), (2, 7)]
 Rotation Scheme is: [(6, 4, 5, 3, 7, 2)]
 Using pass sequence around node 2: [(1, 5), (3, 6), (4, 5), (4, 3), (7, 1), (7, 6)]
@@ -4954,6 +5322,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (5, 4, 10, 13, 12, 8, 6, 14, 7, 2, 1, 11, 9, 3)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(5, 6), (6, 2), (3, 7), (7, 5), (4, 3), (4, 2)]
 Rotation Scheme is: [(5, 6, 2, 4, 3, 7)]
 Using pass sequence around node 2: [(6, 4), (1, 3), (5, 7), (7, 6), (5, 3), (1, 4)]
@@ -4972,6 +5342,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (5, 4, 10, 13, 8, 12, 6, 14, 7, 1, 2, 11, 9, 3)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(5, 6), (6, 2), (3, 7), (7, 5), (4, 2), (4, 3)]
 Rotation Scheme is: [(5, 6, 2, 4, 3, 7)]
 Using pass sequence around node 2: [(6, 4), (1, 3), (5, 7), (7, 6), (5, 3), (1, 4)]
@@ -4990,6 +5362,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (5, 4, 13, 10, 12, 8, 6, 7, 14, 2, 1, 9, 11, 3)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(5, 6), (6, 2), (3, 7), (7, 5), (4, 3), (4, 2)]
 Rotation Scheme is: [(5, 6, 2, 4, 3, 7)]
 Using pass sequence around node 2: [(6, 4), (1, 3), (5, 7), (5, 3), (7, 6), (1, 4)]
@@ -5008,6 +5382,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (5, 4, 13, 10, 8, 12, 6, 7, 14, 1, 2, 9, 11, 3)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(5, 6), (6, 2), (3, 7), (7, 5), (4, 2), (4, 3)]
 Rotation Scheme is: [(5, 6, 2, 4, 3, 7)]
 Using pass sequence around node 2: [(6, 4), (1, 3), (5, 7), (5, 3), (7, 6), (1, 4)]
@@ -5026,6 +5402,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (5, 4, 13, 2, 14, 6, 8, 7, 12, 10, 1, 9, 3, 11)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(6, 5), (3, 7), (6, 2), (4, 5), (4, 3), (2, 7)]
 Rotation Scheme is: [(6, 5, 4, 3, 7, 2)]
 Using pass sequence around node 2: [(1, 4), (3, 6), (5, 4), (5, 3), (7, 6), (7, 1)]
@@ -5058,6 +5436,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (5, 4, 13, 2, 6, 14, 8, 7, 12, 1, 10, 9, 3, 11)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(6, 5), (3, 7), (6, 2), (4, 5), (4, 3), (2, 7)]
 Rotation Scheme is: [(6, 5, 4, 3, 7, 2)]
 Using pass sequence around node 2: [(1, 4), (3, 6), (5, 4), (5, 3), (7, 1), (7, 6)]
@@ -5090,6 +5470,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (5, 4, 2, 13, 14, 6, 8, 12, 7, 10, 1, 3, 9, 11)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(6, 5), (3, 7), (6, 2), (4, 5), (4, 3), (2, 7)]
 Rotation Scheme is: [(6, 5, 4, 3, 7, 2)]
 Using pass sequence around node 2: [(1, 4), (3, 6), (5, 4), (5, 3), (7, 6), (7, 1)]
@@ -5122,6 +5504,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (5, 4, 2, 13, 6, 14, 8, 12, 7, 1, 10, 3, 9, 11)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(6, 5), (3, 7), (6, 2), (4, 5), (4, 3), (2, 7)]
 Rotation Scheme is: [(6, 5, 4, 3, 7, 2)]
 Using pass sequence around node 2: [(1, 4), (3, 6), (5, 4), (5, 3), (7, 1), (7, 6)]
@@ -5154,6 +5538,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (5, 6, 14, 2, 12, 3, 9, 10, 13, 7, 1, 11, 4, 8)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(6, 3), (4, 7), (6, 2), (5, 7), (5, 3), (2, 4)]
 Rotation Scheme is: [(6, 3, 5, 7, 4, 2)]
 Using pass sequence around node 2: [(1, 5), (3, 6), (7, 5), (7, 6), (4, 3), (4, 1)]
@@ -5186,6 +5572,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (5, 6, 14, 2, 13, 4, 8, 10, 12, 7, 1, 11, 3, 9)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(6, 3), (5, 7), (6, 2), (4, 7), (4, 3), (2, 5)]
 Rotation Scheme is: [(6, 3, 4, 7, 5, 2)]
 Using pass sequence around node 2: [(1, 4), (3, 6), (7, 4), (7, 6), (5, 3), (5, 1)]
@@ -5218,6 +5606,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (5, 6, 14, 2, 1, 7, 8, 10, 12, 4, 13, 11, 3, 9)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a six-cycle
 Using pass sequence around node 1: [(6, 3), (2, 7), (5, 6), (4, 7), (4, 3), (5, 2)]
 Rotation Scheme is: [(6, 3, 4, 7, 2, 5)]
 Using pass sequence around node 2: [(3, 1), (6, 4), (7, 4), (7, 6), (1, 5), (5, 3)]
@@ -5236,6 +5626,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (5, 6, 14, 2, 1, 7, 9, 10, 13, 3, 12, 11, 4, 8)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a six-cycle
 Using pass sequence around node 1: [(6, 3), (2, 7), (4, 6), (5, 7), (5, 3), (4, 2)]
 Rotation Scheme is: [(6, 3, 5, 7, 2, 4)]
 Using pass sequence around node 2: [(3, 1), (6, 5), (7, 5), (7, 6), (1, 4), (4, 3)]
@@ -5254,6 +5646,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (5, 6, 14, 2, 3, 12, 9, 10, 13, 1, 7, 11, 4, 8)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(6, 3), (4, 7), (6, 2), (5, 7), (5, 3), (2, 4)]
 Rotation Scheme is: [(6, 3, 5, 7, 4, 2)]
 Using pass sequence around node 2: [(1, 5), (3, 6), (7, 5), (7, 6), (4, 1), (4, 3)]
@@ -5286,6 +5680,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (5, 6, 14, 2, 4, 13, 8, 10, 12, 1, 7, 11, 3, 9)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(6, 3), (5, 7), (6, 2), (4, 7), (4, 3), (2, 5)]
 Rotation Scheme is: [(6, 3, 4, 7, 5, 2)]
 Using pass sequence around node 2: [(1, 4), (3, 6), (7, 4), (7, 6), (5, 1), (5, 3)]
@@ -5318,6 +5714,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (5, 6, 14, 2, 7, 1, 8, 10, 12, 13, 4, 11, 3, 9)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a six-cycle
 Using pass sequence around node 1: [(6, 3), (2, 7), (5, 6), (4, 7), (4, 3), (5, 2)]
 Rotation Scheme is: [(6, 3, 4, 7, 2, 5)]
 Using pass sequence around node 2: [(3, 1), (6, 4), (7, 4), (7, 6), (5, 3), (1, 5)]
@@ -5336,6 +5734,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (5, 6, 14, 2, 7, 1, 9, 10, 13, 12, 3, 11, 4, 8)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a six-cycle
 Using pass sequence around node 1: [(6, 3), (2, 7), (4, 6), (5, 7), (5, 3), (4, 2)]
 Rotation Scheme is: [(6, 3, 5, 7, 2, 4)]
 Using pass sequence around node 2: [(3, 1), (6, 5), (7, 5), (7, 6), (4, 3), (1, 4)]
@@ -5354,6 +5754,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (5, 6, 14, 7, 1, 2, 3, 10, 12, 9, 13, 11, 8, 4)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a six-cycle
 Using pass sequence around node 1: [(6, 2), (3, 7), (4, 6), (4, 7), (5, 2), (5, 3)]
 Rotation Scheme is: [(6, 2, 5, 3, 7, 4)]
 Using pass sequence around node 2: [(1, 3), (6, 5), (7, 4), (7, 6), (4, 3), (1, 5)]
@@ -5372,6 +5774,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (5, 6, 14, 7, 1, 2, 4, 10, 13, 8, 12, 11, 9, 3)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a six-cycle
 Using pass sequence around node 1: [(6, 2), (3, 7), (5, 6), (5, 7), (4, 2), (4, 3)]
 Rotation Scheme is: [(6, 2, 4, 3, 7, 5)]
 Using pass sequence around node 2: [(1, 3), (6, 4), (7, 5), (7, 6), (5, 3), (1, 4)]
@@ -5390,6 +5794,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (5, 6, 14, 7, 2, 1, 3, 10, 12, 13, 9, 11, 8, 4)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a six-cycle
 Using pass sequence around node 1: [(6, 2), (3, 7), (4, 6), (4, 7), (5, 3), (5, 2)]
 Rotation Scheme is: [(6, 2, 5, 3, 7, 4)]
 Using pass sequence around node 2: [(1, 3), (6, 5), (7, 4), (7, 6), (4, 3), (1, 5)]
@@ -5408,6 +5814,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (5, 6, 14, 7, 2, 1, 4, 10, 13, 12, 8, 11, 9, 3)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a six-cycle
 Using pass sequence around node 1: [(6, 2), (3, 7), (5, 6), (5, 7), (4, 3), (4, 2)]
 Rotation Scheme is: [(6, 2, 4, 3, 7, 5)]
 Using pass sequence around node 2: [(1, 3), (6, 4), (7, 5), (7, 6), (5, 3), (1, 4)]
@@ -5426,6 +5834,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (5, 6, 2, 14, 12, 3, 9, 13, 10, 7, 1, 4, 11, 8)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(6, 3), (4, 7), (6, 2), (5, 7), (5, 3), (2, 4)]
 Rotation Scheme is: [(6, 3, 5, 7, 4, 2)]
 Using pass sequence around node 2: [(1, 5), (3, 6), (7, 5), (7, 6), (4, 3), (4, 1)]
@@ -5458,6 +5868,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (5, 6, 2, 14, 13, 4, 8, 12, 10, 7, 1, 3, 11, 9)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(6, 3), (5, 7), (6, 2), (4, 7), (4, 3), (2, 5)]
 Rotation Scheme is: [(6, 3, 4, 7, 5, 2)]
 Using pass sequence around node 2: [(1, 4), (3, 6), (7, 4), (7, 6), (5, 3), (5, 1)]
@@ -5490,6 +5902,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (5, 6, 2, 14, 1, 7, 8, 12, 10, 4, 13, 3, 11, 9)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a six-cycle
 Using pass sequence around node 1: [(6, 3), (2, 7), (5, 6), (4, 7), (4, 3), (5, 2)]
 Rotation Scheme is: [(6, 3, 4, 7, 2, 5)]
 Using pass sequence around node 2: [(3, 1), (6, 4), (7, 4), (7, 6), (1, 5), (5, 3)]
@@ -5508,6 +5922,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (5, 6, 2, 14, 1, 7, 9, 13, 10, 3, 12, 4, 11, 8)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a six-cycle
 Using pass sequence around node 1: [(6, 3), (2, 7), (4, 6), (5, 7), (5, 3), (4, 2)]
 Rotation Scheme is: [(6, 3, 5, 7, 2, 4)]
 Using pass sequence around node 2: [(3, 1), (6, 5), (7, 5), (7, 6), (1, 4), (4, 3)]
@@ -5526,6 +5942,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (5, 6, 2, 14, 3, 12, 9, 13, 10, 1, 7, 4, 11, 8)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(6, 3), (4, 7), (6, 2), (5, 7), (5, 3), (2, 4)]
 Rotation Scheme is: [(6, 3, 5, 7, 4, 2)]
 Using pass sequence around node 2: [(1, 5), (3, 6), (7, 5), (7, 6), (4, 1), (4, 3)]
@@ -5558,6 +5976,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (5, 6, 2, 14, 4, 13, 8, 12, 10, 1, 7, 3, 11, 9)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(6, 3), (5, 7), (6, 2), (4, 7), (4, 3), (2, 5)]
 Rotation Scheme is: [(6, 3, 4, 7, 5, 2)]
 Using pass sequence around node 2: [(1, 4), (3, 6), (7, 4), (7, 6), (5, 1), (5, 3)]
@@ -5590,6 +6010,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (5, 6, 2, 14, 7, 1, 8, 12, 10, 13, 4, 3, 11, 9)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a six-cycle
 Using pass sequence around node 1: [(6, 3), (2, 7), (5, 6), (4, 7), (4, 3), (5, 2)]
 Rotation Scheme is: [(6, 3, 4, 7, 2, 5)]
 Using pass sequence around node 2: [(3, 1), (6, 4), (7, 4), (7, 6), (5, 3), (1, 5)]
@@ -5608,6 +6030,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (5, 6, 2, 14, 7, 1, 9, 13, 10, 12, 3, 4, 11, 8)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a six-cycle
 Using pass sequence around node 1: [(6, 3), (2, 7), (4, 6), (5, 7), (5, 3), (4, 2)]
 Rotation Scheme is: [(6, 3, 5, 7, 2, 4)]
 Using pass sequence around node 2: [(3, 1), (6, 5), (7, 5), (7, 6), (4, 3), (1, 4)]
@@ -5626,6 +6050,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (5, 6, 7, 14, 1, 2, 3, 12, 10, 9, 13, 8, 11, 4)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a six-cycle
 Using pass sequence around node 1: [(6, 2), (3, 7), (4, 6), (4, 7), (5, 2), (5, 3)]
 Rotation Scheme is: [(6, 2, 5, 3, 7, 4)]
 Using pass sequence around node 2: [(1, 3), (6, 5), (7, 4), (4, 3), (7, 6), (1, 5)]
@@ -5644,6 +6070,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (5, 6, 7, 14, 1, 2, 4, 13, 10, 8, 12, 9, 11, 3)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a six-cycle
 Using pass sequence around node 1: [(6, 2), (3, 7), (5, 6), (5, 7), (4, 2), (4, 3)]
 Rotation Scheme is: [(6, 2, 4, 3, 7, 5)]
 Using pass sequence around node 2: [(1, 3), (6, 4), (7, 5), (5, 3), (7, 6), (1, 4)]
@@ -5662,6 +6090,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (5, 6, 7, 14, 2, 1, 3, 12, 10, 13, 9, 8, 11, 4)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a six-cycle
 Using pass sequence around node 1: [(6, 2), (3, 7), (4, 6), (4, 7), (5, 3), (5, 2)]
 Rotation Scheme is: [(6, 2, 5, 3, 7, 4)]
 Using pass sequence around node 2: [(1, 3), (6, 5), (7, 4), (4, 3), (7, 6), (1, 5)]
@@ -5680,6 +6110,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (5, 6, 7, 14, 2, 1, 4, 13, 10, 12, 8, 9, 11, 3)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a six-cycle
 Using pass sequence around node 1: [(6, 2), (3, 7), (5, 6), (5, 7), (4, 3), (4, 2)]
 Rotation Scheme is: [(6, 2, 4, 3, 7, 5)]
 Using pass sequence around node 2: [(1, 3), (6, 4), (7, 5), (5, 3), (7, 6), (1, 4)]
@@ -5698,6 +6130,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (5, 8, 10, 12, 13, 4, 6, 14, 2, 7, 1, 11, 3, 9)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(5, 6), (6, 3), (2, 7), (4, 7), (4, 3), (2, 5)]
 Rotation Scheme is: [(5, 6, 3, 4, 7, 2)]
 Using pass sequence around node 2: [(6, 4), (3, 1), (7, 4), (7, 6), (5, 3), (5, 1)]
@@ -5716,6 +6150,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (5, 8, 10, 12, 1, 7, 6, 14, 2, 4, 13, 11, 3, 9)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(6, 2), (6, 3), (5, 7), (4, 7), (4, 3), (5, 2)]
 Rotation Scheme is: [(6, 2, 5, 7, 4, 3)]
 Using pass sequence around node 2: [(1, 4), (3, 6), (7, 4), (7, 6), (1, 5), (5, 3)]
@@ -5748,6 +6184,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (5, 8, 10, 12, 4, 13, 6, 14, 2, 1, 7, 11, 3, 9)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(5, 6), (6, 3), (2, 7), (4, 7), (4, 3), (2, 5)]
 Rotation Scheme is: [(5, 6, 3, 4, 7, 2)]
 Using pass sequence around node 2: [(6, 4), (3, 1), (7, 4), (7, 6), (5, 1), (5, 3)]
@@ -5766,6 +6204,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (5, 8, 10, 12, 7, 1, 6, 14, 2, 13, 4, 11, 3, 9)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(6, 2), (6, 3), (5, 7), (4, 7), (4, 3), (5, 2)]
 Rotation Scheme is: [(6, 2, 5, 7, 4, 3)]
 Using pass sequence around node 2: [(1, 4), (3, 6), (7, 4), (7, 6), (5, 3), (1, 5)]
@@ -5798,6 +6238,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (5, 8, 12, 10, 13, 4, 6, 2, 14, 7, 1, 3, 11, 9)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(5, 6), (6, 3), (2, 7), (4, 7), (4, 3), (2, 5)]
 Rotation Scheme is: [(5, 6, 3, 4, 7, 2)]
 Using pass sequence around node 2: [(6, 4), (3, 1), (7, 4), (7, 6), (5, 3), (5, 1)]
@@ -5816,6 +6258,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (5, 8, 12, 10, 1, 7, 6, 2, 14, 4, 13, 3, 11, 9)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(6, 2), (6, 3), (5, 7), (4, 7), (4, 3), (5, 2)]
 Rotation Scheme is: [(6, 2, 5, 7, 4, 3)]
 Using pass sequence around node 2: [(1, 4), (3, 6), (7, 4), (7, 6), (1, 5), (5, 3)]
@@ -5848,6 +6292,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (5, 8, 12, 10, 4, 13, 6, 2, 14, 1, 7, 3, 11, 9)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(5, 6), (6, 3), (2, 7), (4, 7), (4, 3), (2, 5)]
 Rotation Scheme is: [(5, 6, 3, 4, 7, 2)]
 Using pass sequence around node 2: [(6, 4), (3, 1), (7, 4), (7, 6), (5, 1), (5, 3)]
@@ -5866,6 +6312,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (5, 8, 12, 10, 7, 1, 6, 2, 14, 13, 4, 3, 11, 9)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(6, 2), (6, 3), (5, 7), (4, 7), (4, 3), (5, 2)]
 Rotation Scheme is: [(6, 2, 5, 7, 4, 3)]
 Using pass sequence around node 2: [(1, 4), (3, 6), (7, 4), (7, 6), (5, 3), (1, 5)]
@@ -5898,6 +6346,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (5, 8, 12, 7, 10, 1, 4, 2, 13, 14, 6, 3, 9, 11)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(6, 2), (6, 5), (3, 7), (4, 5), (4, 3), (7, 2)]
 Rotation Scheme is: [(6, 2, 7, 3, 4, 5)]
 Using pass sequence around node 2: [(1, 4), (3, 6), (5, 4), (5, 3), (7, 6), (1, 7)]
@@ -5930,6 +6380,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (5, 8, 12, 7, 1, 10, 4, 2, 13, 6, 14, 3, 9, 11)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(6, 2), (6, 5), (3, 7), (4, 5), (4, 3), (7, 2)]
 Rotation Scheme is: [(6, 2, 7, 3, 4, 5)]
 Using pass sequence around node 2: [(1, 4), (3, 6), (5, 4), (5, 3), (1, 7), (7, 6)]
@@ -5962,6 +6414,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (5, 8, 7, 12, 10, 1, 4, 13, 2, 14, 6, 9, 3, 11)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(6, 2), (6, 5), (3, 7), (4, 5), (4, 3), (7, 2)]
 Rotation Scheme is: [(6, 2, 7, 3, 4, 5)]
 Using pass sequence around node 2: [(1, 4), (3, 6), (5, 4), (5, 3), (7, 6), (1, 7)]
@@ -5994,6 +6448,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (5, 8, 7, 12, 1, 10, 4, 13, 2, 6, 14, 9, 3, 11)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(6, 2), (6, 5), (3, 7), (4, 5), (4, 3), (7, 2)]
 Rotation Scheme is: [(6, 2, 7, 3, 4, 5)]
 Using pass sequence around node 2: [(1, 4), (3, 6), (5, 4), (5, 3), (1, 7), (7, 6)]
@@ -6026,6 +6482,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (5, 9, 10, 13, 12, 3, 6, 14, 2, 7, 1, 11, 4, 8)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(4, 6), (6, 3), (2, 7), (5, 7), (5, 3), (2, 4)]
 Rotation Scheme is: [(4, 6, 3, 5, 7, 2)]
 Using pass sequence around node 2: [(6, 5), (3, 1), (7, 5), (7, 6), (4, 3), (4, 1)]
@@ -6044,6 +6502,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (5, 9, 10, 13, 1, 7, 6, 14, 2, 3, 12, 11, 4, 8)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(6, 2), (6, 3), (4, 7), (5, 7), (5, 3), (4, 2)]
 Rotation Scheme is: [(6, 2, 4, 7, 5, 3)]
 Using pass sequence around node 2: [(1, 5), (3, 6), (7, 5), (7, 6), (1, 4), (4, 3)]
@@ -6076,6 +6536,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (5, 9, 10, 13, 3, 12, 6, 14, 2, 1, 7, 11, 4, 8)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(4, 6), (6, 3), (2, 7), (5, 7), (5, 3), (2, 4)]
 Rotation Scheme is: [(4, 6, 3, 5, 7, 2)]
 Using pass sequence around node 2: [(6, 5), (3, 1), (7, 5), (7, 6), (4, 1), (4, 3)]
@@ -6094,6 +6556,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (5, 9, 10, 13, 7, 1, 6, 14, 2, 12, 3, 11, 4, 8)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(6, 2), (6, 3), (4, 7), (5, 7), (5, 3), (4, 2)]
 Rotation Scheme is: [(6, 2, 4, 7, 5, 3)]
 Using pass sequence around node 2: [(1, 5), (3, 6), (7, 5), (7, 6), (4, 3), (1, 4)]
@@ -6126,6 +6590,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (5, 9, 13, 10, 12, 3, 6, 2, 14, 7, 1, 4, 11, 8)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(4, 6), (6, 3), (2, 7), (5, 7), (5, 3), (2, 4)]
 Rotation Scheme is: [(4, 6, 3, 5, 7, 2)]
 Using pass sequence around node 2: [(6, 5), (3, 1), (7, 5), (7, 6), (4, 3), (4, 1)]
@@ -6144,6 +6610,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (5, 9, 13, 10, 1, 7, 6, 2, 14, 3, 12, 4, 11, 8)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(6, 2), (6, 3), (4, 7), (5, 7), (5, 3), (4, 2)]
 Rotation Scheme is: [(6, 2, 4, 7, 5, 3)]
 Using pass sequence around node 2: [(1, 5), (3, 6), (7, 5), (7, 6), (1, 4), (4, 3)]
@@ -6176,6 +6644,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (5, 9, 13, 10, 3, 12, 6, 2, 14, 1, 7, 4, 11, 8)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(4, 6), (6, 3), (2, 7), (5, 7), (5, 3), (2, 4)]
 Rotation Scheme is: [(4, 6, 3, 5, 7, 2)]
 Using pass sequence around node 2: [(6, 5), (3, 1), (7, 5), (7, 6), (4, 1), (4, 3)]
@@ -6194,6 +6664,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (5, 9, 13, 10, 7, 1, 6, 2, 14, 12, 3, 4, 11, 8)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(6, 2), (6, 3), (4, 7), (5, 7), (5, 3), (4, 2)]
 Rotation Scheme is: [(6, 2, 4, 7, 5, 3)]
 Using pass sequence around node 2: [(1, 5), (3, 6), (7, 5), (7, 6), (4, 3), (1, 4)]
@@ -6226,6 +6698,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (5, 9, 13, 7, 10, 1, 3, 2, 12, 14, 6, 4, 8, 11)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(6, 2), (6, 4), (3, 7), (5, 4), (5, 3), (7, 2)]
 Rotation Scheme is: [(6, 2, 7, 3, 5, 4)]
 Using pass sequence around node 2: [(1, 5), (3, 6), (4, 5), (4, 3), (7, 6), (1, 7)]
@@ -6258,6 +6732,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (5, 9, 13, 7, 1, 10, 3, 2, 12, 6, 14, 4, 8, 11)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(6, 2), (6, 4), (3, 7), (5, 4), (5, 3), (7, 2)]
 Rotation Scheme is: [(6, 2, 7, 3, 5, 4)]
 Using pass sequence around node 2: [(1, 5), (3, 6), (4, 5), (4, 3), (1, 7), (7, 6)]
@@ -6290,6 +6766,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (5, 9, 7, 13, 10, 1, 3, 12, 2, 14, 6, 8, 4, 11)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(6, 2), (6, 4), (3, 7), (5, 4), (5, 3), (7, 2)]
 Rotation Scheme is: [(6, 2, 7, 3, 5, 4)]
 Using pass sequence around node 2: [(1, 5), (3, 6), (4, 5), (4, 3), (7, 6), (1, 7)]
@@ -6322,6 +6800,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (5, 9, 7, 13, 1, 10, 3, 12, 2, 6, 14, 8, 4, 11)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(6, 2), (6, 4), (3, 7), (5, 4), (5, 3), (7, 2)]
 Rotation Scheme is: [(6, 2, 7, 3, 5, 4)]
 Using pass sequence around node 2: [(1, 5), (3, 6), (4, 5), (4, 3), (1, 7), (7, 6)]
@@ -6354,6 +6834,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (6, 3, 11, 12, 13, 9, 5, 14, 7, 2, 1, 10, 8, 4)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(4, 7), (7, 2), (3, 6), (6, 4), (5, 3), (5, 2)]
 Rotation Scheme is: [(4, 7, 2, 5, 3, 6)]
 Using pass sequence around node 2: [(7, 5), (1, 3), (4, 6), (6, 7), (4, 3), (1, 5)]
@@ -6372,6 +6854,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (6, 3, 11, 12, 9, 13, 5, 14, 7, 1, 2, 10, 8, 4)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(4, 7), (7, 2), (3, 6), (6, 4), (5, 2), (5, 3)]
 Rotation Scheme is: [(4, 7, 2, 5, 3, 6)]
 Using pass sequence around node 2: [(7, 5), (1, 3), (4, 6), (6, 7), (4, 3), (1, 5)]
@@ -6390,6 +6874,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (6, 3, 12, 11, 13, 9, 5, 7, 14, 2, 1, 8, 10, 4)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(4, 7), (7, 2), (3, 6), (6, 4), (5, 3), (5, 2)]
 Rotation Scheme is: [(4, 7, 2, 5, 3, 6)]
 Using pass sequence around node 2: [(7, 5), (1, 3), (4, 6), (4, 3), (6, 7), (1, 5)]
@@ -6408,6 +6894,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (6, 3, 12, 11, 9, 13, 5, 7, 14, 1, 2, 8, 10, 4)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(4, 7), (7, 2), (3, 6), (6, 4), (5, 2), (5, 3)]
 Rotation Scheme is: [(4, 7, 2, 5, 3, 6)]
 Using pass sequence around node 2: [(7, 5), (1, 3), (4, 6), (4, 3), (6, 7), (1, 5)]
@@ -6426,6 +6914,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (6, 3, 12, 2, 14, 5, 9, 7, 13, 11, 1, 8, 4, 10)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(7, 4), (3, 6), (7, 2), (5, 4), (5, 3), (2, 6)]
 Rotation Scheme is: [(7, 4, 5, 3, 6, 2)]
 Using pass sequence around node 2: [(1, 5), (3, 7), (4, 5), (4, 3), (7, 6), (6, 1)]
@@ -6458,6 +6948,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (6, 3, 12, 2, 5, 14, 9, 7, 13, 1, 11, 8, 4, 10)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(7, 4), (3, 6), (7, 2), (5, 4), (5, 3), (2, 6)]
 Rotation Scheme is: [(7, 4, 5, 3, 6, 2)]
 Using pass sequence around node 2: [(1, 5), (3, 7), (4, 5), (4, 3), (6, 1), (7, 6)]
@@ -6490,6 +6982,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (6, 3, 2, 12, 14, 5, 9, 13, 7, 11, 1, 4, 8, 10)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(7, 4), (3, 6), (7, 2), (5, 4), (5, 3), (2, 6)]
 Rotation Scheme is: [(7, 4, 5, 3, 6, 2)]
 Using pass sequence around node 2: [(1, 5), (3, 7), (4, 5), (4, 3), (7, 6), (6, 1)]
@@ -6522,6 +7016,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (6, 3, 2, 12, 5, 14, 9, 13, 7, 1, 11, 4, 8, 10)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(7, 4), (3, 6), (7, 2), (5, 4), (5, 3), (2, 6)]
 Rotation Scheme is: [(7, 4, 5, 3, 6, 2)]
 Using pass sequence around node 2: [(1, 5), (3, 7), (4, 5), (4, 3), (6, 1), (7, 6)]
@@ -6554,6 +7050,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (6, 4, 11, 13, 12, 8, 5, 14, 7, 2, 1, 10, 9, 3)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(5, 7), (7, 2), (3, 6), (6, 5), (4, 3), (4, 2)]
 Rotation Scheme is: [(5, 7, 2, 4, 3, 6)]
 Using pass sequence around node 2: [(7, 4), (1, 3), (5, 6), (6, 7), (5, 3), (1, 4)]
@@ -6572,6 +7070,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (6, 4, 11, 13, 8, 12, 5, 14, 7, 1, 2, 10, 9, 3)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(5, 7), (7, 2), (3, 6), (6, 5), (4, 2), (4, 3)]
 Rotation Scheme is: [(5, 7, 2, 4, 3, 6)]
 Using pass sequence around node 2: [(7, 4), (1, 3), (5, 6), (6, 7), (5, 3), (1, 4)]
@@ -6590,6 +7090,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (6, 4, 13, 11, 12, 8, 5, 7, 14, 2, 1, 9, 10, 3)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(5, 7), (7, 2), (3, 6), (6, 5), (4, 3), (4, 2)]
 Rotation Scheme is: [(5, 7, 2, 4, 3, 6)]
 Using pass sequence around node 2: [(7, 4), (1, 3), (5, 6), (5, 3), (6, 7), (1, 4)]
@@ -6608,6 +7110,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (6, 4, 13, 11, 8, 12, 5, 7, 14, 1, 2, 9, 10, 3)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(5, 7), (7, 2), (3, 6), (6, 5), (4, 2), (4, 3)]
 Rotation Scheme is: [(5, 7, 2, 4, 3, 6)]
 Using pass sequence around node 2: [(7, 4), (1, 3), (5, 6), (5, 3), (6, 7), (1, 4)]
@@ -6626,6 +7130,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (6, 4, 13, 2, 14, 5, 8, 7, 12, 11, 1, 9, 3, 10)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(7, 5), (3, 6), (7, 2), (4, 5), (4, 3), (2, 6)]
 Rotation Scheme is: [(7, 5, 4, 3, 6, 2)]
 Using pass sequence around node 2: [(1, 4), (3, 7), (5, 4), (5, 3), (7, 6), (6, 1)]
@@ -6658,6 +7164,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (6, 4, 13, 2, 5, 14, 8, 7, 12, 1, 11, 9, 3, 10)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(7, 5), (3, 6), (7, 2), (4, 5), (4, 3), (2, 6)]
 Rotation Scheme is: [(7, 5, 4, 3, 6, 2)]
 Using pass sequence around node 2: [(1, 4), (3, 7), (5, 4), (5, 3), (6, 1), (7, 6)]
@@ -6690,6 +7198,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (6, 4, 2, 13, 14, 5, 8, 12, 7, 11, 1, 3, 9, 10)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(7, 5), (3, 6), (7, 2), (4, 5), (4, 3), (2, 6)]
 Rotation Scheme is: [(7, 5, 4, 3, 6, 2)]
 Using pass sequence around node 2: [(1, 4), (3, 7), (5, 4), (5, 3), (7, 6), (6, 1)]
@@ -6722,6 +7232,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (6, 4, 2, 13, 5, 14, 8, 12, 7, 1, 11, 3, 9, 10)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(7, 5), (3, 6), (7, 2), (4, 5), (4, 3), (2, 6)]
 Rotation Scheme is: [(7, 5, 4, 3, 6, 2)]
 Using pass sequence around node 2: [(1, 4), (3, 7), (5, 4), (5, 3), (6, 1), (7, 6)]
@@ -6754,6 +7266,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (6, 5, 14, 2, 12, 3, 9, 11, 13, 7, 1, 10, 4, 8)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(7, 3), (4, 6), (7, 2), (5, 6), (5, 3), (2, 4)]
 Rotation Scheme is: [(7, 3, 5, 6, 4, 2)]
 Using pass sequence around node 2: [(1, 5), (3, 7), (6, 5), (7, 6), (4, 3), (4, 1)]
@@ -6786,6 +7300,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (6, 5, 14, 2, 13, 4, 8, 11, 12, 7, 1, 10, 3, 9)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(7, 3), (5, 6), (7, 2), (4, 6), (4, 3), (2, 5)]
 Rotation Scheme is: [(7, 3, 4, 6, 5, 2)]
 Using pass sequence around node 2: [(1, 4), (3, 7), (6, 4), (7, 6), (5, 3), (5, 1)]
@@ -6818,6 +7334,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (6, 5, 14, 2, 1, 7, 8, 11, 12, 4, 13, 10, 3, 9)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a six-cycle
 Using pass sequence around node 1: [(7, 3), (2, 6), (5, 7), (4, 6), (4, 3), (5, 2)]
 Rotation Scheme is: [(7, 3, 4, 6, 2, 5)]
 Using pass sequence around node 2: [(3, 1), (7, 4), (6, 4), (7, 6), (1, 5), (5, 3)]
@@ -6836,6 +7354,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (6, 5, 14, 2, 1, 7, 9, 11, 13, 3, 12, 10, 4, 8)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a six-cycle
 Using pass sequence around node 1: [(7, 3), (2, 6), (4, 7), (5, 6), (5, 3), (4, 2)]
 Rotation Scheme is: [(7, 3, 5, 6, 2, 4)]
 Using pass sequence around node 2: [(3, 1), (7, 5), (6, 5), (7, 6), (1, 4), (4, 3)]
@@ -6854,6 +7374,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (6, 5, 14, 2, 3, 12, 9, 11, 13, 1, 7, 10, 4, 8)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(7, 3), (4, 6), (7, 2), (5, 6), (5, 3), (2, 4)]
 Rotation Scheme is: [(7, 3, 5, 6, 4, 2)]
 Using pass sequence around node 2: [(1, 5), (3, 7), (6, 5), (7, 6), (4, 1), (4, 3)]
@@ -6886,6 +7408,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (6, 5, 14, 2, 4, 13, 8, 11, 12, 1, 7, 10, 3, 9)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(7, 3), (5, 6), (7, 2), (4, 6), (4, 3), (2, 5)]
 Rotation Scheme is: [(7, 3, 4, 6, 5, 2)]
 Using pass sequence around node 2: [(1, 4), (3, 7), (6, 4), (7, 6), (5, 1), (5, 3)]
@@ -6918,6 +7442,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (6, 5, 14, 2, 7, 1, 8, 11, 12, 13, 4, 10, 3, 9)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a six-cycle
 Using pass sequence around node 1: [(7, 3), (2, 6), (5, 7), (4, 6), (4, 3), (5, 2)]
 Rotation Scheme is: [(7, 3, 4, 6, 2, 5)]
 Using pass sequence around node 2: [(3, 1), (7, 4), (6, 4), (7, 6), (5, 3), (1, 5)]
@@ -6936,6 +7462,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (6, 5, 14, 2, 7, 1, 9, 11, 13, 12, 3, 10, 4, 8)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a six-cycle
 Using pass sequence around node 1: [(7, 3), (2, 6), (4, 7), (5, 6), (5, 3), (4, 2)]
 Rotation Scheme is: [(7, 3, 5, 6, 2, 4)]
 Using pass sequence around node 2: [(3, 1), (7, 5), (6, 5), (7, 6), (4, 3), (1, 4)]
@@ -6954,6 +7482,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (6, 5, 14, 7, 1, 2, 3, 11, 12, 9, 13, 10, 8, 4)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a six-cycle
 Using pass sequence around node 1: [(7, 2), (3, 6), (4, 7), (4, 6), (5, 2), (5, 3)]
 Rotation Scheme is: [(7, 2, 5, 3, 6, 4)]
 Using pass sequence around node 2: [(1, 3), (7, 5), (6, 4), (7, 6), (4, 3), (1, 5)]
@@ -6972,6 +7502,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (6, 5, 14, 7, 1, 2, 4, 11, 13, 8, 12, 10, 9, 3)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a six-cycle
 Using pass sequence around node 1: [(7, 2), (3, 6), (5, 7), (5, 6), (4, 2), (4, 3)]
 Rotation Scheme is: [(7, 2, 4, 3, 6, 5)]
 Using pass sequence around node 2: [(1, 3), (7, 4), (6, 5), (7, 6), (5, 3), (1, 4)]
@@ -6990,6 +7522,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (6, 5, 14, 7, 2, 1, 3, 11, 12, 13, 9, 10, 8, 4)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a six-cycle
 Using pass sequence around node 1: [(7, 2), (3, 6), (4, 7), (4, 6), (5, 3), (5, 2)]
 Rotation Scheme is: [(7, 2, 5, 3, 6, 4)]
 Using pass sequence around node 2: [(1, 3), (7, 5), (6, 4), (7, 6), (4, 3), (1, 5)]
@@ -7008,6 +7542,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (6, 5, 14, 7, 2, 1, 4, 11, 13, 12, 8, 10, 9, 3)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a six-cycle
 Using pass sequence around node 1: [(7, 2), (3, 6), (5, 7), (5, 6), (4, 3), (4, 2)]
 Rotation Scheme is: [(7, 2, 4, 3, 6, 5)]
 Using pass sequence around node 2: [(1, 3), (7, 4), (6, 5), (7, 6), (5, 3), (1, 4)]
@@ -7026,6 +7562,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (6, 5, 2, 14, 12, 3, 9, 13, 11, 7, 1, 4, 10, 8)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(7, 3), (4, 6), (7, 2), (5, 6), (5, 3), (2, 4)]
 Rotation Scheme is: [(7, 3, 5, 6, 4, 2)]
 Using pass sequence around node 2: [(1, 5), (3, 7), (6, 5), (7, 6), (4, 3), (4, 1)]
@@ -7058,6 +7596,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (6, 5, 2, 14, 13, 4, 8, 12, 11, 7, 1, 3, 10, 9)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(7, 3), (5, 6), (7, 2), (4, 6), (4, 3), (2, 5)]
 Rotation Scheme is: [(7, 3, 4, 6, 5, 2)]
 Using pass sequence around node 2: [(1, 4), (3, 7), (6, 4), (7, 6), (5, 3), (5, 1)]
@@ -7090,6 +7630,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (6, 5, 2, 14, 1, 7, 8, 12, 11, 4, 13, 3, 10, 9)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a six-cycle
 Using pass sequence around node 1: [(7, 3), (2, 6), (5, 7), (4, 6), (4, 3), (5, 2)]
 Rotation Scheme is: [(7, 3, 4, 6, 2, 5)]
 Using pass sequence around node 2: [(3, 1), (7, 4), (6, 4), (7, 6), (1, 5), (5, 3)]
@@ -7108,6 +7650,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (6, 5, 2, 14, 1, 7, 9, 13, 11, 3, 12, 4, 10, 8)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a six-cycle
 Using pass sequence around node 1: [(7, 3), (2, 6), (4, 7), (5, 6), (5, 3), (4, 2)]
 Rotation Scheme is: [(7, 3, 5, 6, 2, 4)]
 Using pass sequence around node 2: [(3, 1), (7, 5), (6, 5), (7, 6), (1, 4), (4, 3)]
@@ -7126,6 +7670,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (6, 5, 2, 14, 3, 12, 9, 13, 11, 1, 7, 4, 10, 8)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(7, 3), (4, 6), (7, 2), (5, 6), (5, 3), (2, 4)]
 Rotation Scheme is: [(7, 3, 5, 6, 4, 2)]
 Using pass sequence around node 2: [(1, 5), (3, 7), (6, 5), (7, 6), (4, 1), (4, 3)]
@@ -7158,6 +7704,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (6, 5, 2, 14, 4, 13, 8, 12, 11, 1, 7, 3, 10, 9)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(7, 3), (5, 6), (7, 2), (4, 6), (4, 3), (2, 5)]
 Rotation Scheme is: [(7, 3, 4, 6, 5, 2)]
 Using pass sequence around node 2: [(1, 4), (3, 7), (6, 4), (7, 6), (5, 1), (5, 3)]
@@ -7190,6 +7738,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (6, 5, 2, 14, 7, 1, 8, 12, 11, 13, 4, 3, 10, 9)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a six-cycle
 Using pass sequence around node 1: [(7, 3), (2, 6), (5, 7), (4, 6), (4, 3), (5, 2)]
 Rotation Scheme is: [(7, 3, 4, 6, 2, 5)]
 Using pass sequence around node 2: [(3, 1), (7, 4), (6, 4), (7, 6), (5, 3), (1, 5)]
@@ -7208,6 +7758,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (6, 5, 2, 14, 7, 1, 9, 13, 11, 12, 3, 4, 10, 8)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a six-cycle
 Using pass sequence around node 1: [(7, 3), (2, 6), (4, 7), (5, 6), (5, 3), (4, 2)]
 Rotation Scheme is: [(7, 3, 5, 6, 2, 4)]
 Using pass sequence around node 2: [(3, 1), (7, 5), (6, 5), (7, 6), (4, 3), (1, 4)]
@@ -7226,6 +7778,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (6, 5, 7, 14, 1, 2, 3, 12, 11, 9, 13, 8, 10, 4)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a six-cycle
 Using pass sequence around node 1: [(7, 2), (3, 6), (4, 7), (4, 6), (5, 2), (5, 3)]
 Rotation Scheme is: [(7, 2, 5, 3, 6, 4)]
 Using pass sequence around node 2: [(1, 3), (7, 5), (6, 4), (4, 3), (7, 6), (1, 5)]
@@ -7244,6 +7798,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (6, 5, 7, 14, 1, 2, 4, 13, 11, 8, 12, 9, 10, 3)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a six-cycle
 Using pass sequence around node 1: [(7, 2), (3, 6), (5, 7), (5, 6), (4, 2), (4, 3)]
 Rotation Scheme is: [(7, 2, 4, 3, 6, 5)]
 Using pass sequence around node 2: [(1, 3), (7, 4), (6, 5), (5, 3), (7, 6), (1, 4)]
@@ -7262,6 +7818,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (6, 5, 7, 14, 2, 1, 3, 12, 11, 13, 9, 8, 10, 4)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a six-cycle
 Using pass sequence around node 1: [(7, 2), (3, 6), (4, 7), (4, 6), (5, 3), (5, 2)]
 Rotation Scheme is: [(7, 2, 5, 3, 6, 4)]
 Using pass sequence around node 2: [(1, 3), (7, 5), (6, 4), (4, 3), (7, 6), (1, 5)]
@@ -7280,6 +7838,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (6, 5, 7, 14, 2, 1, 4, 13, 11, 12, 8, 9, 10, 3)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a six-cycle
 Using pass sequence around node 1: [(7, 2), (3, 6), (5, 7), (5, 6), (4, 3), (4, 2)]
 Rotation Scheme is: [(7, 2, 4, 3, 6, 5)]
 Using pass sequence around node 2: [(1, 3), (7, 4), (6, 5), (5, 3), (7, 6), (1, 4)]
@@ -7298,6 +7858,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (6, 8, 11, 12, 13, 4, 5, 14, 2, 7, 1, 10, 3, 9)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(5, 7), (7, 3), (2, 6), (4, 6), (4, 3), (2, 5)]
 Rotation Scheme is: [(5, 7, 3, 4, 6, 2)]
 Using pass sequence around node 2: [(7, 4), (3, 1), (6, 4), (6, 7), (5, 3), (5, 1)]
@@ -7316,6 +7878,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (6, 8, 11, 12, 1, 7, 5, 14, 2, 4, 13, 10, 3, 9)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(7, 2), (7, 3), (5, 6), (4, 6), (4, 3), (5, 2)]
 Rotation Scheme is: [(7, 2, 5, 6, 4, 3)]
 Using pass sequence around node 2: [(1, 4), (3, 7), (6, 4), (6, 7), (1, 5), (5, 3)]
@@ -7348,6 +7912,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (6, 8, 11, 12, 4, 13, 5, 14, 2, 1, 7, 10, 3, 9)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(5, 7), (7, 3), (2, 6), (4, 6), (4, 3), (2, 5)]
 Rotation Scheme is: [(5, 7, 3, 4, 6, 2)]
 Using pass sequence around node 2: [(7, 4), (3, 1), (6, 4), (6, 7), (5, 1), (5, 3)]
@@ -7366,6 +7932,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (6, 8, 11, 12, 7, 1, 5, 14, 2, 13, 4, 10, 3, 9)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(7, 2), (7, 3), (5, 6), (4, 6), (4, 3), (5, 2)]
 Rotation Scheme is: [(7, 2, 5, 6, 4, 3)]
 Using pass sequence around node 2: [(1, 4), (3, 7), (6, 4), (6, 7), (5, 3), (1, 5)]
@@ -7398,6 +7966,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (6, 8, 12, 11, 13, 4, 5, 2, 14, 7, 1, 3, 10, 9)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(5, 7), (7, 3), (2, 6), (4, 6), (4, 3), (2, 5)]
 Rotation Scheme is: [(5, 7, 3, 4, 6, 2)]
 Using pass sequence around node 2: [(7, 4), (3, 1), (6, 4), (6, 7), (5, 3), (5, 1)]
@@ -7416,6 +7986,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (6, 8, 12, 11, 1, 7, 5, 2, 14, 4, 13, 3, 10, 9)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(7, 2), (7, 3), (5, 6), (4, 6), (4, 3), (5, 2)]
 Rotation Scheme is: [(7, 2, 5, 6, 4, 3)]
 Using pass sequence around node 2: [(1, 4), (3, 7), (6, 4), (6, 7), (1, 5), (5, 3)]
@@ -7448,6 +8020,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (6, 8, 12, 11, 4, 13, 5, 2, 14, 1, 7, 3, 10, 9)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(5, 7), (7, 3), (2, 6), (4, 6), (4, 3), (2, 5)]
 Rotation Scheme is: [(5, 7, 3, 4, 6, 2)]
 Using pass sequence around node 2: [(7, 4), (3, 1), (6, 4), (6, 7), (5, 1), (5, 3)]
@@ -7466,6 +8040,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (6, 8, 12, 11, 7, 1, 5, 2, 14, 13, 4, 3, 10, 9)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(7, 2), (7, 3), (5, 6), (4, 6), (4, 3), (5, 2)]
 Rotation Scheme is: [(7, 2, 5, 6, 4, 3)]
 Using pass sequence around node 2: [(1, 4), (3, 7), (6, 4), (6, 7), (5, 3), (1, 5)]
@@ -7498,6 +8074,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (6, 8, 12, 7, 11, 1, 4, 2, 13, 14, 5, 3, 9, 10)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(7, 2), (7, 5), (3, 6), (4, 5), (4, 3), (6, 2)]
 Rotation Scheme is: [(7, 2, 6, 3, 4, 5)]
 Using pass sequence around node 2: [(1, 4), (3, 7), (5, 4), (5, 3), (6, 7), (1, 6)]
@@ -7530,6 +8108,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (6, 8, 12, 7, 1, 11, 4, 2, 13, 5, 14, 3, 9, 10)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(7, 2), (7, 5), (3, 6), (4, 5), (4, 3), (6, 2)]
 Rotation Scheme is: [(7, 2, 6, 3, 4, 5)]
 Using pass sequence around node 2: [(1, 4), (3, 7), (5, 4), (5, 3), (1, 6), (6, 7)]
@@ -7562,6 +8142,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (6, 8, 7, 12, 11, 1, 4, 13, 2, 14, 5, 9, 3, 10)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(7, 2), (7, 5), (3, 6), (4, 5), (4, 3), (6, 2)]
 Rotation Scheme is: [(7, 2, 6, 3, 4, 5)]
 Using pass sequence around node 2: [(1, 4), (3, 7), (5, 4), (5, 3), (6, 7), (1, 6)]
@@ -7594,6 +8176,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (6, 8, 7, 12, 1, 11, 4, 13, 2, 5, 14, 9, 3, 10)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(7, 2), (7, 5), (3, 6), (4, 5), (4, 3), (6, 2)]
 Rotation Scheme is: [(7, 2, 6, 3, 4, 5)]
 Using pass sequence around node 2: [(1, 4), (3, 7), (5, 4), (5, 3), (1, 6), (6, 7)]
@@ -7626,6 +8210,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (6, 9, 11, 13, 12, 3, 5, 14, 2, 7, 1, 10, 4, 8)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(4, 7), (7, 3), (2, 6), (5, 6), (5, 3), (2, 4)]
 Rotation Scheme is: [(4, 7, 3, 5, 6, 2)]
 Using pass sequence around node 2: [(7, 5), (3, 1), (6, 5), (6, 7), (4, 3), (4, 1)]
@@ -7644,6 +8230,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (6, 9, 11, 13, 1, 7, 5, 14, 2, 3, 12, 10, 4, 8)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(7, 2), (7, 3), (4, 6), (5, 6), (5, 3), (4, 2)]
 Rotation Scheme is: [(7, 2, 4, 6, 5, 3)]
 Using pass sequence around node 2: [(1, 5), (3, 7), (6, 5), (6, 7), (1, 4), (4, 3)]
@@ -7676,6 +8264,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (6, 9, 11, 13, 3, 12, 5, 14, 2, 1, 7, 10, 4, 8)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(4, 7), (7, 3), (2, 6), (5, 6), (5, 3), (2, 4)]
 Rotation Scheme is: [(4, 7, 3, 5, 6, 2)]
 Using pass sequence around node 2: [(7, 5), (3, 1), (6, 5), (6, 7), (4, 1), (4, 3)]
@@ -7694,6 +8284,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (6, 9, 11, 13, 7, 1, 5, 14, 2, 12, 3, 10, 4, 8)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(7, 2), (7, 3), (4, 6), (5, 6), (5, 3), (4, 2)]
 Rotation Scheme is: [(7, 2, 4, 6, 5, 3)]
 Using pass sequence around node 2: [(1, 5), (3, 7), (6, 5), (6, 7), (4, 3), (1, 4)]
@@ -7726,6 +8318,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (6, 9, 13, 11, 12, 3, 5, 2, 14, 7, 1, 4, 10, 8)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(4, 7), (7, 3), (2, 6), (5, 6), (5, 3), (2, 4)]
 Rotation Scheme is: [(4, 7, 3, 5, 6, 2)]
 Using pass sequence around node 2: [(7, 5), (3, 1), (6, 5), (6, 7), (4, 3), (4, 1)]
@@ -7744,6 +8338,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (6, 9, 13, 11, 1, 7, 5, 2, 14, 3, 12, 4, 10, 8)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(7, 2), (7, 3), (4, 6), (5, 6), (5, 3), (4, 2)]
 Rotation Scheme is: [(7, 2, 4, 6, 5, 3)]
 Using pass sequence around node 2: [(1, 5), (3, 7), (6, 5), (6, 7), (1, 4), (4, 3)]
@@ -7776,6 +8372,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (6, 9, 13, 11, 3, 12, 5, 2, 14, 1, 7, 4, 10, 8)
 ------------------------------------------------------------
+star(1) maps to a six-cycle
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(4, 7), (7, 3), (2, 6), (5, 6), (5, 3), (2, 4)]
 Rotation Scheme is: [(4, 7, 3, 5, 6, 2)]
 Using pass sequence around node 2: [(7, 5), (3, 1), (6, 5), (6, 7), (4, 1), (4, 3)]
@@ -7794,6 +8392,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (6, 9, 13, 11, 7, 1, 5, 2, 14, 12, 3, 4, 10, 8)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(7, 2), (7, 3), (4, 6), (5, 6), (5, 3), (4, 2)]
 Rotation Scheme is: [(7, 2, 4, 6, 5, 3)]
 Using pass sequence around node 2: [(1, 5), (3, 7), (6, 5), (6, 7), (4, 3), (1, 4)]
@@ -7826,6 +8426,8 @@ Solution Found: 2-pinchpoint Sphere
 ------------------------------------------------------------
 Perm: (6, 9, 13, 7, 11, 1, 3, 2, 12, 14, 5, 4, 8, 10)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(7, 2), (7, 4), (3, 6), (5, 4), (5, 3), (6, 2)]
 Rotation Scheme is: [(7, 2, 6, 3, 5, 4)]
 Using pass sequence around node 2: [(1, 5), (3, 7), (4, 5), (4, 3), (6, 7), (1, 6)]
@@ -7858,6 +8460,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (6, 9, 13, 7, 1, 11, 3, 2, 12, 5, 14, 4, 8, 10)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(7, 2), (7, 4), (3, 6), (5, 4), (5, 3), (6, 2)]
 Rotation Scheme is: [(7, 2, 6, 3, 5, 4)]
 Using pass sequence around node 2: [(1, 5), (3, 7), (4, 5), (4, 3), (1, 6), (6, 7)]
@@ -7890,6 +8494,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (6, 9, 7, 13, 11, 1, 3, 12, 2, 14, 5, 8, 4, 10)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(7, 2), (7, 4), (3, 6), (5, 4), (5, 3), (6, 2)]
 Rotation Scheme is: [(7, 2, 6, 3, 5, 4)]
 Using pass sequence around node 2: [(1, 5), (3, 7), (4, 5), (4, 3), (6, 7), (1, 6)]
@@ -7922,6 +8528,8 @@ Solution Found: Klien Bottle
 ------------------------------------------------------------
 Perm: (6, 9, 7, 13, 1, 11, 3, 12, 2, 5, 14, 8, 4, 10)
 ------------------------------------------------------------
+star(1) maps to a bowtie
+star(2) maps to a bowtie
 Using pass sequence around node 1: [(7, 2), (7, 4), (3, 6), (5, 4), (5, 3), (6, 2)]
 Rotation Scheme is: [(7, 2, 6, 3, 5, 4)]
 Using pass sequence around node 2: [(1, 5), (3, 7), (4, 5), (4, 3), (1, 6), (6, 7)]
