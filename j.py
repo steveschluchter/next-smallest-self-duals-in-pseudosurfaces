@@ -33,7 +33,7 @@ DIV_LENGTH = 60
 PINCHED_PORJECTIVE_PLANE = 'Pinched Projective Plane'
 TWO_PINCHPOINT_SPHERE = '2-pinchpoint Sphere'
 TORUS = 'Torus'
-KLIEN_BOTTLE = 'Klien Bottle'
+KLEIN_BOTTLE = 'Klein Bottle'
 
 ALL_PERMS_N = factorial(14)
 
@@ -366,7 +366,7 @@ class Graph():
                 if is_orientable:
                     log_perm_filled(f'Solution Found: {TORUS}')
                 else:
-                    log_perm_filled(f'Solution Found: {KLIEN_BOTTLE}')
+                    log_perm_filled(f'Solution Found: {KLEIN_BOTTLE}')
 
 
 def process_perm(
@@ -460,7 +460,7 @@ def main() -> None:
             PINCHED_PORJECTIVE_PLANE: 0,
             TWO_PINCHPOINT_SPHERE: 0,
             TORUS: 0,
-            KLIEN_BOTTLE: 0,
+            KLEIN_BOTTLE: 0,
         }
         for perm_n, perm in tqdm(enumerate(perms, start=1), total=total_perms):
                 if args.max_perms and perm_n > args.max_perms:
