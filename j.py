@@ -1,3 +1,55 @@
+"""
+This program was Juan M. Lazaro Ruiz (juan.m.lazaro.ruiz@gmail.com) with
+Steve Schluchter (steven.schluchter@gmail.com) contributing to documentation.
+
+Purpose:
+    The purpose of this script is to find self-dual embeddings of 7-node
+    14-edge graphs in psuedosurfaces. This can be done numerically by permuting
+    the 14 edges.
+
+Notes:
+    This script can run through all 14! edge-permutations or analyze a set of
+    algebraic dual correspondences (ADCs) saved to files from another script.
+
+Algorithm Summary:
+    0. For each permutation, we check if it is an ADC by checking that all the
+    (permutation) mappings of vertex stars are eulerian. If not not, move on to
+    the next permutation (see check_self_dual_perm).
+    1. Make graph walks (see get_dual_graph_walks).
+        1.0. A graph walk is a collection (tuple) of face walks which are
+            themselves a collection (list) of edges (tuples of integers
+            representing nodes)
+        1.1. Find which verticies map via ADC(star(vertex)) to bowties.
+            1.1.1 Bowties are identified by having a vertex with 4 neighbors
+        1.2. Make a graph walk for each of use of the 2 ** n combinations of
+            uses of the n \in {0, 1, 2} bowties.
+    For each graph walk (see check_dual_graph_walks):
+        2. Check for pinchpoints (see get_n_pinchpoints and check_pinchpoint).
+            2.1. For each of vertex of degree six, find all passes through it
+                from each face walk.
+            2.2. Get the number of cycles produced by these passes. Each cycle
+                corresponds to an umbrella so > 1 cycle means the relevant
+                vertex is a pinchpoint.
+        3. Check if the graph walk is orientable (see check_orientable).
+            3.0. Track uses (values) of edges (keys) in a graph walk with a
+                dictionary.
+            3.1. For each face walk in the graph walk
+                3.1.1. Orient the face walk. I.e. if any of the edges is already
+                    in the tracking dictionary in the same orientation, reverse
+                    the face walk (nodes in edges are ordered) otherwise leave
+                    it.
+                3.1.2. For each edge in the face walk, if it is
+                    in the tracking dictionary, but with opposite orientation,
+                    subtract 1. If it is in the dictionary with the same
+                    orientation add 1, or create it with a value of 1 if it
+                    is not yet in the dictionary in any form.
+            3.2. Once all the edges of all the face walks are added, if all
+                dictionary values are 0, it is oreientable, otherwise it is
+                nonorientable.
+        4. Identify psuedosurface of embedding from the number of pinchpoint
+            and orientability.
+"""
+
 import os
 from glob import glob
 import networkx as nx
