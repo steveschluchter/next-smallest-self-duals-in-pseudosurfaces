@@ -1,54 +1,59 @@
-"""
-This program was Juan M. Lazaro Ruiz (juan.m.lazaro.ruiz@gmail.com) with
-Steve Schluchter (steven.schluchter@gmail.com) contributing to documentation.
 
-Purpose:
-    The purpose of this script is to find self-dual embeddings of 7-node
-    14-edge graphs in psuedosurfaces. This can be done numerically by permuting
-    the 14 edges.
+# This program was Juan M. Lazaro Ruiz (juan.m.lazaro.ruiz@gmail.com) with
+# Steve Schluchter (steven.schluchter@gmail.com) contributing to documentation.
+#
+# Purpose:
+#     The purpose of this script is to find self-dual embeddings of 7-node
+#     14-edge graphs in psuedosurfaces with at least one
+#     vertex of degree 7 and all other vertices of minimum degree 3. 
+#     This can be done exhaustively by iterating through the permutations of
+#     the 14 edges and analzing them.
+#
+# Notes:
+#     This script can run through all 14! edge-permutations or analyze a set of
+#     algebraic dual correspondences (ADCs) saved to files from another script.
+#
+#    To execute this script and analyze graph1, run the shell command
+#         python j.py graph1 all
+#
+# Algorithm Summary:
+#     0. For each permutation, we check if it is an ADC by checking that all the
+#     (permutation) mappings of vertex stars induce Eulerian subgraphs. If not, move on to
+#     the next permutation (see check_self_dual_perm).
+#     1. Make graph walks (see get_dual_graph_walks).
+#        1.0. A graph walk is a collection (tuple) of face walks, each of which is
+#            themselves a collection (list) of edges (tuples of integers
+#            representing nodes).
+#        1.1. Find which vertex stars map via ADC(star(vertex)) to bowties.
+#            1.1.1 Bowties are identified by having a vertex with 4 neighbors
+#        1.2. Make a graph walk for each of use of the 2 ** n combinations of
+#            uses of the n \in {0, 1, 2} bowties.
+#    For each graph walk (see check_dual_graph_walks):
+#        2. Check for pinchpoints (see get_n_pinchpoints and check_pinchpoint).
+#            2.1. For each of vertex of degree six, find all passes through it
+#                from each face walk.
+#            2.2. Get the number of cycles produced by these passes. Each cycle
+#                corresponds to an umbrella so > 1 cycle means the relevant
+#                vertex is a pinchpoint.
+#        3. Check if the graph walk is orientable (see check_orientable).
+#            3.0. Track uses (values) of edges (keys) in a graph walk with a tracking
+#                dictionary.
+#            3.1. For each face walk in the graph walk
+#                3.1.1. Orient the face walk. I.e. if any of the edges is already
+#                    in the tracking dictionary in the same orientation, reverse
+#                    the face walk (nodes in edges are ordered) and otherwise leave
+#                    it.
+#                3.1.2. For each edge in the face walk, if it is
+#                    in the tracking dictionary, but with opposite orientation,
+#                    subtract 1. If it is in the dictionary with the same
+#                    orientation add 1, or create it with a value of 1 if it
+#                    is not yet in the dictionary in any form.
+#            3.2. Once all the edges of all the face walks are added, if all
+#                dictionary values are 0, it is oreientable, otherwise it is
+#                nonorientable.
+#        4. Identify psuedosurface of embedding from the number of pinchpoint
+#            and orientability.
 
-Notes:
-    This script can run through all 14! edge-permutations or analyze a set of
-    algebraic dual correspondences (ADCs) saved to files from another script.
-
-Algorithm Summary:
-    0. For each permutation, we check if it is an ADC by checking that all the
-    (permutation) mappings of vertex stars are eulerian. If not not, move on to
-    the next permutation (see check_self_dual_perm).
-    1. Make graph walks (see get_dual_graph_walks).
-        1.0. A graph walk is a collection (tuple) of face walks which are
-            themselves a collection (list) of edges (tuples of integers
-            representing nodes)
-        1.1. Find which verticies map via ADC(star(vertex)) to bowties.
-            1.1.1 Bowties are identified by having a vertex with 4 neighbors
-        1.2. Make a graph walk for each of use of the 2 ** n combinations of
-            uses of the n \in {0, 1, 2} bowties.
-    For each graph walk (see check_dual_graph_walks):
-        2. Check for pinchpoints (see get_n_pinchpoints and check_pinchpoint).
-            2.1. For each of vertex of degree six, find all passes through it
-                from each face walk.
-            2.2. Get the number of cycles produced by these passes. Each cycle
-                corresponds to an umbrella so > 1 cycle means the relevant
-                vertex is a pinchpoint.
-        3. Check if the graph walk is orientable (see check_orientable).
-            3.0. Track uses (values) of edges (keys) in a graph walk with a
-                dictionary.
-            3.1. For each face walk in the graph walk
-                3.1.1. Orient the face walk. I.e. if any of the edges is already
-                    in the tracking dictionary in the same orientation, reverse
-                    the face walk (nodes in edges are ordered) otherwise leave
-                    it.
-                3.1.2. For each edge in the face walk, if it is
-                    in the tracking dictionary, but with opposite orientation,
-                    subtract 1. If it is in the dictionary with the same
-                    orientation add 1, or create it with a value of 1 if it
-                    is not yet in the dictionary in any form.
-            3.2. Once all the edges of all the face walks are added, if all
-                dictionary values are 0, it is oreientable, otherwise it is
-                nonorientable.
-        4. Identify psuedosurface of embedding from the number of pinchpoint
-            and orientability.
-"""
 
 import os
 from glob import glob
@@ -116,7 +121,7 @@ def get_perm(perm_path: str) -> PERM:
 
 def rotation_scheme(seq: list[PASS]) -> list[tuple[NODE]]:
     """
-    Gets list of cycles from sequence of edges
+    Gets rotation scheme from sequence of edges indicent to a vertex.
     Example:
     [(1,2), (2,3), (3,1), (4,5), (5,6), (6,4)] -> [(1,2,3), (4,5,6)]
     """
@@ -230,8 +235,8 @@ class Graph():
 
     def get_dual_bowtie_nodes(self, perm: PERM) -> dict[NODE, NODE]:
         """
-        Get dictionary of degree six node(s) (keys), if the dual of their
-        vstar is a bowtie, and the center node of that bowtie (values)
+        Get dictionary of degree six node(s) (keys) if the dual of their
+        vstar is a bowtie and the center node of that bowtie (values).
         """
         dual_bowtie_nodes = {}
         for degree_six_node in self.degree_six_nodes:
@@ -248,7 +253,7 @@ class Graph():
         ) -> list[GRAPH_WALK]:
         """
         Get all dual graph walks allowed by different uses of bowsties
-        generated by perm (ADC), where a graph walk is a set of facial walks.
+        generated by perm (ADC), where a graph walk is a set of facial boundary walks.
         """
         # Determine how any bowties there are and therefore how many options we
         # have for the use of the bowtie edges
@@ -282,7 +287,7 @@ class Graph():
         ) -> int:
             """
             Return index to pass to self.get_dual_bowtie_edge_options to
-            instruct which set of passes to use
+            instruct which set of passes to use.
             """
             return (
                 option if n_dual_bowtie_nodes == 1
@@ -301,7 +306,7 @@ class Graph():
             ]
 
         def get_cycle_walk(edges: list[EDGE]) -> FACE_WALK:
-            """ Organize cycle edges with rotation_scheme """
+            """ Organize cycle edges with rotation_scheme. """
             rs = list(rotation_scheme(edges)[0])
             return [tup for tup in zip(rs, rs[1:] + [rs[0]])]
 
@@ -336,7 +341,7 @@ class Graph():
         Check if a degree_six_node is a pinchpoint by checking for more than
         one cycle of passes (node_1, node_2) representing edges
         (node_1, degree_six_node), (degree_six_node, node_2) through
-        degree_six_node representing more then one umbrella.
+        degree_six_node representing more then one umbrella of the degree_six_node.
         """
         pass_seq = []
         for face_walk in graph_walk:
@@ -400,7 +405,7 @@ class Graph():
 
     def check_dual_graph_walks(self, perm: PERM, perm_log: PERM_LOG) -> None:
         """
-        Check dual graph walks for number of pinchpoints and orientability
+        Check dual graph walks for number of pinchpoints and orientability.
         """
         log_perm_filled = partial(log_perm, perm_log=perm_log)
         dual_graph_walks = self.get_dual_graph_walks(perm, perm_log)
