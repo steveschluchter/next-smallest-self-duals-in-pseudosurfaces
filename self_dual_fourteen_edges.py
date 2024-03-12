@@ -5,7 +5,7 @@
 # Purpose:
 #     The purpose of this script is to find self-dual embeddings of 7-node
 #     14-edge graphs in psuedosurfaces with at least one
-#     vertex of degree 7 and all other vertices of minimum degree 3. 
+#     vertex of degree 7 and all other vertices of minimum degree 3.
 #     This can be done exhaustively by iterating through the permutations of
 #     the 14 edges and analzing them.
 #
