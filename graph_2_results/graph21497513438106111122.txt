@@ -1,1 +1,0 @@
-The permutation (14, 9, 7, 5, 13, 4, 3, 8, 10, 6, 11, 1, 12, 2) is an algebraic dual permutation of graph2.

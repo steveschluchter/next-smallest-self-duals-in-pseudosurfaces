@@ -1,1 +1,0 @@
-The permutation (13, 5, 4, 7, 3, 6, 10, 9, 8, 2, 14, 1, 12, 11) is an algebraic dual permutation of graph2.This perm is a winner!  It maps each vertex star to a cycle.

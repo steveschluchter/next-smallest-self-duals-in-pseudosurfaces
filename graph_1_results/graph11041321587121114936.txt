@@ -1,1 +1,0 @@
-The permutation (10, 4, 13, 2, 1, 5, 8, 7, 12, 11, 14, 9, 3, 6) is an algebraic dual permutation of graph1.

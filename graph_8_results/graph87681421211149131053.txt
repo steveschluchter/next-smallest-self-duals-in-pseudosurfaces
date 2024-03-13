@@ -1,1 +1,0 @@
-The permutation (7, 6, 8, 14, 2, 12, 1, 11, 4, 9, 13, 10, 5, 3) is an algebraic dual permutation of graph8.

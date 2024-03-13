@@ -1,1 +1,0 @@
-The permutation (4, 11, 3, 7, 8, 1, 13, 5, 14, 2, 9, 6, 12, 10) is an algebraic dual permutation of graph11.This perm is a winner!  It maps each vertex star to a cycle.

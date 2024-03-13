@@ -1,1 +1,0 @@
-The permutation (13, 8, 12, 6, 2, 9, 10, 11, 14, 7, 3, 5, 4, 1) is an algebraic dual permutation of graph3.
