@@ -1,6 +1,6 @@
 
-# This program was Juan M. Lazaro Ruiz (juan.m.lazaro.ruiz@gmail.com) with
-# Steve Schluchter (steven.schluchter@gmail.com) contributing to documentation.
+# This program was written by Juan M. Lazaro Ruiz (juan.m.lazaro.ruiz@gmail.com)
+# with Steve Schluchter (steven.schluchter@gmail.com) contributing to documentation.
 #
 # Purpose:
 #     The purpose of this script is to find self-dual embeddings of 7-node
