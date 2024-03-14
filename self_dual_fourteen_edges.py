@@ -14,7 +14,7 @@
 #     algebraic dual correspondences (ADCs) saved to files from another script.
 #
 #    To execute this script and analyze graph1, run the shell command
-#         python j.py graph1 all
+#         python self_dual_fourteen_edges.py graph1 all
 #
 # Algorithm Summary:
 #     0. For each permutation, we check if it is an ADC by checking that all the
