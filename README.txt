@@ -2,7 +2,7 @@ This repository accompanies the article
 
 The next smallest self-dual embeddable graphs in pseudosurfaces
 
-by Steven Schluchter and Juan Miguel Lazaro Ruiz.
+by Steven Schluchter and Juan Manuel Lazaro Ruiz.
 
 The article is in preparation.
 
