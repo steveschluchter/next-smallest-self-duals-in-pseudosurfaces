@@ -16,21 +16,6 @@ Edge 14: (5, 6)
 Degree six nodes are: (1,)
 
 ------------------------------------------------------------
-Perm: (2, 1, 12, 10, 5, 6, 11, 8, 9, 4, 7, 3, 13, 14)
-------------------------------------------------------------
-star(1) maps to a bowtie
-Using pass sequence around node 1: [(3, 2), (6, 7), (5, 3), (4, 2), (5, 6), (4, 7)]
-Rotation Scheme is: [(3, 2, 4, 7, 6, 5)]
-Number of pinchpoints: 0
-Is orientable: False
-Solution Found: Klien Bottle
-Using pass sequence around node 1: [(3, 6), (2, 7), (5, 3), (4, 2), (5, 6), (4, 7)]
-Rotation Scheme is: [(3, 6, 5), (2, 7, 4)]
-Number of pinchpoints: 1
-Is orientable: False
-Solution Found: Pinched Projective Plane
-
-------------------------------------------------------------
 Perm: (2, 1, 12, 4, 9, 6, 11, 8, 5, 10, 7, 3, 13, 14)
 ------------------------------------------------------------
 star(1) maps to a bowtie
@@ -38,7 +23,7 @@ Using pass sequence around node 1: [(3, 2), (5, 7), (6, 3), (4, 2), (6, 5), (4, 
 Rotation Scheme is: [(3, 2, 4, 7, 5, 6)]
 Number of pinchpoints: 0
 Is orientable: False
-Solution Found: Klien Bottle
+Solution Found: Klein Bottle
 Using pass sequence around node 1: [(3, 5), (2, 7), (6, 3), (4, 2), (6, 5), (4, 7)]
 Rotation Scheme is: [(3, 5, 6), (2, 7, 4)]
 Number of pinchpoints: 1
@@ -53,7 +38,7 @@ Using pass sequence around node 1: [(3, 2), (6, 7), (5, 3), (4, 2), (5, 6), (4, 
 Rotation Scheme is: [(3, 2, 4, 7, 6, 5)]
 Number of pinchpoints: 0
 Is orientable: False
-Solution Found: Klien Bottle
+Solution Found: Klein Bottle
 Using pass sequence around node 1: [(3, 6), (2, 7), (5, 3), (4, 2), (5, 6), (4, 7)]
 Rotation Scheme is: [(3, 6, 5), (2, 7, 4)]
 Number of pinchpoints: 1
@@ -68,7 +53,7 @@ Using pass sequence around node 1: [(3, 2), (5, 7), (6, 3), (4, 2), (6, 5), (4, 
 Rotation Scheme is: [(3, 2, 4, 7, 5, 6)]
 Number of pinchpoints: 0
 Is orientable: False
-Solution Found: Klien Bottle
+Solution Found: Klein Bottle
 Using pass sequence around node 1: [(3, 5), (2, 7), (6, 3), (4, 2), (6, 5), (4, 7)]
 Rotation Scheme is: [(3, 5, 6), (2, 7, 4)]
 Number of pinchpoints: 1
@@ -76,14 +61,14 @@ Is orientable: False
 Solution Found: Pinched Projective Plane
 
 ------------------------------------------------------------
-Perm: (2, 12, 1, 10, 5, 6, 8, 11, 9, 4, 7, 13, 3, 14)
+Perm: (2, 1, 12, 10, 5, 6, 11, 8, 9, 4, 7, 3, 13, 14)
 ------------------------------------------------------------
 star(1) maps to a bowtie
 Using pass sequence around node 1: [(3, 2), (6, 7), (5, 3), (4, 2), (5, 6), (4, 7)]
 Rotation Scheme is: [(3, 2, 4, 7, 6, 5)]
 Number of pinchpoints: 0
 Is orientable: False
-Solution Found: Klien Bottle
+Solution Found: Klein Bottle
 Using pass sequence around node 1: [(3, 6), (2, 7), (5, 3), (4, 2), (5, 6), (4, 7)]
 Rotation Scheme is: [(3, 6, 5), (2, 7, 4)]
 Number of pinchpoints: 1
@@ -98,7 +83,7 @@ Using pass sequence around node 1: [(3, 2), (5, 7), (6, 3), (4, 2), (6, 5), (4, 
 Rotation Scheme is: [(3, 2, 4, 7, 5, 6)]
 Number of pinchpoints: 0
 Is orientable: False
-Solution Found: Klien Bottle
+Solution Found: Klein Bottle
 Using pass sequence around node 1: [(3, 5), (2, 7), (6, 3), (4, 2), (6, 5), (4, 7)]
 Rotation Scheme is: [(3, 5, 6), (2, 7, 4)]
 Number of pinchpoints: 1
@@ -113,7 +98,7 @@ Using pass sequence around node 1: [(3, 2), (6, 7), (5, 3), (4, 2), (5, 6), (4, 
 Rotation Scheme is: [(3, 2, 4, 7, 6, 5)]
 Number of pinchpoints: 0
 Is orientable: False
-Solution Found: Klien Bottle
+Solution Found: Klein Bottle
 Using pass sequence around node 1: [(3, 6), (2, 7), (5, 3), (4, 2), (5, 6), (4, 7)]
 Rotation Scheme is: [(3, 6, 5), (2, 7, 4)]
 Number of pinchpoints: 1
@@ -128,7 +113,7 @@ Using pass sequence around node 1: [(3, 2), (5, 7), (6, 3), (4, 2), (6, 5), (4, 
 Rotation Scheme is: [(3, 2, 4, 7, 5, 6)]
 Number of pinchpoints: 0
 Is orientable: False
-Solution Found: Klien Bottle
+Solution Found: Klein Bottle
 Using pass sequence around node 1: [(3, 5), (2, 7), (6, 3), (4, 2), (6, 5), (4, 7)]
 Rotation Scheme is: [(3, 5, 6), (2, 7, 4)]
 Number of pinchpoints: 1
@@ -136,16 +121,16 @@ Is orientable: False
 Solution Found: Pinched Projective Plane
 
 ------------------------------------------------------------
-Perm: (3, 1, 13, 10, 5, 6, 11, 7, 9, 4, 8, 2, 12, 14)
+Perm: (2, 12, 1, 10, 5, 6, 8, 11, 9, 4, 7, 13, 3, 14)
 ------------------------------------------------------------
 star(1) maps to a bowtie
-Using pass sequence around node 1: [(4, 2), (6, 7), (5, 4), (3, 2), (5, 6), (3, 7)]
-Rotation Scheme is: [(4, 2, 3, 7, 6, 5)]
+Using pass sequence around node 1: [(3, 2), (6, 7), (5, 3), (4, 2), (5, 6), (4, 7)]
+Rotation Scheme is: [(3, 2, 4, 7, 6, 5)]
 Number of pinchpoints: 0
 Is orientable: False
-Solution Found: Klien Bottle
-Using pass sequence around node 1: [(4, 6), (2, 7), (5, 4), (3, 2), (5, 6), (3, 7)]
-Rotation Scheme is: [(4, 6, 5), (2, 7, 3)]
+Solution Found: Klein Bottle
+Using pass sequence around node 1: [(3, 6), (2, 7), (5, 3), (4, 2), (5, 6), (4, 7)]
+Rotation Scheme is: [(3, 6, 5), (2, 7, 4)]
 Number of pinchpoints: 1
 Is orientable: False
 Solution Found: Pinched Projective Plane
@@ -158,7 +143,7 @@ Using pass sequence around node 1: [(4, 2), (5, 7), (6, 4), (3, 2), (6, 5), (3, 
 Rotation Scheme is: [(4, 2, 3, 7, 5, 6)]
 Number of pinchpoints: 0
 Is orientable: False
-Solution Found: Klien Bottle
+Solution Found: Klein Bottle
 Using pass sequence around node 1: [(4, 5), (2, 7), (6, 4), (3, 2), (6, 5), (3, 7)]
 Rotation Scheme is: [(4, 5, 6), (2, 7, 3)]
 Number of pinchpoints: 1
@@ -173,7 +158,7 @@ Using pass sequence around node 1: [(4, 2), (6, 7), (5, 4), (3, 2), (5, 6), (3, 
 Rotation Scheme is: [(4, 2, 3, 7, 6, 5)]
 Number of pinchpoints: 0
 Is orientable: False
-Solution Found: Klien Bottle
+Solution Found: Klein Bottle
 Using pass sequence around node 1: [(4, 6), (2, 7), (5, 4), (3, 2), (5, 6), (3, 7)]
 Rotation Scheme is: [(4, 6, 5), (2, 7, 3)]
 Number of pinchpoints: 1
@@ -188,7 +173,7 @@ Using pass sequence around node 1: [(4, 2), (5, 7), (6, 4), (3, 2), (6, 5), (3, 
 Rotation Scheme is: [(4, 2, 3, 7, 5, 6)]
 Number of pinchpoints: 0
 Is orientable: False
-Solution Found: Klien Bottle
+Solution Found: Klein Bottle
 Using pass sequence around node 1: [(4, 5), (2, 7), (6, 4), (3, 2), (6, 5), (3, 7)]
 Rotation Scheme is: [(4, 5, 6), (2, 7, 3)]
 Number of pinchpoints: 1
@@ -196,14 +181,14 @@ Is orientable: False
 Solution Found: Pinched Projective Plane
 
 ------------------------------------------------------------
-Perm: (3, 13, 1, 10, 5, 6, 7, 11, 9, 4, 8, 12, 2, 14)
+Perm: (3, 1, 13, 10, 5, 6, 11, 7, 9, 4, 8, 2, 12, 14)
 ------------------------------------------------------------
 star(1) maps to a bowtie
 Using pass sequence around node 1: [(4, 2), (6, 7), (5, 4), (3, 2), (5, 6), (3, 7)]
 Rotation Scheme is: [(4, 2, 3, 7, 6, 5)]
 Number of pinchpoints: 0
 Is orientable: False
-Solution Found: Klien Bottle
+Solution Found: Klein Bottle
 Using pass sequence around node 1: [(4, 6), (2, 7), (5, 4), (3, 2), (5, 6), (3, 7)]
 Rotation Scheme is: [(4, 6, 5), (2, 7, 3)]
 Number of pinchpoints: 1
@@ -218,7 +203,7 @@ Using pass sequence around node 1: [(4, 2), (5, 7), (6, 4), (3, 2), (6, 5), (3, 
 Rotation Scheme is: [(4, 2, 3, 7, 5, 6)]
 Number of pinchpoints: 0
 Is orientable: False
-Solution Found: Klien Bottle
+Solution Found: Klein Bottle
 Using pass sequence around node 1: [(4, 5), (2, 7), (6, 4), (3, 2), (6, 5), (3, 7)]
 Rotation Scheme is: [(4, 5, 6), (2, 7, 3)]
 Number of pinchpoints: 1
@@ -233,7 +218,7 @@ Using pass sequence around node 1: [(4, 2), (6, 7), (5, 4), (3, 2), (5, 6), (3, 
 Rotation Scheme is: [(4, 2, 3, 7, 6, 5)]
 Number of pinchpoints: 0
 Is orientable: False
-Solution Found: Klien Bottle
+Solution Found: Klein Bottle
 Using pass sequence around node 1: [(4, 6), (2, 7), (5, 4), (3, 2), (5, 6), (3, 7)]
 Rotation Scheme is: [(4, 6, 5), (2, 7, 3)]
 Number of pinchpoints: 1
@@ -248,7 +233,7 @@ Using pass sequence around node 1: [(4, 2), (5, 7), (6, 4), (3, 2), (6, 5), (3, 
 Rotation Scheme is: [(4, 2, 3, 7, 5, 6)]
 Number of pinchpoints: 0
 Is orientable: False
-Solution Found: Klien Bottle
+Solution Found: Klein Bottle
 Using pass sequence around node 1: [(4, 5), (2, 7), (6, 4), (3, 2), (6, 5), (3, 7)]
 Rotation Scheme is: [(4, 5, 6), (2, 7, 3)]
 Number of pinchpoints: 1
@@ -256,11 +241,26 @@ Is orientable: False
 Solution Found: Pinched Projective Plane
 
 ------------------------------------------------------------
+Perm: (3, 13, 1, 10, 5, 6, 7, 11, 9, 4, 8, 12, 2, 14)
+------------------------------------------------------------
+star(1) maps to a bowtie
+Using pass sequence around node 1: [(4, 2), (6, 7), (5, 4), (3, 2), (5, 6), (3, 7)]
+Rotation Scheme is: [(4, 2, 3, 7, 6, 5)]
+Number of pinchpoints: 0
+Is orientable: False
+Solution Found: Klein Bottle
+Using pass sequence around node 1: [(4, 6), (2, 7), (5, 4), (3, 2), (5, 6), (3, 7)]
+Rotation Scheme is: [(4, 6, 5), (2, 7, 3)]
+Number of pinchpoints: 1
+Is orientable: False
+Solution Found: Pinched Projective Plane
+
+------------------------------------------------------------
 Summary
 ------------------------------------------------------------
-Permutations checked: 16
+Permutations checked: 87178291200
 ADCs found: 16
 Pinched Projective Plane found: 16
 2-pinchpoint Sphere found: 0
 Torus found: 0
-Klien Bottle found: 16
+Klein Bottle found: 16

@@ -23,7 +23,7 @@ Using pass sequence around node 1: [(2, 5), (6, 3), (7, 2), (7, 3), (4, 5), (4, 
 Rotation Scheme is: [(2, 5, 4, 6, 3, 7)]
 Number of pinchpoints: 0
 Is orientable: False
-Solution Found: Klien Bottle
+Solution Found: Klein Bottle
 Using pass sequence around node 1: [(2, 6), (5, 3), (7, 2), (7, 3), (4, 5), (4, 6)]
 Rotation Scheme is: [(2, 6, 4, 5, 3, 7)]
 Number of pinchpoints: 0
@@ -43,7 +43,7 @@ Using pass sequence around node 1: [(3, 6), (5, 2), (7, 3), (7, 2), (4, 6), (4, 
 Rotation Scheme is: [(3, 6, 4, 5, 2, 7)]
 Number of pinchpoints: 0
 Is orientable: False
-Solution Found: Klien Bottle
+Solution Found: Klein Bottle
 
 ------------------------------------------------------------
 Perm: (4, 5, 7, 1, 2, 12, 3, 8, 9, 10, 11, 6, 13, 14)
@@ -53,7 +53,7 @@ Using pass sequence around node 1: [(5, 2), (3, 6), (4, 5), (4, 6), (7, 2), (7, 
 Rotation Scheme is: [(5, 2, 7, 3, 6, 4)]
 Number of pinchpoints: 0
 Is orientable: False
-Solution Found: Klien Bottle
+Solution Found: Klein Bottle
 Using pass sequence around node 1: [(5, 3), (2, 6), (4, 5), (4, 6), (7, 2), (7, 3)]
 Rotation Scheme is: [(5, 3, 7, 2, 6, 4)]
 Number of pinchpoints: 0
@@ -73,14 +73,14 @@ Using pass sequence around node 1: [(6, 3), (2, 5), (4, 6), (4, 5), (7, 3), (7, 
 Rotation Scheme is: [(6, 3, 7, 2, 5, 4)]
 Number of pinchpoints: 0
 Is orientable: False
-Solution Found: Klien Bottle
+Solution Found: Klein Bottle
 
 ------------------------------------------------------------
 Summary
 ------------------------------------------------------------
-Permutations checked: 4
+Permutations checked: 87178291200
 ADCs found: 4
 Pinched Projective Plane found: 0
 2-pinchpoint Sphere found: 0
 Torus found: 4
-Klien Bottle found: 4
+Klein Bottle found: 4

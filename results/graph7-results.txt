@@ -14,3 +14,13 @@ Edge 12: (4, 7)
 Edge 13: (5, 7)
 Edge 14: (6, 7)
 Degree six nodes are: (1,)
+
+------------------------------------------------------------
+Summary
+------------------------------------------------------------
+Permutations checked: 87178291200
+ADCs found: 0
+Pinched Projective Plane found: 0
+2-pinchpoint Sphere found: 0
+Torus found: 0
+Klein Bottle found: 0
